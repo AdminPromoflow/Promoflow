@@ -20,6 +20,6 @@
     <?php include "../../views/login/sections/section-1-home.php" ?>
 
     <!-- Include the JavaScript file for the home section -->
-    <script src="../../public/js/login/sections/section-1-home.js" type="text/javascript"></script>
+    <script src="../../public/js/global/user.js" type="text/javascript"></script>
   </body>
 </html>
