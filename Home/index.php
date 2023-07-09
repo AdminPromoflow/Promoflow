@@ -320,7 +320,7 @@
     document.querySelector('#passwordData').addEventListener('keypress', function (e) {
         if (e.key === 'Enter') {
           login();
-        } 
+        }
     });
 
     function login(){
@@ -338,7 +338,7 @@
             var data = jQuery.parseJSON(data);
         //    alert(data["COUNT(*)"]);
             if (data["COUNT(*)"]==1) {
-              window.open("../Dashboard/index.php", "_self");
+              window.open("../Dashboard/", "_self");
             }
             else{
               setTimeout(function() {
