@@ -270,7 +270,7 @@
         <span style="--i:15;"></span>
       </div>
       <div class="menuLogin">
-        <h1>Promoflow...</h1>
+        <h1>Promoflow</h1>
         <img src="Images/Logo.png" alt="">
       </div>
       <div class="bodyLogin">
