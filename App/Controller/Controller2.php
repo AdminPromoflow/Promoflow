@@ -123,7 +123,8 @@ include ('../Data/flapi_credentials.php');
       $db = new Database();
       $group = new Groups($db);
       $group->setIdCategory($_POST['id']);
-      echo "Hola";
+      $result = json_encode($group->getGroups());
+      echo $result;
     }
 
 

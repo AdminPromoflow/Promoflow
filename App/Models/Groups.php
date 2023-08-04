@@ -12,9 +12,9 @@
       }
 
 
-      /*function getCategories(){
+      function getGroups(){
         try{
-          $sql = $this->conn->conn()->query("SELECT * FROM `product_category` ");
+          $sql = $this->conn->conn()->query("SELECT `code`, `name` FROM `product_group` WHERE `prodcat` = '$this->idCategory'");
          $data = $sql->fetchAll(PDO::FETCH_ASSOC);
          $this->conn->close();
          return $data;
@@ -22,7 +22,7 @@
          catch(PDOException $e){
              echo $query . "<br>" . $e->getMessage();
            }
-       }*/
+       }
 
 
 
