@@ -344,10 +344,11 @@ getCategories();
            success: function(data){
              alert(data);
             containersItemGroup.innerHTML =  "";
-            //var data = jQuery.parseJSON(data);
-            /*for (var i = 0; i < data.length; i++) {
-              createCategories(data[i]["code"], data[i]["name"], i);
-            }*/
+            var data = jQuery.parseJSON(data);
+            for (var i = 0; i < data.length; i++) {
+              alert(data[i]["name"]);
+              //createGroups();
+            }
             }
           })
           }
