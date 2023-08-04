@@ -324,7 +324,15 @@ getCategories();
         '<div class="containersItemGroup">'+
         '</div>'+
       '</div>';
+
+      getGroups();
+
   }
 
 
+/*--------------------------------  Get groups  ------------------------------*/
+
+  function getGroups(){
+    alert("Hola");
+  }
 </script>
