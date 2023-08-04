@@ -460,7 +460,7 @@
             <div class="items">
               <h3>W3P </h3>
             </div>
-            <div class="items">
+          <!--  <div class="items">
               <h3>Client PO & Art to C2R</h3>
             </div>
             <div class="items">
@@ -483,7 +483,7 @@
             </div>
             <div class="items">
               <h3>Invoice</h3>
-            </div>
+            </div> -->
             <div class="items">
               <h3>Lanyard for you</h3>
             </div>
@@ -498,16 +498,6 @@
 
     <?php include "../1-ClientsManager/ClientsManager.php" ?>
     <?php include "../2-W3P/W3P.php" ?>
-    <?php include "../3-ClientPOAndArtToC2R/ClientPOAndArtToC2R.php" ?>
-    <?php include "../4-C2RPOAndArtSupplier/C2RPOAndArtSupplier.php" ?>
-    <?php include "../5-ProofFromSupplierToC2R/ProofFromSupplierToC2R.php" ?>
-    <?php include "../6-ApprovalFromClient/ApprovalFromClient.php" ?>
-    <?php include "../7-ApprovalFromC2RToSupplier/ApprovalFromC2RToSupplier.php" ?>
-    <?php include "../8-ToProduction/ToProduction.php" ?>
-    <?php include "../9-Despatch/Despatch.php" ?>
-    <?php include "../10-Invoice/Invoice.php" ?>
-    <?php include "../11-LanyardForYou/LanyardsForYou.php" ?>
-
 
     <script type="text/javascript">
     /* verifyLogin */
