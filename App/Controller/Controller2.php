@@ -135,7 +135,9 @@ include ('../Data/flapi_credentials.php');
         echo $result;
       }
 
-
+      elseif ($_POST['module']=="getGroups") {
+        echo $_POST['id'];
+      }
 
       //
 
