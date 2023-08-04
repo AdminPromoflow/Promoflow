@@ -114,13 +114,16 @@ include ('../Data/flapi_credentials.php');
 
     elseif ($_POST['module']=="getCategories") {
       $db = new Database();
-      $user = new Categories($db);
-      $result = json_encode($user->getCategories());
+      $category = new Categories($db);
+      $result = json_encode($category->getCategories());
       echo $result;
     }
 
     elseif ($_POST['module']=="getGroups") {
-      echo $_POST['id'];
+      $db = new Database();
+      $group = new Groups($db);
+      $group->setIdCategory($_POST['id']);
+      echo "Hola";
     }
 
 

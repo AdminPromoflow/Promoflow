@@ -1,10 +1,14 @@
 <?php
     class Groups {
       private $conn;
-
+      private $idCategory;
 
       function __construct($conn) {
           $this->conn = $conn;
+      }
+
+      function setIdCategory($idCategory){
+        $this->idCategory = $idCategory;
       }
 
 
