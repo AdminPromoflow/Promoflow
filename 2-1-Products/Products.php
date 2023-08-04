@@ -342,7 +342,7 @@ getCategories();
              id: code
                    },
            success: function(data){
-             alert("Hola");
+             alert(data);
             containersItemGroup.innerHTML =  "";
             //var data = jQuery.parseJSON(data);
             /*for (var i = 0; i < data.length; i++) {
