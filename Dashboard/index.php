@@ -271,7 +271,7 @@
         background-color: gold;
         cursor: pointer;
         margin: 3px 0;
-        background-color: rgba(109, 114, 126, 1);
+        background-color: rgba(33, 46, 63, 1);
       }
       .itemsLogout h3{
         margin: 0;
@@ -282,10 +282,10 @@
         color: rgba(240, 250, 240, 1);
       }
       .itemsLogout:hover {
-        background-color: rgba(109, 114, 126, .7);
+        background-color: rgba(33, 46, 63, .7);
       }
       .itemsLogout:active {
-        background-color: rgba(109, 114, 126, 1);
+        background-color: rgba(33, 46, 63, 1);
       }
 
       .items:nth-child(odd) {
