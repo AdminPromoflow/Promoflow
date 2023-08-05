@@ -370,7 +370,7 @@ getCategories();
             '</div>'+
           '</div>';
 
-        //alert(codeG + nameG + noDivCategory);
+        alert(codeG + nameG + noDivCategory);
 
         /*
         var containerProducts = document.getElementById("containerProducts");
