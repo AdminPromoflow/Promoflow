@@ -80,8 +80,8 @@
     }
     .buttonLessGroup{
       position: absolute;
-      width: 17px;
-      height: 11px;
+      width: 14px;
+      height: 8px;
       top:50%;
       right: 10px;
       transform: translateY(-50%);
@@ -90,8 +90,8 @@
       }
     .buttonPlusGroup {
       position: absolute;
-      width: 17px;
-      height: 21px;
+      width: 14px;
+      height: 18px;
       top:50%;
       right:10px;
       transform: translateY(-50%);
