@@ -401,12 +401,12 @@ getCategories();
 
         function createProducts(codeP, nameP, noDivGroup, noDivProduct) {
 
-          const containersItemGroup = document.querySelectorAll(".containersItemGroup");
-      containersItemGroup[noDivGroup].innerHTML +=
+          const containersItemProduct = document.querySelectorAll(".containersItemProduct");
+      containersItemProduct[noDivGroup].innerHTML +=
 
           '<div class="containerItemProduct">'+
               '<div class="itemProduct">'+
-                '<h3> '+ nameG +'</h3>'+
+                '<h3> '+ nameP +'</h3>'+
                 '<div class="openToggleSubitemProduct"  >'
                 '</div>'+
               '</div>'+
