@@ -344,8 +344,8 @@ getCategories();
              id: code
                    },
            success: function(data){
-             alert(noDivCategory);
-            //containersItemGroup[noDivCategory].innerHTML =  '';
+             alert(noDivCategory + containersItemGroup[noDivCategory]);
+            containersItemGroup[noDivCategory].innerHTML =  '';
             var data = jQuery.parseJSON(data);
             for (var i = 0; i < data.length; i++) {
               createGroups(data[i]["code"], data[i]["name"], noDivCategory);
