@@ -2,8 +2,8 @@
     class Database{
       private $servername = 'localhost';
       private $dbname = "u273173398_promoflow";
-      private $username = "root";//u273173398_Ian root
-      private $password = "root";//IanSail2023 root
+      private $username = "u273173398_Ian";//u273173398_Ian root
+      private $password = "IanSail2023";//IanSail2023 root
       private $conn;
       public function __construct(){
         try {
