@@ -372,22 +372,5 @@ getCategories();
 
         alert(codeG + nameG + noDivCategory);
 
-        /*
-        var containerProducts = document.getElementById("containerProducts");
-        name  = name.replace("Category", "");
-        containerProducts.innerHTML +=
-        '<div class="containerItemsCategory">'+
-            '<div class="itemCategory">'+
-              '<h3> '+ name +'</h3>'+
-              '<div class="openToggleSubitemCategory"  >'+
-                '<img  class="buttonPlusCategory"src="../2-2-Orders/Images/mas.png" alt="">'+
-                '<img  class="buttonLessCategory"src="../2-2-Orders/Images/menos.png" alt="">'+
-              '</div>'+
-            '</div>'+
-            '<div class="containersItemGroup">'+
-            '</div>'+
-          '</div>';
-
-
-      */}
+        }
 </script>
