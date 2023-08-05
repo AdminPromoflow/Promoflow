@@ -404,12 +404,10 @@ getCategories();
           const containersItemGroup = document.querySelectorAll(".containersItemGroup");
       containersItemGroup[noDivCategory].innerHTML +=
 
-          '<div class="containerItemGroup">'+
-              '<div class="itemGroup">'+
+          '<div class="containerItemProduct">'+
+              '<div class="itemProduct">'+
                 '<h3> '+ nameG +'</h3>'+
-                '<div class="openToggleSubitemGroup"  >'+
-                  '<img  class="buttonPlusGroup"src="../2-2-Orders/Images/mas.png" alt="">'+
-                  '<img  class="buttonLessGroup"src="../2-2-Orders/Images/menos.png" alt="">'+
+                '<div class="openToggleSubitemProduct"  >'
                 '</div>'+
               '</div>'+
               '<div class="containersItemProduct">'+
