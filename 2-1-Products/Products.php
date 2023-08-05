@@ -372,7 +372,7 @@ getCategories();
           '<div class="containersItemProduct">'+
           '</div>'+
         '</div>';
-      getProducts(codeG, noDivGroup);
+    //  getProducts(codeG, noDivGroup);
    }
 
 
