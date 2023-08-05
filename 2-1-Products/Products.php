@@ -393,7 +393,7 @@ getCategories();
                   containersItemProduct[noDivGroup].innerHTML =  '';
                   var data = jQuery.parseJSON(data);
                   for (var i = 0; i < data.length; i++) {
-                    //createProducts(data[i]["id"], data[i]["name"], noDivGroup, i);
+                    createProducts(data[i]["id"], data[i]["name"], noDivGroup, i);
                   }
                   }
                 })
@@ -402,7 +402,7 @@ getCategories();
         function createProducts(codeP, nameP, noDivGroup, noDivProduct) {
 
           const containersItemGroup = document.querySelectorAll(".containersItemGroup");
-    /*  containersItemGroup[noDivCategory].innerHTML +=
+      containersItemGroup[noDivCategory].innerHTML +=
 
           '<div class="containerItemProduct">'+
               '<div class="itemProduct">'+
@@ -412,7 +412,7 @@ getCategories();
               '</div>'+
               '<div class="containersItemProduct">'+
               '</div>'+
-            '</div>';*/
+            '</div>';
 
 
           }
