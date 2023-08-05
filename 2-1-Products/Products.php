@@ -350,6 +350,8 @@ getCategories();
               var data = jQuery.parseJSON(data);
               for (var i = 0; i < data.length; i++) {
                 createGroups(data[i]["code"], data[i]["name"], noDivCategory, i);
+                alert("Get Groups: " + i + data[i]["code"] );
+
               }
           }
       })
