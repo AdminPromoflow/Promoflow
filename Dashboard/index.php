@@ -483,10 +483,10 @@
             </div>
             <div class="items">
               <h3>Invoice</h3>
-            </div> -->
+            </div>
             <div class="items">
               <h3>Lanyard for you</h3>
-            </div>
+            </div>-->
             <div id="logout" class="itemsLogout">
               <h3>Logout </h3>
             </div>
@@ -552,7 +552,7 @@
 
 
     for (let i = 0; i < bodyLogin.length; i++) {
-      alert(i);
+
       bodyLogin[i].style.display = "none";
       bodyLogin[containerOn].style.display = "block";
 
