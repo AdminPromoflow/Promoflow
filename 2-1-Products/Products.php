@@ -293,7 +293,7 @@ getCategories();
 /*----------------------  Get Categories from Database  -----------------------*/
 
   function getCategories(){
-    var containerProducts = document.getElementById("containerProducts");
+    var containersItemsCategory = document.getElementById("containersItemsCategory");
 
     $.ajax( "../App/Controller/Controller2.php", {
            type: 'post',
@@ -302,7 +302,7 @@ getCategories();
              module: "getCategories"
                    },
            success: function(data){
-            containerProducts.innerHTML =  "";
+            containersItemsCategory.innerHTML =  "";
             var data = jQuery.parseJSON(data);
             for (var i = 0; i < data.length; i++) {
               createCategories(data[i]["code"], data[i]["name"], i);
