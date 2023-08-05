@@ -64,7 +64,7 @@
     .itemGroup h3{
       position: relative;
       text-align: center;
-      width: 75%;
+      width: 68%;
       left: 50%;
       transform: translateX(-50%);
       color: rgba(255, 255, 255, .8);
