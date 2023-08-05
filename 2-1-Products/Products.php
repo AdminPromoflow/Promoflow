@@ -344,7 +344,7 @@ getCategories();
              id: code
                    },
            success: function(data){
-            containersItemGroup.innerHTML =  '<h1>Hola</h1>';
+            containersItemGroup[noDivCategory].innerHTML =  '';
             var data = jQuery.parseJSON(data);
             for (var i = 0; i < data.length; i++) {
               createGroups(data[i]["code"], data[i]["name"], noDivCategory);
@@ -357,9 +357,9 @@ getCategories();
 
       function createGroups(codeG, nameG, noDivCategory) {
         const containersItemGroup = document.querySelectorAll("containersItemGroup");
-        containersItemGroup.innerHTML +=
-          '<h1>Hola</h1>';
-        /*'<div class="containerItemGroup">'+
+        containersItemGroup[noDivCategory].innerHTML +=
+
+        '<div class="containerItemGroup">'+
             '<div class="itemGroup">'+
               '<h3> '+ nameG +'</h3>'+
               '<div class="openToggleSubitemGroup"  >'+
@@ -370,7 +370,7 @@ getCategories();
             '<div class="containersItemProduct">'+
             '</div>'+
           '</div>';
-*/
+
       //  alert(codeG + nameG + noDivCategory);
 
 
