@@ -390,7 +390,6 @@ getCategories();
                    id: codeG
                          },
                  success: function(data){
-                   alert(data);
                   containersItemProduct[noDivGroup].innerHTML =  '';
                   var data = jQuery.parseJSON(data);
                   for (var i = 0; i < data.length; i++) {
