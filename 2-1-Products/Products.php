@@ -402,7 +402,7 @@ getCategories();
         function createProducts(codeP, nameP, noDivGroup, noDivProduct) {
 
           const containersItemGroup = document.querySelectorAll(".containersItemGroup");
-      containersItemGroup[noDivCategory].innerHTML +=
+    /*  containersItemGroup[noDivCategory].innerHTML +=
 
           '<div class="containerItemProduct">'+
               '<div class="itemProduct">'+
@@ -412,7 +412,7 @@ getCategories();
               '</div>'+
               '<div class="containersItemProduct">'+
               '</div>'+
-            '</div>';
+            '</div>';*/
 
 
           }
