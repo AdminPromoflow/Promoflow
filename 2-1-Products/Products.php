@@ -346,7 +346,6 @@ getCategories();
              id: code
                    },
            success: function(data){
-              //alert(containersItemGroup.length);
               containersItemGroup[noDivCategory].innerHTML =  '';
               var data = jQuery.parseJSON(data);
               for (var i = 0; i < data.length; i++) {
@@ -379,7 +378,7 @@ getCategories();
 
 /*--------------------------------  Get products  ----------------------------*/
 
-  function getProducts(codeG, noDivGroup){
+/*  function getProducts(codeG, noDivGroup){
     const containersItemProduct = document.querySelectorAll(".containersItemProduct");
     $.ajax( "../App/Controller/Controller2.php", {
            type: 'post',
@@ -396,12 +395,12 @@ getCategories();
               }
           }
       })
-  }
+  }*/
 
 
 /*-----------------------------  Create products  ----------------------------*/
 
-  function createProducts(codeP, nameP, noDivGroup, noDivProduct) {
+/*  function createProducts(codeP, nameP, noDivGroup, noDivProduct) {
     const containersItemProduct = document.querySelectorAll(".containersItemProduct");
     containersItemProduct[noDivGroup].innerHTML +=
     '<div class="containerItemProduct">'+
@@ -413,5 +412,5 @@ getCategories();
         '<div class="containersItemProduct">'+
         '</div>'+
       '</div>';
-    }
+    }*/
 </script>
