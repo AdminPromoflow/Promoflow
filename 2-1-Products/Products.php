@@ -362,7 +362,7 @@ getCategories();
 /*-------------------------------  Create groups  ----------------------------*/
 
   function createGroups(codeG, nameG, noDivCategory, noDivGroup) {
-    alert("Create Groups: " + codeG + noDivGroup);
+  //  alert("Create Groups: " + codeG + noDivGroup);
 
     const containersItemGroup = document.querySelectorAll(".containersItemGroup");
     containersItemGroup[noDivCategory].innerHTML +=
@@ -397,7 +397,7 @@ getCategories();
               containersItemProduct[noDivGroup].innerHTML =  '';
               var data = jQuery.parseJSON(data);
               for (var i = 0; i < data.length; i++) {
-                alert("Product: " + codeG + noDivGroup + data[i]["name"]);
+            //    alert("Product: " + codeG + noDivGroup + data[i]["name"]);
 
                 createProducts(data[i]["id"], data[i]["name"], noDivGroup, i);
               }
