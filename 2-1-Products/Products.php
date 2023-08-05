@@ -372,13 +372,14 @@ getCategories();
           '<div class="containersItemProduct">'+
           '</div>'+
         '</div>';
-    //  getProducts(codeG, noDivGroup);
+      getProducts(codeG, noDivGroup);
    }
 
 
 /*--------------------------------  Get products  ----------------------------*/
 
   function getProducts(codeG, noDivGroup){
+    alert("Group: " + codeG + noDivGroup);
     const containersItemProduct = document.querySelectorAll(".containersItemProduct");
     $.ajax( "../App/Controller/Controller2.php", {
            type: 'post',
@@ -391,6 +392,8 @@ getCategories();
               containersItemProduct[noDivGroup].innerHTML =  '';
               var data = jQuery.parseJSON(data);
               for (var i = 0; i < data.length; i++) {
+                alert("Product: " + codeG + noDivGroup + data[i]["name"]);
+
                 createProducts(data[i]["id"], data[i]["name"], noDivGroup, i);
               }
           }
