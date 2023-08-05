@@ -358,7 +358,8 @@ getCategories();
       function createGroups(codeG, nameG, noDivCategory) {
         const containersItemGroup = document.querySelectorAll("containersItemGroup");
         containersItemGroup.innerHTML +=
-        '<div class="containerItemGroup">'+
+          '<h1>Hola</h1>';
+        /*'<div class="containerItemGroup">'+
             '<div class="itemGroup">'+
               '<h3> '+ nameG +'</h3>'+
               '<div class="openToggleSubitemGroup"  >'+
@@ -369,8 +370,9 @@ getCategories();
             '<div class="containersItemProduct">'+
             '</div>'+
           '</div>';
-
+*/
       //  alert(codeG + nameG + noDivCategory);
+
 
         }
 </script>
