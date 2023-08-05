@@ -337,8 +337,8 @@ getCategories();
 /*--------------------------------  Get groups  ------------------------------*/
 
   function getGroups(code, noDivCategory){
-    const containersItemGroup = document.querySelectorAll(".containersItemGroup");
-    $.ajax( "../App/Controller/Controller2.php", {
+      const containersItemGroup = document.querySelectorAll(".containersItemGroup");
+      $.ajax( "../App/Controller/Controller2.php", {
            type: 'post',
            async: false,
            data: {
@@ -352,14 +352,13 @@ getCategories();
                 createGroups(data[i]["code"], data[i]["name"], noDivCategory, i);
               }
           }
-    })
+      })
   }
 
 
 /*-------------------------------  Create groups  ----------------------------*/
 
   function createGroups(codeG, nameG, noDivCategory, noDivGroup) {
-    alert("Buenas");
     const containersItemGroup = document.querySelectorAll(".containersItemGroup");
     containersItemGroup[noDivCategory].innerHTML +=``
       '<div class="containerItemGroup">'+
