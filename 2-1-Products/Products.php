@@ -335,7 +335,7 @@ getCategories();
 /*--------------------------------  Get groups  ------------------------------*/
 
   function getGroups(code, noDivCategory){
-    const containersItemGroup = document.querySelectorAll("containersItemGroup");
+    const containersItemGroup = document.querySelectorAll(".containersItemGroup");
     $.ajax( "../App/Controller/Controller2.php", {
            type: 'post',
            async: false,
