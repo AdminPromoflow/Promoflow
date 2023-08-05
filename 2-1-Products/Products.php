@@ -381,7 +381,7 @@ getCategories();
         }
 
         function getProducts(codeG, noDivGroup){
-          //const containersItemProduct = document.querySelectorAll(".containersItemProduct");
+          const containersItemProduct = document.querySelectorAll(".containersItemProduct");
           $.ajax( "../App/Controller/Controller2.php", {
                  type: 'post',
                  async: false,
@@ -391,12 +391,32 @@ getCategories();
                          },
                  success: function(data){
                    alert(data);
-                  //containersItemProduct[noDivGroup].innerHTML =  '';
+                  containersItemProduct[noDivGroup].innerHTML =  '';
                   var data = jQuery.parseJSON(data);
                   for (var i = 0; i < data.length; i++) {
-                    //createGroups(data[i]["code"], data[i]["name"], noDivCategory, i);
+                    //createProducts(data[i]["id"], data[i]["name"], noDivGroup, i);
                   }
                   }
                 })
         }
+
+        function createProducts(codeP, nameP, noDivGroup, noDivProduct) {
+
+          const containersItemGroup = document.querySelectorAll(".containersItemGroup");
+      containersItemGroup[noDivCategory].innerHTML +=
+
+          '<div class="containerItemGroup">'+
+              '<div class="itemGroup">'+
+                '<h3> '+ nameG +'</h3>'+
+                '<div class="openToggleSubitemGroup"  >'+
+                  '<img  class="buttonPlusGroup"src="../2-2-Orders/Images/mas.png" alt="">'+
+                  '<img  class="buttonLessGroup"src="../2-2-Orders/Images/menos.png" alt="">'+
+                '</div>'+
+              '</div>'+
+              '<div class="containersItemProduct">'+
+              '</div>'+
+            '</div>';
+
+
+          }
 </script>
