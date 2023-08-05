@@ -359,7 +359,6 @@ getCategories();
 /*-------------------------------  Create groups  ----------------------------*/
 
   function createGroups(codeG, nameG, noDivCategory, noDivGroup) {
-    alert(codeG+ nameG+ noDivCategory+ noDivGroup);
     const containersItemGroup = document.querySelectorAll(".containersItemGroup");
     containersItemGroup[noDivCategory].innerHTML +=``
       '<div class="containerItemGroup">'+
@@ -373,13 +372,13 @@ getCategories();
           '<div class="containersItemProduct">'+
           '</div>'+
         '</div>';
-    //  getProducts(codeG, noDivGroup);
+      getProducts(codeG, noDivGroup);
    }
 
 
 /*--------------------------------  Get products  ----------------------------*/
 
-/*  function getProducts(codeG, noDivGroup){
+  function getProducts(codeG, noDivGroup){
     const containersItemProduct = document.querySelectorAll(".containersItemProduct");
     $.ajax( "../App/Controller/Controller2.php", {
            type: 'post',
@@ -396,12 +395,12 @@ getCategories();
               }
           }
       })
-  }*/
+  }
 
 
 /*-----------------------------  Create products  ----------------------------*/
 
-/*  function createProducts(codeP, nameP, noDivGroup, noDivProduct) {
+  function createProducts(codeP, nameP, noDivGroup, noDivProduct) {
     const containersItemProduct = document.querySelectorAll(".containersItemProduct");
     containersItemProduct[noDivGroup].innerHTML +=
     '<div class="containerItemProduct">'+
@@ -413,5 +412,5 @@ getCategories();
         '<div class="containersItemProduct">'+
         '</div>'+
       '</div>';
-    }*/
+    }
 </script>
