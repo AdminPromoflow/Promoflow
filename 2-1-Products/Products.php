@@ -329,7 +329,7 @@ getCategories();
         '<div class="containersItemGroup">'+
         '</div>'+
       '</div>';
-
+      alert("create categories");
       getGroups(code, noDivCategory);
   }
 
