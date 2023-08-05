@@ -356,6 +356,7 @@ getCategories();
 
 
       function createGroups(codeG, nameG, noDivCategory) {
+        alert(noDivCategory);
         const containersItemGroup = document.querySelectorAll("containersItemGroup");
         containersItemGroup[noDivCategory].innerHTML +=
 
