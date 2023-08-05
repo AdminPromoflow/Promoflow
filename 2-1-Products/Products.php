@@ -384,7 +384,7 @@ getCategories();
 /*--------------------------------  Get products  ----------------------------*/
 
   function getProducts(codeG, noDivGroup){
-    alert("Group: " + codeG + noDivGroup);
+  //  alert("Group: " + codeG + noDivGroup);
     const containersItemProduct = document.querySelectorAll(".containersItemProduct");
     $.ajax( "../App/Controller/Controller2.php", {
            type: 'post',
