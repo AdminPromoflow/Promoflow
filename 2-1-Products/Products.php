@@ -322,7 +322,7 @@ getCategories();
         '<div class="itemCategory">'+
           '<h3> '+ name +'</h3>'+
           '<div class="openToggleSubitemCategory"  >'+
-            '<img  class="buttonPlusGroup"src="../2-2-Orders/Images/mas.png" alt="">'+
+            '<img  class="buttonPlusCategory"src="../2-2-Orders/Images/mas.png" alt="">'+
             '<img  class="buttonLessCategory"src="../2-2-Orders/Images/menos.png" alt="">'+
           '</div>'+
         '</div>'+
@@ -368,7 +368,7 @@ getCategories();
             '<div class="itemGroup">'+
               '<h3> '+ nameG +'</h3>'+
               '<div class="openToggleSubitemGroup"  >'+
-                '<img  class="buttonPlusCategory"src="../2-2-Orders/Images/mas.png" alt="">'+
+                '<img  class="buttonPlusGroup"src="../2-2-Orders/Images/mas.png" alt="">'+
                 '<img  class="buttonLessGroup"src="../2-2-Orders/Images/menos.png" alt="">'+
               '</div>'+
             '</div>'+
