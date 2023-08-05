@@ -127,6 +127,15 @@ include ('../Data/flapi_credentials.php');
       echo $result;
     }
 
+    elseif ($_POST['module']=="getProducts") {
+      $db = new Database();
+      $product = new Products($db);
+      $product->setIdGroup($_POST['id']);
+      $result = json_encode($product->getProducts());
+      echo $result;
+    }
+
+
 
 /*---------------------------------  Customers  ------------------------------*/
 

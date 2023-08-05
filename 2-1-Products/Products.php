@@ -218,7 +218,7 @@
 <!--  Table 1  -->
 <!--<button class="exampleAPI" id="requestProductsExample" type="button" name="button" >Request products</button>-->
 <div class="containerTableW3P">
-  <div id="containerProducts"  class="containerCenterTable">
+  <div id="containersItemsCategory"  class="containerCenterTable">
 
   <!--  <div class="containerItemsCategory">
       <div class="itemCategory">
@@ -315,9 +315,9 @@ getCategories();
 /*---------------------------  Create categories  ----------------------------*/
 
   function createCategories(code, name, noDivCategory) {
-    var containerProducts = document.getElementById("containerProducts");
+    var containersItemsCategory = document.getElementById("containersItemsCategory");
     name  = name.replace("Category", "");
-    containerProducts.innerHTML +=
+    containersItemsCategory.innerHTML +=
     '<div class="containerItemsCategory">'+
         '<div class="itemCategory">'+
           '<h3> '+ name +'</h3>'+
@@ -351,7 +351,7 @@ getCategories();
             containersItemGroup[noDivCategory].innerHTML =  '';
             var data = jQuery.parseJSON(data);
             for (var i = 0; i < data.length; i++) {
-              createGroups(data[i]["code"], data[i]["name"], noDivCategory);
+              createGroups(data[i]["code"], data[i]["name"], noDivCategory, i);
             }
             }
           })
@@ -359,7 +359,7 @@ getCategories();
 
 
 
-      function createGroups(codeG, nameG, noDivCategory) {
+      function createGroups(codeG, nameG, noDivCategory, noDivGroup) {
 
         const containersItemGroup = document.querySelectorAll(".containersItemGroup");
     containersItemGroup[noDivCategory].innerHTML +=
@@ -376,8 +376,27 @@ getCategories();
             '</div>'+
           '</div>';
 
-      //  alert(codeG + nameG + noDivCategory);
+    getProducts(codeG, noDivGroup);
 
+        }
 
+        function getProducts(codeG, noDivGroup){
+          const containersItemProduct = document.querySelectorAll(".containersItemProduct");
+          $.ajax( "../App/Controller/Controller2.php", {
+                 type: 'post',
+                 async: false,
+                 data: {
+                   module: "getProducts",
+                   id: codeG
+                         },
+                 success: function(data){
+                   alert(data);
+                  containersItemProduct[noDivGroup].innerHTML =  '';
+                  var data = jQuery.parseJSON(data);
+                  for (var i = 0; i < data.length; i++) {
+                    //createGroups(data[i]["code"], data[i]["name"], noDivCategory, i);
+                  }
+                  }
+                })
         }
 </script>
