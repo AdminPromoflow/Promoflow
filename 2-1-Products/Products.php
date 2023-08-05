@@ -376,7 +376,7 @@ getCategories();
             '</div>'+
           '</div>';
 
-    getProducts(codeG, noDivGroup);
+  //  getProducts(codeG, noDivGroup);
 
         }
 

@@ -137,7 +137,6 @@ include ('../Data/flapi_credentials.php');
     }
 
 
-
 /*---------------------------------  Customers  ------------------------------*/
 
     elseif ($_POST['module']=="getCustomers") {
