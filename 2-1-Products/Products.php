@@ -331,7 +331,6 @@ getCategories();
       '</div>';
 
       getGroups(code, noDivCategory);
-
   }
 
 
@@ -347,73 +346,72 @@ getCategories();
              id: code
                    },
            success: function(data){
-             //alert(containersItemGroup.length);
-            containersItemGroup[noDivCategory].innerHTML =  '';
-            var data = jQuery.parseJSON(data);
-            for (var i = 0; i < data.length; i++) {
-              createGroups(data[i]["code"], data[i]["name"], noDivCategory, i);
-            }
-            }
-          })
+              //alert(containersItemGroup.length);
+              containersItemGroup[noDivCategory].innerHTML =  '';
+              var data = jQuery.parseJSON(data);
+              for (var i = 0; i < data.length; i++) {
+                createGroups(data[i]["code"], data[i]["name"], noDivCategory, i);
+              }
           }
+    })
+  }
 
 
+/*-------------------------------  Create groups  ----------------------------*/
 
-      function createGroups(codeG, nameG, noDivCategory, noDivGroup) {
-
-        const containersItemGroup = document.querySelectorAll(".containersItemGroup");
-    containersItemGroup[noDivCategory].innerHTML +=
-
-        '<div class="containerItemGroup">'+
-            '<div class="itemGroup">'+
-              '<h3> '+ nameG +'</h3>'+
-              '<div class="openToggleSubitemGroup"  >'+
-                '<img  class="buttonPlusGroup"src="../2-2-Orders/Images/mas.png" alt="">'+
-                '<img  class="buttonLessGroup"src="../2-2-Orders/Images/menos.png" alt="">'+
-              '</div>'+
+  function createGroups(codeG, nameG, noDivCategory, noDivGroup) {
+    const containersItemGroup = document.querySelectorAll(".containersItemGroup");
+    containersItemGroup[noDivCategory].innerHTML +=``
+      '<div class="containerItemGroup">'+
+          '<div class="itemGroup">'+
+            '<h3> '+ nameG +'</h3>'+
+            '<div class="openToggleSubitemGroup"  >'+
+              '<img  class="buttonPlusGroup"src="../2-2-Orders/Images/mas.png" alt="">'+
+              '<img  class="buttonLessGroup"src="../2-2-Orders/Images/menos.png" alt="">'+
             '</div>'+
-            '<div class="containersItemProduct">'+
-            '</div>'+
-          '</div>';
-
-  //  getProducts(codeG, noDivGroup);
-
-        }
-
-        function getProducts(codeG, noDivGroup){
-          const containersItemProduct = document.querySelectorAll(".containersItemProduct");
-          $.ajax( "../App/Controller/Controller2.php", {
-                 type: 'post',
-                 async: false,
-                 data: {
-                   module: "getProducts",
-                   id: codeG
-                         },
-                 success: function(data){
-                  containersItemProduct[noDivGroup].innerHTML =  '';
-                  var data = jQuery.parseJSON(data);
-                  for (var i = 0; i < data.length; i++) {
-                    createProducts(data[i]["id"], data[i]["name"], noDivGroup, i);
-                  }
-                  }
-                })
-        }
-
-        function createProducts(codeP, nameP, noDivGroup, noDivProduct) {
-
-          const containersItemProduct = document.querySelectorAll(".containersItemProduct");
-      containersItemProduct[noDivGroup].innerHTML +=
-
-          '<div class="containerItemProduct">'+
-              '<div class="itemProduct">'+
-                '<h3> '+ nameP +'</h3>'+
-                '<div class="openToggleSubitemProduct"  >'
-                '</div>'+
-              '</div>'+
-              '<div class="containersItemProduct">'+
-              '</div>'+
-            '</div>';
+          '</div>'+
+          '<div class="containersItemProduct">'+
+          '</div>'+
+        '</div>';
+      getProducts(codeG, noDivGroup);
+   }
 
 
+/*--------------------------------  Get products  ----------------------------*/
+
+  function getProducts(codeG, noDivGroup){
+    const containersItemProduct = document.querySelectorAll(".containersItemProduct");
+    $.ajax( "../App/Controller/Controller2.php", {
+           type: 'post',
+           async: false,
+           data: {
+             module: "getProducts",
+             id: codeG
+                   },
+           success: function(data){
+              containersItemProduct[noDivGroup].innerHTML =  '';
+              var data = jQuery.parseJSON(data);
+              for (var i = 0; i < data.length; i++) {
+                createProducts(data[i]["id"], data[i]["name"], noDivGroup, i);
+              }
           }
+      })
+  }
+
+
+/*-----------------------------  Create products  ----------------------------*/
+
+  function createProducts(codeP, nameP, noDivGroup, noDivProduct) {
+    const containersItemProduct = document.querySelectorAll(".containersItemProduct");
+    containersItemProduct[noDivGroup].innerHTML +=
+    '<div class="containerItemProduct">'+
+        '<div class="itemProduct">'+
+          '<h3> '+ nameP +'</h3>'+
+          '<div class="openToggleSubitemProduct"  >'
+          '</div>'+
+        '</div>'+
+        '<div class="containersItemProduct">'+
+        '</div>'+
+      '</div>';
+    }
 </script>
