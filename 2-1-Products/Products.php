@@ -331,7 +331,7 @@ getCategories();
         '</div>'+
       '</div>';
       getGroups(code, noDivCategory);
-      noCurrentGroup++;
+      noCurrentGroup = noCurrentGroup + 1;
   }
 
 
