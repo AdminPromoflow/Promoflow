@@ -313,7 +313,7 @@ getCategories();
           '<div class="containersItemProduct">'+
         '</div>'+
       '</div>';
-      getProducts(codeG, noCurrentGroup);
+      getProducts(codeG);
       noCurrentGroup = noCurrentGroup + 1;
 
    }
@@ -321,7 +321,7 @@ getCategories();
 
 /*--------------------------------  Get products  ----------------------------*/
 
-  function getProducts(codeG, noCurrentGroup){
+  function getProducts(codeG){
   //  alert("Group: " + codeG + noDivGroup);
     const containersItemProduct = document.querySelectorAll(".containersItemProduct");
     $.ajax( "../App/Controller/Controller2.php", {
@@ -336,7 +336,7 @@ getCategories();
               var dataP = jQuery.parseJSON(dataP);
               for (var i = 0; i < dataP.length; i++) {
                 console.log("Product:  " +  dataP[i]["name"]   + "Number group: " + noCurrentGroup);
-                createProduct(dataP[i]["id"], dataP[i]["name"], noCurrentGroup, i);
+                createProduct(dataP[i]["id"], dataP[i]["name"], i);
               }
           }
       })
@@ -345,7 +345,7 @@ getCategories();
 
 /*-----------------------------  Create products  ----------------------------*/
 
-  function createProduct(codeP, nameP, noCurrentGroup, noDivProduct) {
+  function createProduct(codeP, nameP, noDivProduct) {
     const containersItemProduct = document.querySelectorAll(".containersItemProduct");
     containersItemProduct[noCurrentGroup].innerHTML +=
     '<div class="containerItemProduct">'+
