@@ -330,6 +330,8 @@ getCategories();
         '<div class="containersItemGroup">'+
         '</div>'+
       '</div>';
+      alert("hahah: " +noCurrentGroup);
+
       getGroups(code, noDivCategory, noCurrentGroup);
       noCurrentGroup = noCurrentGroup + 1;
   }
