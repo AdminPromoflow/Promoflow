@@ -285,7 +285,7 @@ getCategories();
               for (var i = 0; i < data.length; i++) {
             //    alert("Get Groups: " + data[i]["code"] + noCurrentGroup );
                 console.log("Group:  " +  data[i]["name"]);
-                createGroups(data[i]["code"], data[i]["name"], noDivCategory, noCurrentGroup);
+                createGroup(data[i]["code"], data[i]["name"], noDivCategory, noCurrentGroup);
                 noCurrentGroup = noCurrentGroup + 1;
 
 
@@ -298,7 +298,7 @@ getCategories();
 
 /*-------------------------------  Create groups  ----------------------------*/
 
-  function createGroups(codeG, nameG, noDivCategory, noCurrentGroup) {
+  function createGroup(codeG, nameG, noDivCategory, noCurrentGroup) {
   //  alert("Create Groups: " + codeG + noDivGroup);
 
     const containersItemGroup = document.querySelectorAll(".containersItemGroup");
@@ -335,7 +335,7 @@ getCategories();
               var dataP = jQuery.parseJSON(dataP);
               for (var i = 0; i < dataP.length; i++) {
                 console.log("Product:  " +  dataP[i]["name"]   + "Number group: " + noCurrentGroup);
-                createProducts(dataP[i]["id"], dataP[i]["name"], noCurrentGroup, i);
+                createProduct(dataP[i]["id"], dataP[i]["name"], noCurrentGroup, i);
               }
           }
       })
@@ -344,7 +344,7 @@ getCategories();
 
 /*-----------------------------  Create products  ----------------------------*/
 
-  function createProducts(codeP, nameP, noCurrentGroup, noDivProduct) {
+  function createProduct(codeP, nameP, noCurrentGroup, noDivProduct) {
     const containersItemProduct = document.querySelectorAll(".containersItemProduct");
     containersItemProduct[noCurrentGroup].innerHTML +=
     '<div class="containerItemProduct">'+
