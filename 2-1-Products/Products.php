@@ -398,11 +398,10 @@ getCategories();
              module: "getProducts",
              id: codeG
                    },
-           success: function(data){
+           success: function(dataP){
               containersItemProduct[noDivGroup].innerHTML =  '';
-              var data = jQuery.parseJSON(data);
+              var data = jQuery.parseJSON(dataP);
               for (var i = 0; i < data.length; i++) {
-            //    alert("Product: " + codeG + noDivGroup + data[i]["name"]);
                 console.log("Product:  " +  data[i]["name"]);
                 createProducts(data[i]["id"], data[i]["name"], noDivGroup, i);
               }
@@ -431,17 +430,14 @@ getCategories();
 
     /*
     select
-        `product_group`.name AS 'GROUP' , `product`.name AS 'PRODUCT'
+        `product_group`.code AS 'GROUP CODE', `product_group`.name AS 'GROUP',  `product`.id AS 'PRODUCT CODE', `product`.name AS 'PRODUCT'
     from
         `product`
     inner join `product_group`
         on `product`.code = `product_group`.code
 
     ORDER BY  `product_group`.name
-
-
-
-
-
     */
+
+
 </script>
