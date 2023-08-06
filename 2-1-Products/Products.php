@@ -266,7 +266,6 @@ getCategories();
     //  alert("hahah: " +noCurrentGroup);
 
       getGroups(code, noDivCategory, noCurrentGroup);
-      noCurrentGroup = noCurrentGroup + 1;
   }
 
 
@@ -287,6 +286,8 @@ getCategories();
             //    alert("Get Groups: " + data[i]["code"] + noCurrentGroup );
                 console.log("Group:  " +  data[i]["name"]);
                 createGroups(data[i]["code"], data[i]["name"], noDivCategory, noCurrentGroup);
+                noCurrentGroup = noCurrentGroup + 1;
+
 
 
               }
