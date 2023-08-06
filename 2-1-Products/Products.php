@@ -425,4 +425,22 @@ getCategories();
         '</div>'+
       '</div>';
     }
+
+
+
+    /*
+    select
+        `product_group`.name AS 'GROUP' , `product`.name AS 'PRODUCT'
+    from
+        `product`
+    inner join `product_group`
+        on `product`.code = `product_group`.code
+
+    ORDER BY  `product_group`.name
+
+
+
+
+
+    */
 </script>

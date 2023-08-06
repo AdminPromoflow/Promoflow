@@ -49,7 +49,7 @@ var rightArrowW3P = document.getElementById('rightArrowW3P');
 const textNavigatorTable = document.querySelectorAll(".textNavigatorTable");
 const containerTableW3P = document.querySelectorAll(".containerTableW3P");
 
-var indexTableOn = 1;
+var indexTableOn = 0;
 
 getOrders();
 getCustomers();
