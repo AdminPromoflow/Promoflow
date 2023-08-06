@@ -265,12 +265,12 @@ getCategories();
       '</div>';
     //  alert("hahah: " +noCurrentGroup);
 
-      getGroups(code, noDivCategory, noCurrentGroup);
+      getGroups(code, noDivCategory);
   }
 
 
 /*--------------------------------  Get groups  ------------------------------*/
-  function getGroups(code, noDivCategory, noCurrentGroup){
+  function getGroups(code, noDivCategory){
       const containersItemGroup = document.querySelectorAll(".containersItemGroup");
       $.ajax( "../App/Controller/Controller2.php", {
            type: 'post',
@@ -285,7 +285,7 @@ getCategories();
               for (var i = 0; i < data.length; i++) {
             //    alert("Get Groups: " + data[i]["code"] + noCurrentGroup );
                 console.log("Group:  " +  data[i]["name"]);
-                createGroup(data[i]["code"], data[i]["name"], noDivCategory, noCurrentGroup);
+                createGroup(data[i]["code"], data[i]["name"], noDivCategory);
 
 
 
@@ -297,7 +297,7 @@ getCategories();
 
 /*-------------------------------  Create groups  ----------------------------*/
 
-  function createGroup(codeG, nameG, noDivCategory, noCurrentGroup) {
+  function createGroup(codeG, nameG, noDivCategory) {
   //  alert("Create Groups: " + codeG + noDivGroup);
 
     const containersItemGroup = document.querySelectorAll(".containersItemGroup");
