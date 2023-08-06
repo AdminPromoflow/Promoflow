@@ -332,7 +332,7 @@ getCategories();
            success: function(dataP){
               containersItemProduct[noDivGroup].innerHTML =  '';
               var dataP = jQuery.parseJSON(dataP);
-              for (var i = 0; i < data.length; i++) {
+              for (var i = 0; i < dataP.length; i++) {
                 console.log("Product:  " +  dataP[i]["name"]);
                 createProducts(dataP[i]["id"], dataP[i]["name"], noDivGroup, i);
               }
