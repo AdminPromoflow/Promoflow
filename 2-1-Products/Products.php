@@ -297,7 +297,7 @@ getCategories();
 
 /*-------------------------------  Create groups  ----------------------------*/
 
-  function createGroups(codeG, nameG, noDivCategory, noDivGroup) {
+  function createGroups(codeG, nameG, noDivCategory, noCurrentGroup) {
   //  alert("Create Groups: " + codeG + noDivGroup);
 
     const containersItemGroup = document.querySelectorAll(".containersItemGroup");
@@ -313,13 +313,13 @@ getCategories();
           '<div class="containersItemProduct">'+
         '</div>'+
       '</div>';
-      getProducts(codeG, noDivGroup);
+      getProducts(codeG, noCurrentGroup);
    }
 
 
 /*--------------------------------  Get products  ----------------------------*/
 
-  function getProducts(codeG, noDivGroup){
+  function getProducts(codeG, noCurrentGroup){
   //  alert("Group: " + codeG + noDivGroup);
     const containersItemProduct = document.querySelectorAll(".containersItemProduct");
     $.ajax( "../App/Controller/Controller2.php", {
@@ -330,11 +330,11 @@ getCategories();
              id: codeG
                    },
            success: function(dataP){
-              containersItemProduct[noDivGroup].innerHTML =  '';
+              containersItemProduct[noCurrentGroup].innerHTML =  '';
               var dataP = jQuery.parseJSON(dataP);
               for (var i = 0; i < dataP.length; i++) {
-                console.log("Product:  " +  dataP[i]["name"]);
-                createProducts(dataP[i]["id"], dataP[i]["name"], noDivGroup, i);
+                console.log("Product:  " +  dataP[i]["name"]   + "Number group: " + noCurrentGroup);
+                createProducts(dataP[i]["id"], dataP[i]["name"], noCurrentGroup, i);
               }
           }
       })
@@ -343,9 +343,9 @@ getCategories();
 
 /*-----------------------------  Create products  ----------------------------*/
 
-  function createProducts(codeP, nameP, noDivGroup, noDivProduct) {
+  function createProducts(codeP, nameP, noCurrentGroup, noDivProduct) {
     const containersItemProduct = document.querySelectorAll(".containersItemProduct");
-    containersItemProduct[noDivGroup].innerHTML +=
+    containersItemProduct[noCurrentGroup].innerHTML +=
     '<div class="containerItemProduct">'+
         '<div class="itemProduct">'+
           '<h3> '+ nameP +'</h3>'+
