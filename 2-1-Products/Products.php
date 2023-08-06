@@ -289,7 +289,9 @@
 
 </div>
 <script type="text/javascript">
+var noCurrentGroup = 0;
 getCategories();
+
 /*----------------------  Get Categories from Database  -----------------------*/
 
   function getCategories(){
@@ -314,7 +316,6 @@ getCategories();
 
 /*---------------------------  Create categories  ----------------------------*/
 
-  var noCurrentGroup = 0;
   function createCategories(code, name, noDivCategory) {
     var containersItemsCategory = document.getElementById("containersItemsCategory");
     name  = name.replace("Category", "");
