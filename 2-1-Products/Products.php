@@ -307,6 +307,7 @@ getCategories();
             containersItemsCategory.innerHTML =  "";
             var data = jQuery.parseJSON(data);
             for (var i = 0; i < data.length; i++) {
+              console.log("Category:  " +  data[i]["name"]);
               createCategories(data[i]["code"], data[i]["name"], i);
             }
             }
@@ -353,7 +354,7 @@ getCategories();
               var data = jQuery.parseJSON(data);
               for (var i = 0; i < data.length; i++) {
             //    alert("Get Groups: " + data[i]["code"] + noCurrentGroup );
-
+                console.log("Group:  " +  data[i]["name"]);
                 createGroups(data[i]["code"], data[i]["name"], noDivCategory, noCurrentGroup);
 
 
@@ -402,7 +403,7 @@ getCategories();
               var data = jQuery.parseJSON(data);
               for (var i = 0; i < data.length; i++) {
             //    alert("Product: " + codeG + noDivGroup + data[i]["name"]);
-
+                console.log("Product:  " +  data[i]["name"]);
                 createProducts(data[i]["id"], data[i]["name"], noDivGroup, i);
               }
           }
