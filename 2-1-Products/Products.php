@@ -286,7 +286,6 @@ getCategories();
             //    alert("Get Groups: " + data[i]["code"] + noCurrentGroup );
                 console.log("Group:  " +  data[i]["name"]);
                 createGroup(data[i]["code"], data[i]["name"], noDivCategory, noCurrentGroup);
-                noCurrentGroup = noCurrentGroup + 1;
 
 
 
@@ -315,6 +314,8 @@ getCategories();
         '</div>'+
       '</div>';
       getProducts(codeG, noCurrentGroup);
+      noCurrentGroup = noCurrentGroup + 1;
+
    }
 
 
