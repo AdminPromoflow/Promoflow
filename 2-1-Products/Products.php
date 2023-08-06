@@ -314,6 +314,7 @@ getCategories();
 
 /*---------------------------  Create categories  ----------------------------*/
 
+  var noCurrentGroup = 0;
   function createCategories(code, name, noDivCategory) {
     var containersItemsCategory = document.getElementById("containersItemsCategory");
     name  = name.replace("Category", "");
@@ -330,11 +331,11 @@ getCategories();
         '</div>'+
       '</div>';
       getGroups(code, noDivCategory);
+      noCurrentGroup++;
   }
 
 
 /*--------------------------------  Get groups  ------------------------------*/
-  var noCurrentGroup = 0;
   function getGroups(code, noDivCategory){
       const containersItemGroup = document.querySelectorAll(".containersItemGroup");
       $.ajax( "../App/Controller/Controller2.php", {
@@ -351,7 +352,7 @@ getCategories();
                 //alert("Get Groups: " + i + data[i]["code"] );
 
                 createGroups(data[i]["code"], data[i]["name"], noDivCategory, noCurrentGroup);
-                noCurrentGroup++;
+
 
               }
           }
