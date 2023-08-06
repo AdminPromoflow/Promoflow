@@ -331,7 +331,7 @@ getCategories();
         '<div class="containersItemGroup">'+
         '</div>'+
       '</div>';
-      alert("hahah: " +noCurrentGroup);
+    //  alert("hahah: " +noCurrentGroup);
 
       getGroups(code, noDivCategory, noCurrentGroup);
       noCurrentGroup = noCurrentGroup + 1;
@@ -352,7 +352,7 @@ getCategories();
               containersItemGroup[noDivCategory].innerHTML =  '';
               var data = jQuery.parseJSON(data);
               for (var i = 0; i < data.length; i++) {
-                alert("Get Groups: " + data[i]["code"] + noCurrentGroup );
+            //    alert("Get Groups: " + data[i]["code"] + noCurrentGroup );
 
                 createGroups(data[i]["code"], data[i]["name"], noDivCategory, noCurrentGroup);
 
