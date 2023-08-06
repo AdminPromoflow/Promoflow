@@ -215,78 +215,9 @@
           }
 
 </style>
-<!--  Table 1  -->
-<!--<button class="exampleAPI" id="requestProductsExample" type="button" name="button" >Request products</button>-->
 <div class="containerTableW3P">
   <div id="containersItemsCategory"  class="containerCenterTable">
-
-  <!--  <div class="containerItemsCategory">
-      <div class="itemCategory">
-        <h3>Category:  Bags </h3>
-        <div class="openToggleSubitemCategory"  >
-          <img  class="buttonPlusCategory"src="../2-2-Orders/Images/mas.png" alt="">
-          <img  class="buttonLessCategory"src="../2-2-Orders/Images/menos.png" alt="">
-        </div>
-      </div>
-      <div class="containersItemGroup">
-        <div class="containerItemGroup">
-          <div class="itemGroup">
-            <h3>Group:  small bags </h3>
-            <div class="openToggleSubitemGroup"   >
-              <img  class="buttonPlusGroup"src="../2-2-Orders/Images/mas.png" alt="">
-              <img  class="buttonLessGroup"src="../2-2-Orders/Images/menos.png" alt="">
-            </div>
-          </div>
-          <div class="containersItemsProducts">
-              <div class="containerItemProduct">
-                <div class="itemProduct">
-                  <h3>  <strong class="blueColor">Product: </strong>   Blue bag </h3>
-                  <div class="openToggleSubitemProduct" >
-                   <img  class="buttonPlusProduct"src="../2-2-Orders/Images/mas.png" alt="">
-                   <img  class="buttonLessProduct"src="../2-2-Orders/Images/menos.png" alt="">
-                 </div>
-                </div>
-                <div class="containersItemsProductContent">
-
-
-                  <div class="containerItemProductContent">
-                    <div class="itemProductContent">
-                      <h3>Size   :  23cm </h3>
-                      <div class="openToggleSubitemProductContent" >
-                       <img  class="buttonPlusProductContent"src="../2-2-Orders/Images/mas.png" alt="">
-                       <img  class="buttonLessProductContent"src="../2-2-Orders/Images/menos.png" alt="">
-                     </div>
-                    </div>
-                    <div class="containersItemsProductContentL3">
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>-->
-
-
-  <!--  <div class="containerItemsCategory">
-        <div class="itemCategory">
-          <h3>Category:  Bags </h3>
-          <div class="openToggleSubitemCategory"  >
-            <img  class="buttonPlusCategory"src="../2-2-Orders/Images/mas.png" alt="">
-            <img  class="buttonLessCategory"src="../2-2-Orders/Images/menos.png" alt="">
-          </div>
-        </div>
-        <div class="containersItemGroup">
-        </div>
-      </div>-->
-
-
-
-
   </div>
-
-
 </div>
 <script type="text/javascript">
 var noCurrentGroup = 0;
@@ -370,18 +301,18 @@ getCategories();
   //  alert("Create Groups: " + codeG + noDivGroup);
 
     const containersItemGroup = document.querySelectorAll(".containersItemGroup");
-    containersItemGroup[noDivCategory].innerHTML +=
+      containersItemGroup[noDivCategory].innerHTML +=
       '<div class="containerItemGroup">'+
-          '<div class="itemGroup">'+
-            '<h3> '+ nameG +'</h3>'+
-            '<div class="openToggleSubitemGroup"  >'+
-              '<img  class="buttonPlusGroup"src="../2-2-Orders/Images/mas.png" alt="">'+
-              '<img  class="buttonLessGroup"src="../2-2-Orders/Images/menos.png" alt="">'+
-            '</div>'+
+        '<div class="itemGroup">'+
+           '<h3> '+ nameG +'</h3>'+
+           '<div class="openToggleSubitemGroup"  >'+
+             '<img  class="buttonPlusGroup"src="../2-2-Orders/Images/mas.png" alt="">'+
+             '<img  class="buttonLessGroup"src="../2-2-Orders/Images/menos.png" alt="">'+
+           '</div>'+
           '</div>'+
           '<div class="containersItemProduct">'+
-          '</div>'+
-        '</div>';
+        '</div>'+
+      '</div>';
       getProducts(codeG, noDivGroup);
    }
 
@@ -400,10 +331,10 @@ getCategories();
                    },
            success: function(dataP){
               containersItemProduct[noDivGroup].innerHTML =  '';
-              var data = jQuery.parseJSON(dataP);
+              var dataP = jQuery.parseJSON(dataP);
               for (var i = 0; i < data.length; i++) {
-                console.log("Product:  " +  data[i]["name"]);
-                createProducts(data[i]["id"], data[i]["name"], noDivGroup, i);
+                console.log("Product:  " +  dataP[i]["name"]);
+                createProducts(dataP[i]["id"], dataP[i]["name"], noDivGroup, i);
               }
           }
       })
