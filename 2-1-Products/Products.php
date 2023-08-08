@@ -333,6 +333,8 @@ getCategories();
         '</div>'+
       '</div>';
       getProducts(codeG);
+      showGroups(noCurrentGroup);
+      showGroups(noCurrentGroup);
       noCurrentGroup = noCurrentGroup + 1;
 
    }
