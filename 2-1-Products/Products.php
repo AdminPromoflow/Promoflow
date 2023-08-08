@@ -255,7 +255,7 @@ getCategories();
     '<div class="containerItemsCategory">'+
         '<div class="itemCategory">'+
           '<h3> '+ name +'</h3>'+
-          '<div class="openToggleSubitemCategory"  >'+
+          '<div class="openToggleSubitemCategory" onclick="showJobs(\'' + noDivCategory  + '\');" >'+
             '<img  class="buttonPlusCategory"src="../2-2-Orders/Images/mas.png" alt="">'+
             '<img  class="buttonLessCategory"src="../2-2-Orders/Images/menos.png" alt="">'+
           '</div>'+
@@ -266,8 +266,27 @@ getCategories();
     //  alert("hahah: " +noCurrentGroup);
 
       getGroups(code, noDivCategory);
+      showJobs(noDivCategory);
+      showJobs(noDivCategory);
   }
 
+
+  function showJobs(noDivCategory){
+    const buttonPlusCategory =  document.querySelectorAll(".buttonPlusCategory");
+    const buttonLessCategory =  document.querySelectorAll(".buttonLessCategory");
+    const containersItemGroup =  document.querySelectorAll(".containersItemGroup");
+
+    if (buttonPlusCategory[noDivCategory].style.display == "none" ) {
+      buttonPlusCategory[noDivCategory].style.display = "block";
+      buttonLessCategory[noDivCategory].style.display = "none";
+      containersItemGroup[noDivCategory].style.display = "none";
+
+    }else {
+      buttonPlusCategory[noDivCategory].style.display = "none";
+      buttonLessCategory[noDivCategory].style.display = "block";
+      containersItemGroup[noDivCategory].style.display = "block";
+    }
+  }
 
 /*--------------------------------  Get groups  ------------------------------*/
   function getGroups(code, noDivCategory){
