@@ -255,7 +255,7 @@ getCategories();
     '<div class="containerItemsCategory">'+
         '<div class="itemCategory">'+
           '<h3> '+ name +'</h3>'+
-          '<div class="openToggleSubitemCategory" onclick="showJobs(\'' + noDivCategory  + '\');" >'+
+          '<div class="openToggleSubitemCategory" onclick="showCategories(\'' + noDivCategory  + '\');" >'+
             '<img  class="buttonPlusCategory"src="../2-2-Orders/Images/mas.png" alt="">'+
             '<img  class="buttonLessCategory"src="../2-2-Orders/Images/menos.png" alt="">'+
           '</div>'+
@@ -266,12 +266,12 @@ getCategories();
     //  alert("hahah: " +noCurrentGroup);
 
       getGroups(code, noDivCategory);
-      showJobs(noDivCategory);
-      showJobs(noDivCategory);
+      showCategories(noDivCategory);
+      showCategories(noDivCategory);
   }
 
 
-  function showJobs(noDivCategory){
+  function showCategories(noDivCategory){
     const buttonPlusCategory =  document.querySelectorAll(".buttonPlusCategory");
     const buttonLessCategory =  document.querySelectorAll(".buttonLessCategory");
     const containersItemGroup =  document.querySelectorAll(".containersItemGroup");
