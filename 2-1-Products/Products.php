@@ -324,7 +324,7 @@ getCategories();
       '<div class="containerItemGroup">'+
         '<div class="itemGroup">'+
            '<h3> '+ nameG +'</h3>'+
-           '<div class="openToggleSubitemGroup"  >'+
+           '<div class="openToggleSubitemGroup" onclick="showGroups(\'' + noCurrentGroup  + '\');" >'+
              '<img  class="buttonPlusGroup"src="../2-2-Orders/Images/mas.png" alt="">'+
              '<img  class="buttonLessGroup"src="../2-2-Orders/Images/menos.png" alt="">'+
            '</div>'+
@@ -335,6 +335,23 @@ getCategories();
       getProducts(codeG);
       noCurrentGroup = noCurrentGroup + 1;
 
+   }
+
+   function showGroups(noCurrentGroup){
+     const buttonPlusGroup =  document.querySelectorAll(".buttonPlusGroup");
+     const buttonLessGroup =  document.querySelectorAll(".buttonLessGroup");
+     const containersItemProduct =  document.querySelectorAll(".containersItemProduct");
+
+     if (buttonPlusGroup[noCurrentGroup].style.display == "none" ) {
+       buttonPlusGroup[noCurrentGroup].style.display = "block";
+       buttonLessGroup[noCurrentGroup].style.display = "none";
+       containersItemProduct[noCurrentGroup].style.display = "none";
+
+     }else {
+       buttonPlusGroup[noCurrentGroup].style.display = "none";
+       buttonLessGroup[noCurrentGroup].style.display = "block";
+       containersItemProduct[noCurrentGroup].style.display = "block";
+     }
    }
 
 
