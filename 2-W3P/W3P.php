@@ -52,7 +52,7 @@ const containerTableW3P = document.querySelectorAll(".containerTableW3P");
 var indexTableOn = 0;
 
 getOrders();
-getCustomers();
+//getCustomers();
 
 
 
