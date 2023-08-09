@@ -276,7 +276,7 @@
                      },
              success: function(data){
 
-              // alert((data));
+              alert((data));
               var data = jQuery.parseJSON(data);
               containerOrders.innerHTML  = "";
              for (var i = 0; i < data["runs"].length; i++) { // Create each orders
