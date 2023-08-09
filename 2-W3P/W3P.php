@@ -34,7 +34,7 @@
 
   <?php include "../2-1-Products/Products.php" ?>
   <?php include "../2-2-Orders/Orders.php" ?>
-  <?php include "../2-3-Customers/Customers.php" ?>
+  <?php include "../2-3-ToSendPO/ToSendPO.php" ?>
 
 
 <script type="text/javascript">
