@@ -104,7 +104,7 @@
   <div id="containerCustomers" class="containerCenterTable">
     <div class="containerItemsToSendPO">
         <div class="itemToSendPO">
-          <h3>Order</h3>
+          <h3>Order date</h3>
           <div class="openToggleSubitemToSendPO" onclick="showCategories(\ + noDivToSendPO  + \);" >
             <img  class="buttonPlusToSendPO"src="../2-2-Orders/Images/mas.png" alt="">
             <img  class="buttonLessToSendPO"src="../2-2-Orders/Images/menos.png" alt="">
@@ -113,11 +113,8 @@
         <div class="containersItemsContentToSendPO">
           <div class="containerItemsContentToSendPO">
               <div class="itemContentToSendPO">
-                <h3> + name +</h3>
-                <div class="openToggleSubitemContentToSendPO" onclick="showCategories(\ + noDivContentToSendPO  + \);" >
-                  <img  class="buttonPlusContentToSendPO"src="../2-2-Orders/Images/mas.png" alt="">
-                  <img  class="buttonLessContentToSendPO"src="../2-2-Orders/Images/menos.png" alt="">
-                </div>
+                <h3>1. Code</h3>
+        
               </div>
               <div class="containersItemGroup">
               </div>
