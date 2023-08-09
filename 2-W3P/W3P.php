@@ -15,7 +15,7 @@
       <h3>Orders</h3>
     </div>
     <div class="textNavigatorTable">
-      <h3>Customers</h3>
+      <h3>ToSendPO</h3>
     </div>
   <!--  <div class="textNavigatorTable">
       <h3>Products</h3>
