@@ -55,7 +55,7 @@
 
 /*----------------------------------  Login  ---------------------------------*/
 
-    elseif ($_POST['module']=="loginUser") {
+     if ($_POST['module']=="loginUser") {
       /*$db = new Database();
       $user = new Users($db);
       $user->setEmail($_POST['email']);
