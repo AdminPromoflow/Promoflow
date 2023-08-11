@@ -153,6 +153,7 @@ include ('../Data/flapi_credentials.php');
       foreach ($result["runs"] as $item => $value) {
 
         echo $value["id"]."\n";
+        echo $value["created_date"]."\n";
         echo $value["name"]."\n";
         echo $value["runtype"]."\n";
         echo $value["description"]."\n";
