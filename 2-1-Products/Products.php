@@ -221,7 +221,7 @@
 </div>
 <script type="text/javascript">
 var noCurrentGroup = 0;
-//getCategories();
+getCategories();
 
 /*----------------------  Get Categories from Database  -----------------------*/
 
@@ -265,7 +265,7 @@ var noCurrentGroup = 0;
       '</div>';
     //  alert("hahah: " +noCurrentGroup);
 
-      getGroups(code, noDivCategory);
+      //getGroups(code, noDivCategory);
       showCategories(noDivCategory);
       showCategories(noDivCategory);
   }

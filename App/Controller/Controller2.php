@@ -74,9 +74,9 @@ include ('../Data/flapi_credentials.php');
       }
     }
 
-    /*elseif ($_POST['module']=="logout") {
+    elseif ($_POST['module']=="logout") {
       session_destroy();
-    }*/
+    }
 
 
 /*--------------------------------- Get Orders  ------------------------------*/
@@ -120,14 +120,14 @@ include ('../Data/flapi_credentials.php');
 
 /*---------------------------------  Products  -------------------------------*/
 
-    /*elseif ($_POST['module']=="getCategories") {
+    elseif ($_POST['module']=="getCategories") {
       $db = new Database();
       $category = new Categories($db);
       $result = json_encode($category->getCategories());
       echo $result;
     }
 
-    elseif ($_POST['module']=="getGroups") {
+    /*elseif ($_POST['module']=="getGroups") {
       $db = new Database();
       $group = new Groups($db);
       $group->setIdCategory($_POST['id']);
