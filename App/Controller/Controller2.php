@@ -153,7 +153,7 @@ include ('../Data/flapi_credentials.php');
 
       foreach ($result["runs"] as $item => $value) {
 
-        $db = new Database();
+      /*  $db = new Database();
         $order = new Orders($db);
         $order->setId($value["id"]);
         $order->setCreatedDate($value["created_date"]);
@@ -162,7 +162,7 @@ include ('../Data/flapi_credentials.php');
         $order->setDescription($value["description"]);
         $order->setFinishedDate($value["finished_date"]);
         $order->setWorkgroup($value["workgroup"]);
-
+*/
         echo "1"."\n";
       }
      }
