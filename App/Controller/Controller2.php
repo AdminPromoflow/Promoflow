@@ -96,10 +96,7 @@ include ('../Data/flapi_credentials.php');
         setOrders();
     }
 
-   function setOrders(){
-     echo "Hola";
 
-    }
 
     elseif ($_POST['module']=="getOrdersContent") {
       $apiClient = new PestJSON('https://dev-7.flyerlink.com/api.php');
@@ -150,7 +147,10 @@ include ('../Data/flapi_credentials.php');
     }*/
 
 
+    function setOrders(){
+      echo "Hola";
 
+     }
 
 
  ?>
