@@ -127,7 +127,7 @@ include ('../Data/flapi_credentials.php');
       echo $result;
     }
 
-    /*elseif ($_POST['module']=="getGroups") {
+    elseif ($_POST['module']=="getGroups") {
       $db = new Database();
       $group = new Groups($db);
       $group->setIdCategory($_POST['id']);
@@ -141,7 +141,7 @@ include ('../Data/flapi_credentials.php');
       $product->setIdGroup($_POST['id']);
       $result = json_encode($product->getProducts());
       echo $result;
-    }*/
+    }
 
 
 /*---------------------------------  Customers  ------------------------------*/

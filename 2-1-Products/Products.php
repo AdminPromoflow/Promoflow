@@ -265,7 +265,7 @@ getCategories();
       '</div>';
     //  alert("hahah: " +noCurrentGroup);
 
-      //getGroups(code, noDivCategory);
+      getGroups(code, noDivCategory);
       showCategories(noDivCategory);
       showCategories(noDivCategory);
   }
