@@ -152,6 +152,7 @@ include ('../Data/flapi_credentials.php');
 
       foreach ($result["runs"] as $item => $value) {
         echo "El item es: ".$item.". Y su valor es: ".$value."\n";
+        echo $value[$item]."\n";
       }
      }
 
