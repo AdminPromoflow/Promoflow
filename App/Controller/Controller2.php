@@ -3,7 +3,7 @@ session_start();
 
 /*---------------------------------  Imports  --------------------------------*/
 
-require_once('../Config/database.php');
+//require_once('../Config/database.php');
 //require_once('../Models/Users.php');
 //require_once('../Models/Categories.php');
 //require_once('../Models/Groups.php');
