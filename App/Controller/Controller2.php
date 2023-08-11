@@ -55,7 +55,7 @@ session_start();
 
 /*----------------------------------  Login  ---------------------------------*/
 
-    /*elseif ($_POST['module']=="loginUser") {
+    elseif ($_POST['module']=="loginUser") {
       $db = new Database();
       $user = new Users($db);
       $user->setEmail($_POST['email']);
@@ -63,7 +63,7 @@ session_start();
       $result = json_encode($user->readUserExist());
       echo $result;
       $_SESSION['loginUser'] = 'active';
-    }*/
+    }
 
     elseif ($_POST['module']=="verifyLogin") {
       if ($_SESSION['loginUser'] == 'active') {
