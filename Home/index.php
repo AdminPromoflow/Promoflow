@@ -333,7 +333,7 @@
             email: data[0].value,
             password: data[1].value
           },
-          success: function(data){
+          success: function(data){/*
 
             var data = jQuery.parseJSON(data);
         //    alert(data["COUNT(*)"]);
@@ -347,7 +347,7 @@
               wrongPassword.display = "block";
               spanLoading.display = "none";
             }
-         }
+        */ }
         }
       )
     }
