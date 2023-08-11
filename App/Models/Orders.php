@@ -38,16 +38,19 @@
 
        function createUser(){
          try{
-           $sql = "INSERT INTO `Users`(`name`, `email`, `password`, `userType`)
-                 VALUES (
-                   '$this->name',
-                   '$this->email',
-                   '$this->password',
-                   '$this->userType'
-                 )";
+           $sql = "INSERT INTO `Order`(`id`, `created_date`, `name`, `runtype`, `description`, `finished_date`, `workgroup`)
+            VALUES (
+              '$this->id',
+              '$this->created_date',
+              '$this->name',
+              '$this->runtype',
+              '$this->description',
+              '$this->finished_date',
+              '$this->workgroup'
+            )";
            $this->conn->conn()->exec($sql);//echo "hola2"; exit;
            $this->conn->close();
-           return "The user has been created";
+           return "The order has been created";
              }
          catch(PDOException $e){
              return $query . "<br>" . $e->getMessage();

@@ -162,8 +162,7 @@ include ('../Data/flapi_credentials.php');
         $order->setDescription($value["description"]);
         $order->setFinishedDate($value["finished_date"]);
         $order->setWorkgroup($value["workgroup"]);
-
-        echo "1"."\n";
+        echo json_encode($order->createUser());
       }
      }
 
