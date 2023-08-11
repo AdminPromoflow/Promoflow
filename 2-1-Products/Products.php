@@ -239,7 +239,7 @@ getCategories();
             var data = jQuery.parseJSON(data);
             for (var i = 0; i < data.length; i++) {
               console.log("Category:  " +  data[i]["name"]);
-              createCategories(data[i]["code"], data[i]["name"], i);
+              //createCategories(data[i]["code"], data[i]["name"], i);
             }
             }
           })
