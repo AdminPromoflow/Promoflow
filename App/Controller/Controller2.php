@@ -154,7 +154,7 @@ include ('../Data/flapi_credentials.php');
       foreach ($result["runs"] as $item => $value) {
 
         $db = new Database();
-        $order = new Order($db);
+        $order = new Orders($db);
         $order->setId($value["id"]);
         $order->setCreatedDate($value["created_date"]);
         $order->setName($value["name"]);
