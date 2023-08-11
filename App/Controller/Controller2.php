@@ -93,15 +93,13 @@ include ('../Data/flapi_credentials.php');
         }
 
         echo(json_encode( $result) ); // Examine successful result
-        //setOrders($result);
+        setOrders($result);
     }
 
-   /*function setOrders($result){
-      foreach ($result as $key => $value) {
-        // code...
-      }
+   function setOrders($result){
 
-    }*/
+
+    }
 
     elseif ($_POST['module']=="getOrdersContent") {
       $apiClient = new PestJSON('https://dev-7.flyerlink.com/api.php');
