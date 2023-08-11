@@ -65,14 +65,14 @@ include ('../Data/flapi_credentials.php');
       $_SESSION['loginUser'] = 'active';
     }
 
-    elseif ($_POST['module']=="verifyLogin") {
+    elseif ($_POST['module']=="verifyLogin") {/*
       if ($_SESSION['loginUser'] == 'active') {
         echo json_encode(1);
       }
       else {
         echo json_encode(0);
       }
-    }
+    */}
 
     elseif ($_POST['module']=="logout") {
       session_destroy();
