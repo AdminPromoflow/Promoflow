@@ -149,9 +149,10 @@ include ('../Data/flapi_credentials.php');
 
     function setOrders($result){
       //echo "Hola";
-      foreach ($result as $key => $value) {
+    echo $result["runs"][0]["id"];
+      /*foreach ($result as $key => $value) {
         // code...
-      }
+      }*/
      }
 
 
