@@ -56,5 +56,16 @@
              return $query . "<br>" . $e->getMessage();
            }
        }
+       function verifyRepeatOrder(){
+         try{ //SELECT COUNT(*) FROM `Order` WHERE `id` = ''
+          $sql = $this->conn->conn()->query("SELECT COUNT(*) FROM `Order` WHERE `id` = '$this->id'");
+          $data = $sql->fetch(PDO::FETCH_ASSOC);
+          $this->conn->close();
+          return $data;
+              }
+          catch(PDOException $e){
+              echo $query . "<br>" . $e->getMessage();
+            }
+       }
      }
 ?>

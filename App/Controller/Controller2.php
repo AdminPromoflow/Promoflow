@@ -152,8 +152,14 @@ include ('../Data/flapi_credentials.php');
       //echo "Hola";
 
       foreach ($result["runs"] as $item => $value) {
-
         $db = new Database();
+        $order = new Orders($db);
+        $order->setId($value["id"]);
+        echo $order->verifyRepeatOrder();
+
+
+
+        /*$db = new Database();
         $order = new Orders($db);
         $order->setId($value["id"]);
         $order->setCreatedDate($value["created_date"]);
@@ -162,7 +168,7 @@ include ('../Data/flapi_credentials.php');
         $order->setDescription($value["description"]);
         $order->setFinishedDate($value["finished_date"]);
         $order->setWorkgroup($value["workgroup"]);
-        echo json_encode($order->createUser());
+        echo json_encode($order->createUser());*/
       }
      }
 
