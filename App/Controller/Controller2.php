@@ -55,7 +55,7 @@ require_once('../Models/Users.php');
 
 /*----------------------------------  Login  ---------------------------------*/
 
-    /*elseif ($_POST['module']=="loginUser") {
+    elseif ($_POST['module']=="loginUser") {
       $db = new Database();
       $user = new Users($db);
       $user->setEmail($_POST['email']);
@@ -65,7 +65,7 @@ require_once('../Models/Users.php');
       $_SESSION['loginUser'] = 'active';
     }
 
-    elseif ($_POST['module']=="verifyLogin") {
+    /*elseif ($_POST['module']=="verifyLogin") {
       if ($_SESSION['loginUser'] == 'active') {
         echo json_encode(1);
       }
