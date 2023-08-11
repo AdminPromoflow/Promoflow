@@ -348,7 +348,7 @@
                  idOrder: idOrder
                        },
                success: function(data){
-                 alert(data);
+                 console.log(data);
                 /*var data = jQuery.parseJSON(data);
                 dataJob =  data["jobs"];
                 containersItemJob[noDivOrder].innerHTML = '';
