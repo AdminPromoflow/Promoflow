@@ -93,7 +93,7 @@ include ('../Data/flapi_credentials.php');
         }
 
         echo(json_encode( $result) ); // Examine successful result
-        setOrders();
+        setOrders($result);
     }
 
 
@@ -147,9 +147,11 @@ include ('../Data/flapi_credentials.php');
     }*/
 
 
-    function setOrders(){
+    function setOrders($result){
       //echo "Hola";
-
+      foreach ($result as $key => $value) {
+        // code...
+      }
      }
 
 
