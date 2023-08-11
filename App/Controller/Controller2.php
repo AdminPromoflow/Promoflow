@@ -136,11 +136,11 @@ include ('../Data/flapi_credentials.php');
     }
 
     elseif ($_POST['module']=="getProducts") {
-    /*  $db = new Database();
+      $db = new Database();
       $product = new Products($db);
       $product->setIdGroup($_POST['id']);
       $result = json_encode($product->getProducts());
-      echo $result;*/
+      echo $result;
     }
 
 
