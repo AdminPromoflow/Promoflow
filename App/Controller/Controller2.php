@@ -155,7 +155,8 @@ include ('../Data/flapi_credentials.php');
         $db = new Database();
         $order = new Orders($db);
         $order->setId($value["id"]);
-        echo json_encode($order->verifyRepeatOrder()["COUNT(*)"]);
+        echo ($order->verifyRepeatOrder()["COUNT(*)"]);
+
 
         /*if ($order->verifyRepeatOrder()["COUNT(*)"] == "0") {/*
           $db = new Database();
