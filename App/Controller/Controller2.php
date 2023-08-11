@@ -79,7 +79,7 @@ include ('../Data/flapi_credentials.php');
     }
 
 
-/*----------------------------------  Orders  --------------------------------*/
+/*--------------------------------- Get Orders  ------------------------------*/
 
     elseif ($_POST['module']=="getOrders") {
         $apiClient = new PestJSON('https://dev-7.flyerlink.com/api.php'); // Init the library (put in your TC credentials here)
@@ -93,6 +93,13 @@ include ('../Data/flapi_credentials.php');
         }
 
         echo(json_encode( $result) ); // Examine successful result
+        setOrders($result);
+    }
+
+    function setOrders($result){
+      foreach ($result as $key => $value) {
+        // code...
+      }
 
     }
 
