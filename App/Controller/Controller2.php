@@ -148,7 +148,7 @@ include ('../Data/flapi_credentials.php');
 
 
     function setOrders(){
-      echo "Hola";
+      //echo "Hola";
 
      }
 
