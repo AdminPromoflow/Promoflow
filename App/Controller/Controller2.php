@@ -55,7 +55,7 @@ require_once('../Models/Users.php');
 
 /*----------------------------------  Login  ---------------------------------*/
 
-    elseif ($_POST['module']=="loginUser") {
+    /*elseif ($_POST['module']=="loginUser") {
       $db = new Database();
       $user = new Users($db);
       $user->setEmail($_POST['email']);
@@ -72,7 +72,7 @@ require_once('../Models/Users.php');
       else {
         echo json_encode(0);
       }
-    }
+    }*/
 
     /*elseif ($_POST['module']=="logout") {
       session_destroy();
