@@ -111,6 +111,7 @@ include ('../Data/flapi_credentials.php');
       }
 
       echo(json_encode( $result) );
+      setOrdersContent($result);
     }
 
 
@@ -170,15 +171,13 @@ include ('../Data/flapi_credentials.php');
           $order->setWorkgroup($value["workgroup"]);
           json_encode($order->createUser());
         }
-
         elseif ($result2 == '1') {
         }
-
-
-
-
       }
      }
 
+     function setOrdersContent($result){
+      echo json_encode($result);
+     }
 
  ?>
