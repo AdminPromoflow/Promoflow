@@ -501,7 +501,7 @@
 
     <script type="text/javascript">
     /* verifyLogin */
-    //verifyLogin();
+    verifyLogin();
     function verifyLogin() {
       $.ajax( "../App/Controller/Controller2.php", {
       type: 'post',
@@ -510,7 +510,7 @@
         module: "verifyLogin",
       },
       success: function(data){
-        var data = jQuery.parseJSON(data);
+        //var data = jQuery.parseJSON(data);
         if (data == 1) {
 
         }
