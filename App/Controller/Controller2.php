@@ -8,6 +8,7 @@ require_once('../Models/Users.php');
 require_once('../Models/Categories.php');
 require_once('../Models/Groups.php');
 require_once('../Models/Products.php');
+require_once('../Models/ Orders.php');
 require_once('../pest-master/PestJSON.php');
 include ('../Data/flapi_credentials.php');
 
@@ -152,13 +153,17 @@ include ('../Data/flapi_credentials.php');
 
       foreach ($result["runs"] as $item => $value) {
 
-        echo $value["id"]."\n";
-        echo $value["created_date"]."\n";
-        echo $value["name"]."\n";
-        echo $value["runtype"]."\n";
-        echo $value["description"]."\n";
-        echo $value["finished_date"]."\n";
-        echo $value["workgroup"]."\n";
+        $db = new Database();
+        $order = new Order($db);
+        $order->setId($value["id"]);
+        $order->setCreatedDate($value["created_date"]);
+        $order->setName($value["name"]);
+        $order->setRuntype($value["runtype"]);
+        $order->setDescription($value["description"]);
+        $order->setFinishedDate($value["finished_date"]);
+        $order->setWorkgroup($value["workgroup"]);
+
+        echo "1"."\n";
       }
      }
 
