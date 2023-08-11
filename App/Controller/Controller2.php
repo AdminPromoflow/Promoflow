@@ -154,6 +154,10 @@ include ('../Data/flapi_credentials.php');
 
         echo $value["id"]."\n";
         echo $value["name"]."\n";
+        echo $value["runtype"]."\n";
+        echo $value["description"]."\n";
+        echo $value["finished_date"]."\n";
+        echo $value["workgroup"]."\n";
       }
      }
 
