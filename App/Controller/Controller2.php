@@ -14,7 +14,7 @@ include ('../Data/flapi_credentials.php');
 
 /*--------------------------------  CRUD users  ------------------------------*/
 
-    /*if ($_POST['module']=="createUser") {
+    if ($_POST['module']=="createUser") {
       $db = new Database();
       $user = new Users($db);
       $user->setEmail($_POST['email']);
@@ -50,12 +50,12 @@ include ('../Data/flapi_credentials.php');
       $user->setIdUser($_POST['idUser']);
       $result = json_encode($user->deleteUser());
       echo $result;
-    }*/
+    }
 
 
 /*----------------------------------  Login  ---------------------------------*/
 
-     if ($_POST['module']=="loginUser") {
+     elseif ($_POST['module']=="loginUser") {
       $db = new Database();
       $user = new Users($db);
       $user->setEmail($_POST['email']);
