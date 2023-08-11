@@ -14,7 +14,7 @@ include ('../Data/flapi_credentials.php');
 
 /*--------------------------------  CRUD users  ------------------------------*/
 
-    if ($_POST['module']=="createUser") {
+    /*if ($_POST['module']=="createUser") {
       $db = new Database();
       $user = new Users($db);
       $user->setEmail($_POST['email']);
@@ -50,12 +50,12 @@ include ('../Data/flapi_credentials.php');
       $user->setIdUser($_POST['idUser']);
       $result = json_encode($user->deleteUser());
       echo $result;
-    }
+    }*/
 
 
 /*----------------------------------  Login  ---------------------------------*/
 
-    elseif ($_POST['module']=="loginUser") {
+    /*elseif ($_POST['module']=="loginUser") {
       $db = new Database();
       $user = new Users($db);
       $user->setEmail($_POST['email']);
@@ -63,25 +63,25 @@ include ('../Data/flapi_credentials.php');
       $result = json_encode($user->readUserExist());
       echo $result;
       $_SESSION['loginUser'] = 'active';
-    }
+    }*/
 
-    elseif ($_POST['module']=="verifyLogin") {/*
+    elseif ($_POST['module']=="verifyLogin") {
       if ($_SESSION['loginUser'] == 'active') {
         echo json_encode(1);
       }
       else {
         echo json_encode(0);
       }
-    */}
-
-    elseif ($_POST['module']=="logout") {
-      session_destroy();
     }
+
+    /*elseif ($_POST['module']=="logout") {
+      session_destroy();
+    }*/
 
 
 /*--------------------------------- Get Orders  ------------------------------*/
 
-    elseif ($_POST['module']=="getOrders") {
+    /*elseif ($_POST['module']=="getOrders") {
         $apiClient = new PestJSON('https://dev-7.flyerlink.com/api.php'); // Init the library (put in your TC credentials here)
         $apiClient->setupAuth($flapi[0],$flapi[1]); //  $apiClient->setupAuth( 'username', 'password' );
 
@@ -94,16 +94,16 @@ include ('../Data/flapi_credentials.php');
 
         echo(json_encode( $result) ); // Examine successful result
         //setOrders($result);
-    }
+    }*/
 
-    function setOrders($result){
-      /*foreach ($result as $key => $value) {
+   /*function setOrders($result){
+      foreach ($result as $key => $value) {
         // code...
-      }*/
+      }
 
-    }
+    }*/
 
-    elseif ($_POST['module']=="getOrdersContent") {
+    /*elseif ($_POST['module']=="getOrdersContent") {
       $apiClient = new PestJSON('https://dev-7.flyerlink.com/api.php');
       $apiClient->setupAuth($flapi[0],$flapi[1]);
 
@@ -115,12 +115,12 @@ include ('../Data/flapi_credentials.php');
       }
 
       echo(json_encode( $result) );
-    }
+    }*/
 
 
 /*---------------------------------  Products  -------------------------------*/
 
-    elseif ($_POST['module']=="getCategories") {
+    /*elseif ($_POST['module']=="getCategories") {
       $db = new Database();
       $category = new Categories($db);
       $result = json_encode($category->getCategories());
@@ -141,15 +141,15 @@ include ('../Data/flapi_credentials.php');
       $product->setIdGroup($_POST['id']);
       $result = json_encode($product->getProducts());
       echo $result;
-    }
+    }*/
 
 
 /*---------------------------------  Customers  ------------------------------*/
 
-    elseif ($_POST['module']=="getCustomers") {
+    /*elseif ($_POST['module']=="getCustomers") {
       $json = file_get_contents('../../Json/Customer.json');
       echo ($json);
-    }
+    }*/
 
 
 
