@@ -168,11 +168,10 @@ include ('../Data/flapi_credentials.php');
           $order->setDescription($value["description"]);
           $order->setFinishedDate($value["finished_date"]);
           $order->setWorkgroup($value["workgroup"]);
-          echo json_encode($order->createUser());
+          json_encode($order->createUser());
         }
 
         elseif ($result2 == '1') {
-          echo "No se puede crear orden porque ya ha sido creada";
         }
 
 
