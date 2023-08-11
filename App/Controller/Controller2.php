@@ -155,10 +155,10 @@ include ('../Data/flapi_credentials.php');
         $db = new Database();
         $order = new Orders($db);
         $order->setId($value["id"]);
-        echo gettype($order->verifyRepeatOrder()["COUNT(*)"]);
+        $result2 =  ($order->verifyRepeatOrder()["COUNT(*)"]);
 
 
-        if (json_encode($order->verifyRepeatOrder()["COUNT(*)"]) == '0') {
+        if ($result2 == '0') {/*
           $db = new Database();
           $order = new Orders($db);
           $order->setId($value["id"]);
@@ -169,7 +169,7 @@ include ('../Data/flapi_credentials.php');
           $order->setFinishedDate($value["finished_date"]);
           $order->setWorkgroup($value["workgroup"]);
           echo json_encode($order->createUser());
-        }
+      */  }
 
         /*elseif ($order->verifyRepeatOrder()["COUNT(*)"] == '1') {
           echo "No se puede crear orden porque ya ha sido creada";
