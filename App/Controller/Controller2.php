@@ -149,12 +149,11 @@ include ('../Data/flapi_credentials.php');
 
     function setOrders($result){
       //echo "Hola";
-      for ($i=0; $i < count($result["runs"]) ; $i++) {
-        echo "string".$result["runs"][$i]["name"];
-      }
+
       foreach ($result["runs"] as $item => $value) {
-        echo "El item es: ".$item.". Y su valor es: ".$value["id"]."\n";
-        echo $value[$item]."\n";
+
+        echo $value["id"]."\n";
+        echo $value["name"]."\n";
       }
      }
 
