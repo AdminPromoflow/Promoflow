@@ -92,7 +92,7 @@ include ('../Data/flapi_credentials.php');
             die( $e->getMessage()); // which you can use to differentiate between different error conditions
         }
 
-        echo(json_encode( $result) ); // Examine successful result
+        //echo(json_encode( $result) ); // Examine successful result
         setOrders($result);
     }
 
