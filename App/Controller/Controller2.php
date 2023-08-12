@@ -240,7 +240,7 @@ include ('../Data/flapi_credentials.php');
          $job->setReverse($value["reverse"]);
 
 
-         echo $value["id"];
+         echo json_encode($job->createJob());;
        }
       //echo json_encode($result);
      }

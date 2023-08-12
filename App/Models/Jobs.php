@@ -60,6 +60,32 @@
       private $reverse;
 
 
+      private $data_no;
+      private $print_ref;
+      private $project;
+      private $PO_sent;
+      private $approval_sent;
+      private $C_due_date;
+      private $artwork_pre_approved;
+      private $C_artwork;
+      private $C_artwork_visual;
+      private $C_approved_PDF;
+      private $C_approved_visual;
+      private $box_no;
+      private $act_despatch_date;
+      private $UK_tracking_no;
+      private $delivered_date;
+      private $nett_sale;
+      private $service_level;
+      private $status_order;
+      private $note;
+      private $UK_track_link;
+      private $delivery_image;
+      private $not_sure;
+      private $PO_received;
+      private $idUser;
+
+
       function __construct($conn) {
           $this->conn = $conn;
       }
@@ -235,63 +261,80 @@
         $this->reverse = $reverse;
       }
 
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
-      private $;
+
+      function setDataNo($data_no){
+        $this->data_no = $data_no;
+      }
+      function setPrintRef($print_ref){
+        $this->print_ref = $print_ref;
+      }
+      function setProject($project){
+        $this->project = $project;
+      }
+      function setPOSent($PO_sent){
+        $this->PO_sent = $PO_sent;
+      }
+      function setApprovalSent($approval_sent){
+        $this->approval_sent = $approval_sent;
+      }
+      function setCDueDate($C_due_date){
+        $this->C_due_date = $C_due_date;
+      }
+      function setArtworkPreApproved($artwork_pre_approved){
+        $this->artwork_pre_approved = $artwork_pre_approved;
+      }
+      function setCArtwork($C_artwork){
+        $this->C_artwork = $C_artwork;
+      }
+      function setCArtworkVisual($C_artwork_visual){
+        $this->C_artwork_visual = $C_artwork_visual;
+      }
+      function setCApprovedPDF($C_approved_PDF){
+        $this->C_approved_PDF = $C_approved_PDF;
+      }
+      function setCApprovedVisual($C_approved_visual){
+        $this->C_approved_visual = $C_approved_visual;
+      }
+      function setBoxNo($box_no){
+        $this->box_no = $box_no;
+      }
+      function setActDespatchDate($act_despatch_date){
+        $this->act_despatch_date = $act_despatch_date;
+      }
+      function setUKTrackingNo($UK_tracking_no){
+        $this->UK_tracking_no = $UK_tracking_no;
+      }
+      function setDeliveredDate($delivered_date){
+        $this->delivered_date = $delivered_date;
+      }
+      function setNettSale($nett_sale){
+        $this->nett_sale = $nett_sale;
+      }
+      function setServiceLevel($service_level){
+        $this->service_level = $service_level;
+      }
+      function setStatusOrder($status_order){
+        $this->status_order = $status_order;
+      }
+      function setNote($note){
+        $this->note = $note;
+      }
+      function setUKTrackLink($UK_track_link){
+        $this->UK_track_link = $UK_track_link;
+      }
+      function setDeliveryImage($delivery_image){
+        $this->delivery_image = $delivery_image;
+      }
+      function setNotSure($not_sure){
+        $this->not_sure = $not_sure;
+      }
+      function setPOReceived($PO_received){
+        $this->PO_received = $PO_received;
+      }
+      function setIdUser($idUser){
+        $this->idUser = $idUser;
+      }
+
 
 
        function createJob(){
@@ -374,29 +417,29 @@
                            '$this->package_code',/*package_code*/
                            '$this->jobmaker_pack',/*jobmaker_pack*/
                            '$this->file_paths',/*file_paths*/
-                           '$this->',/*data_no*/
-                           '$this->',/*print_ref*/
-                           '$this->',/*project*/
-                           '$this->',/*PO_sent*/
-                           '$this->',/*approval_sent*/
-                           '$this->',/*C_due_date*/
-                           '$this->',/*artwork_pre_approved*/
-                           '$this->',/*C_artwork*/
-                           '$this->',/*C_artwork_visual*/
-                           '$this->',/*C_approved_PDF*/
-                           '$this->',/*C_approved_visual*/
-                           '$this->',/*box_no*/
-                           '$this->',/*act_despatch_date*/
-                           '$this->',/*UK_tracking_no*/
-                           '$this->',/*delivered_date*/
-                           '$this->',/*nett_sale*/
-                           '$this->',/*service_level*/
-                           '$this->',/*status_order*/
-                           '$this->',/*note*/
-                           '$this->',/*UK_track_link*/
-                           '$this->',/*delivery_image*/
-                           '$this->',/*not_sure*/
-                           '$this->',/*PO_received*/
+                           '$this->data_no',/*data_no*/
+                           '$this->print_ref',/*print_ref*/
+                           '$this->project',/*project*/
+                           '$this->PO_sent',/*PO_sent*/
+                           '$this->approval_sent',/*approval_sent*/
+                           '$this->C_due_date',/*C_due_date*/
+                           '$this->artwork_pre_approved',/*artwork_pre_approved*/
+                           '$this->C_artwork',/*C_artwork*/
+                           '$this->C_artwork_visual',/*C_artwork_visual*/
+                           '$this->C_approved_PDF',/*C_approved_PDF*/
+                           '$this->C_approved_visual',/*C_approved_visual*/
+                           '$this->box_no',/*box_no*/
+                           '$this->act_despatch_date',/*act_despatch_date*/
+                           '$this->UK_tracking_no',/*UK_tracking_no*/
+                           '$this->delivered_date',/*delivered_date*/
+                           '$this->nett_sale',/*nett_sale*/
+                           '$this->service_level',/*service_level*/
+                           '$this->status_order',/*status_order*/
+                           '$this->note',/*note*/
+                           '$this->UK_track_link',/*UK_track_link*/
+                           '$this->delivery_image',/*delivery_image*/
+                           '$this->not_sure',/*not_sure*/
+                           '$this->PO_received',/*PO_received*/
                            '' /*idUser*/
                          )"; //no esta reverse
            $this->conn->conn()->exec($sql);//echo "hola2"; exit;
