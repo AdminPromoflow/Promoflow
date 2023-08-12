@@ -356,7 +356,7 @@
                 for (var i = 0; i < data["jobs"].length; i++) {
                    createJobs(noDivOrder, i);
                 }
-                }
+                */}
               })
     }
 
