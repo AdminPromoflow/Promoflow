@@ -348,6 +348,8 @@
                  idOrder: idOrder
                        },
                success: function(data){
+                 console.log(data);
+
                 // alert(data);
                 /*var data = jQuery.parseJSON(data);
                 dataJob =  data["jobs"];
