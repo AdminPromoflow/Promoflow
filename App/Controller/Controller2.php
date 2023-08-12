@@ -181,7 +181,7 @@ include ('../Data/flapi_credentials.php');
        foreach ($result["jobs"] as $item => $value) {
          $db = new Database();
          $job = new Jobs($db);
-        /* $job->setId($value["id"]);
+         $job->setId($value["id"]);
          $job->setStatus($value["status"]);
          $job->setCustomer($value["customer"]);
          $job->setContact($value["contact"]);
@@ -193,7 +193,7 @@ include ('../Data/flapi_credentials.php');
          $job->setTotal($value["total"]);
          $job->setProductCode($value["product_code"]);
          $job->setClientReference($value["client_reference"]);
-         $job->setTotalPrcost($value["setTotalPrcost"]);
+      /*   $job->setTotalPrcost($value["setTotalPrcost"]);
          $job->setTitle($value["title"]);
          $job->setCategory($value["category"]);
          $job->setQuantity($value["quantity"]);
