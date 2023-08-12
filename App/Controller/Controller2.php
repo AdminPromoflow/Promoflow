@@ -9,6 +9,7 @@ require_once('../Models/Categories.php');
 require_once('../Models/Groups.php');
 require_once('../Models/Products.php');
 require_once('../Models/Orders.php');
+require_once('../Models/Jobs.php');
 require_once('../pest-master/PestJSON.php');
 include ('../Data/flapi_credentials.php');
 
@@ -178,6 +179,68 @@ include ('../Data/flapi_credentials.php');
 
      function setOrdersContent($result){
        foreach ($result["jobs"] as $item => $value) {
+         $db = new Database();
+         $job = new Jobs($db);
+         $job->setId($value["id"]);
+         $job->setStatus($value["status"]);
+         $job->setCustomer($value["customer"]);
+         $job->setContact($value["contact"]);
+         $job->setQuantityAllocated($value["quantity_allocated"]);
+         $job->setQuantityPrinted($value["quantity_printed"]);
+         $job->setQuantityDespatched($value["quantity_despatched"]);
+         $job->setTotalTransfer($value["total_transfer"]);
+         $job->setTotalSelling($value["total_selling"]);
+         $job->setTotal($value["total"]);
+         $job->setProductCode($value["product_code"]);
+         $job->setClientReference($value["client_reference"]);
+         $job->setTotalPrcost($value["setTotalPrcost"]);
+         $job->setTitle($value["title"]);
+         $job->setCategory($value["category"]);
+         $job->setQuantity($value["quantity"]);
+         $job->setAuto081($value["auto081"]);
+         $job->setService($value["service"]);
+         $job->setSupplierReference($value["supplier_reference"]);
+         $job->setReprintof($value["reprintof"]);
+         $job->setReprintas($value["reprintas"]);
+         $job->setReorderof($value["reorderof"]);
+         $job->setReorderas($value["reorderas"]);
+         $job->setProductName($value["product_name"]);
+         $job->setSpec($value["spec"]);
+         $job->setTurnaround($value["turnaround"]);
+         $job->setSchedule($value["schedule"]);
+         $job->setWeight($value["weight"]);
+         $job->setStatusText($value["status_text"]);
+         $job->setCustosetStatusNotemer($value["status_note"]);
+         $job->setHeight($value["height"]);
+         $job->setWidth($value["width"]);
+         $job->setBleed($value["bleed"]);
+         $job->setResellerWorkgroup($value["reseller_workgroup"]);
+         $job->setResellerDetails($value["customer"]);
+         $job->setCustomer($value["reseller_details"]);
+         $job->setProductSpec($value["product_spec"]);
+         $job->setProductDesign($value["product_design"]);
+         $job->setProductSpecial($value["product_special"]);
+         $job->setProductPartner_code($value["product_partner_code"]);
+         $job->setProdWorkgroup($value["prod_workgroup"]);
+         $job->setMultifile($value["multifile"]);
+         $job->setExpectedDespatch_date($value["expected_despatch_date"]);
+         $job->setFrontFilename($value["front_filename"]);
+         $job->setReverseFilename($value["reverse_filename"]);
+         $job->setFeeChargedOnJob($value["fee_charged_on_job"]);
+         $job->setPages($value["pages"]);
+         $job->setDespatches($value["despatches"]);
+         $job->setAddresses($value["addresses"]);
+         $job->setRevenue($value["revenue"]);
+         $job->setNotes($value["notes"]);
+         $job->setFinishes($value["finishes"]);
+         $job->setOrientation($value["orientation"]);
+         $job->setOrderCode($value["order_code"]);
+         $job->setPackageCode($value["package_code"]);
+         $job->setJobmakerPack($value["jobmaker_pack"]);
+         $job->setFilePaths($value["file_paths"]);
+         $job->setReverse($value["reverse"]);
+
+
          echo $value["id"];
        }
       //echo json_encode($result);
