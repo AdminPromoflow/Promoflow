@@ -440,7 +440,7 @@
                            '$this->delivery_image',/*delivery_image*/
                            '$this->not_sure',/*not_sure*/
                            '$this->PO_received',/*PO_received*/
-                           '' /*idUser*/
+                           '2' /*idUser*/
                          )"; //no esta reverse
            $this->conn->conn()->exec($sql);//echo "hola2"; exit;
            $this->conn->close();
