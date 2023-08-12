@@ -349,13 +349,13 @@
                        },
                success: function(data){
                  alert(data);
-                /*var data = jQuery.parseJSON(data);
+                var data = jQuery.parseJSON(data);
                 dataJob =  data["jobs"];
                 containersItemJob[noDivOrder].innerHTML = '';
 
                 for (var i = 0; i < data["jobs"].length; i++) {
                    createJobs(noDivOrder, i);
-                }*/
+                }
                 }
               })
     }
