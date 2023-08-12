@@ -15,8 +15,13 @@ include ('../Data/flapi_credentials.php');
 
 
 /*--------------------------------  CRUD users  ------------------------------*/
-
-    if ($_POST['module']=="createUser") {
+    if ($_POST['module'] = "getUsers") {
+      $db = new Database();
+      $user = new Users($db);
+      $result = json_encode($user->getUsers());
+      echo $result;
+    }
+    elseif ($_POST['module']=="createUser") {
       $db = new Database();
       $user = new Users($db);
       $user->setEmail($_POST['email']);
