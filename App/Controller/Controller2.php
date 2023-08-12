@@ -210,20 +210,19 @@ include ('../Data/flapi_credentials.php');
          $job->setSchedule($value["schedule"]);
          $job->setWeight($value["weight"]);
          $job->setStatusText($value["status_text"]);
-         $job->setCustosetStatusNotemer($value["status_note"]);
-        /* $job->setHeight($value["height"]);
+         $job->setStatusNote($value["status_note"]);
+         $job->setHeight($value["height"]);
          $job->setWidth($value["width"]);
          $job->setBleed($value["bleed"]);
          $job->setResellerWorkgroup($value["reseller_workgroup"]);
-         $job->setResellerDetails($value["customer"]);
-         $job->setCustomer($value["reseller_details"]);
+         $job->setResellerDetails($value["reseller_details"]);
          $job->setProductSpec($value["product_spec"]);
          $job->setProductDesign($value["product_design"]);
          $job->setProductSpecial($value["product_special"]);
-         $job->setProductPartner_code($value["product_partner_code"]);
+         $job->setProductPartnerCode($value["product_partner_code"]);
          $job->setProdWorkgroup($value["prod_workgroup"]);
          $job->setMultifile($value["multifile"]);
-         $job->setExpectedDespatch_date($value["expected_despatch_date"]);
+         $job->setExpectedDespatchDate($value["expected_despatch_date"]);
          $job->setFrontFilename($value["front_filename"]);
          $job->setReverseFilename($value["reverse_filename"]);
          $job->setFeeChargedOnJob($value["fee_charged_on_job"]);
@@ -241,7 +240,7 @@ include ('../Data/flapi_credentials.php');
          $job->setReverse($value["reverse"]);
 
 
-         echo $value["id"];*/
+         echo $value["id"];
        }
       //echo json_encode($result);
      }

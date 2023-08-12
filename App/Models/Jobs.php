@@ -78,7 +78,7 @@
       function setQuantityAllocated($quantity_allocated){
         $this->quantity_allocated = $quantity_allocated;
       }
-      function setQuantityPrinted($quantity_printed){ 
+      function setQuantityPrinted($quantity_printed){
         $this->quantity_printed = $quantity_printed;
       }
       function setQuantityDespatched($quantity_despatched){
@@ -177,7 +177,7 @@
       function setProductSpecial($product_special){
         $this->product_special = $product_special;
       }
-      function setProductPartner_code($product_partner_code){
+      function setProductPartnerCode($product_partner_code){
         $this->product_partner_code = $product_partner_code;
       }
       function setProdWorkgroup($prod_workgroup){
@@ -186,7 +186,7 @@
       function setMultifile($multifile){
         $this->multifile = $multifile;
       }
-      function setExpectedDespatch_date($expected_despatch_date){
+      function setExpectedDespatchDate($expected_despatch_date){
         $this->expected_despatch_date = $expected_despatch_date;
       }
       function setFrontFilename($front_filename){
