@@ -78,7 +78,7 @@
       function setQuantityAllocated($quantity_allocated){
         $this->quantity_allocated = $quantity_allocated;
       }
-      function setQuantityPrinted($quantity_printed){
+      function setQuantityPrinted($quantity_printed){ 
         $this->quantity_printed = $quantity_printed;
       }
       function setQuantityDespatched($quantity_despatched){
@@ -245,7 +245,7 @@
               `client_reference`, `total_prcost`, `title`, `category`, `quantity`,
               `auto081`, `service`, `supplier_reference`, `reprintof`,
              `reprintas`, `reorderof`, `reorderas`, `product_name`, `spec`,
-             `turnaround`, `schedule`, `weight`, `status_text`, `status_note`, 
+             `turnaround`, `schedule`, `weight`, `status_text`, `status_note`,
             `height`, `width`, `bleed`, `reseller_workgroup`, `reseller_details`,
             `product_spec`, `product_design`, `product_special`,
             `product_partner_code`, `prod_workgroup`, `complete`, `multifile`,

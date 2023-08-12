@@ -178,7 +178,7 @@ include ('../Data/flapi_credentials.php');
      }
 
      function setOrdersContent($result){
-       foreach ($result["jobs"] as $item => $value) {
+       foreach ($result["jobs"] as $item => $value) {/*
          $db = new Database();
          $job = new Jobs($db);
          $job->setId($value["id"]);
@@ -241,7 +241,7 @@ include ('../Data/flapi_credentials.php');
          $job->setReverse($value["reverse"]);
 
 
-         echo $value["id"];
+         echo $value["id"];*/
        }
       //echo json_encode($result);
      }
