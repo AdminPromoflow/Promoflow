@@ -110,8 +110,8 @@ include ('../Data/flapi_credentials.php');
           die( $e->getMessage());
       }
 
-      echo(json_encode( $result) );
-      //setOrdersContent($result);
+      //echo(json_encode( $result) );
+      setOrdersContent($result);
     }
 
 
