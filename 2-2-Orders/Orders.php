@@ -275,7 +275,7 @@
                module: "getOrders"
                      },
              success: function(data){
-               //alert(data);
+               alert(data);
               console.log(data);
               var data = jQuery.parseJSON(data);
               containerOrders.innerHTML  = "";
