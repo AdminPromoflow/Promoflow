@@ -111,7 +111,7 @@ include ('../Data/flapi_credentials.php');
       }
 
       echo(json_encode( $result) );
-      setOrdersContent($result);
+      //setOrdersContent($result);
     }
 
 
