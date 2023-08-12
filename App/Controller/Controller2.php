@@ -95,7 +95,7 @@ include ('../Data/flapi_credentials.php');
         }
 
         echo(json_encode( $result) ); // Examine successful result
-      //  setOrders($result);
+        setOrders($result);
     }
 
 
@@ -111,7 +111,7 @@ include ('../Data/flapi_credentials.php');
           die( $e->getMessage());
       }
 
-    //  echo(json_encode( $result) );
+      //echo(json_encode( $result) );
       setOrdersContent($result);
     }
 
