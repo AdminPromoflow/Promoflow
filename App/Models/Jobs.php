@@ -442,8 +442,8 @@
                            '$this->PO_received',/*PO_received*/
                            '2' /*idUser*/
                          )"; //no esta reverse
-           $this->conn->conn()->exec($sql);//echo "hola2"; exit;
-           $this->conn->close();
+          // $this->conn->conn()->exec($sql);//echo "hola2"; exit;
+          // $this->conn->close();
            return "The order has been created";
              }
          catch(PDOException $e){
