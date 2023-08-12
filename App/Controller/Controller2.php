@@ -177,7 +177,10 @@ include ('../Data/flapi_credentials.php');
      }
 
      function setOrdersContent($result){
-      echo json_encode($result);
+       foreach ($result["runs"] as $item => $value) {
+         echo $value["id"];
+       }
+      //echo json_encode($result);
      }
 
  ?>
