@@ -178,10 +178,10 @@ include ('../Data/flapi_credentials.php');
      }
 
      function setOrdersContent($result){
-       foreach ($result["jobs"] as $item => $value) {/*
+       foreach ($result["jobs"] as $item => $value) {
          $db = new Database();
          $job = new Jobs($db);
-         $job->setId($value["id"]);
+      /*   $job->setId($value["id"]);
          $job->setStatus($value["status"]);
          $job->setCustomer($value["customer"]);
          $job->setContact($value["contact"]);
