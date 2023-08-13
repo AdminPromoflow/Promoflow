@@ -123,7 +123,7 @@
        }
        function verifyRepeatCustomer(){
          try{ //SELECT COUNT(*) FROM `Order` WHERE `id` = ''
-          $sql = $this->conn->conn()->query("SELECT COUNT(*) FROM `Order` WHERE `id` = '$this->id'");
+          $sql = $this->conn->conn()->query("SELECT COUNT(*) FROM `Customer` WHERE `code` = '$this->despatch_customer_code'");
           $data = $sql->fetch(PDO::FETCH_ASSOC);
           $this->conn->close();
           return $data;

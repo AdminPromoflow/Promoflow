@@ -262,7 +262,13 @@ include ('../Data/flapi_credentials.php');
      function setCustomer($customerInfo){
     //   echo json_encode($customerInfo);
     foreach ( $customerInfo[0] as $item => $value) {
+      $db = new Database();
+      $customer = new Customers($db);
+      $customer->setId($value["id"]);
+      $result2 =  ($customer->verifyRepeatCustomer()["COUNT(*)"]);
+
       //echo $value["despatch_customer_code"]."  ";
+      if ($result2 == '0'){
       $db = new Database();
       $customer = new Customers($db);
       $customer->setName($value["name"]);
@@ -285,7 +291,7 @@ include ('../Data/flapi_credentials.php');
       $customer->setDespatchCustomerCode($value["despatch_customer_code"]);
       $customer->setDespatchCustomerAddressId($value["despatch_customer_address_id"]);
       $customer->setLine($value["line"]);
-      $customer->createCustomer();
+      $customer->createCustomer();}
 
     }
        //echo json_encode($customerInfo[1]);
