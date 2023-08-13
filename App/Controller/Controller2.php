@@ -114,7 +114,7 @@ include ('../Data/flapi_credentials.php');
       }
 
       //echo(json_encode( $result) );
-      setOrdersContent($result);
+      setOrdersContent($result, $_POST['idOrder']);
     }
 
 
@@ -179,7 +179,7 @@ include ('../Data/flapi_credentials.php');
       }
      }
 
-     function setOrdersContent($result){
+     function setOrdersContent($result, $idOrder){
        $searchedCharacter = "'";
        $neewCharacter = "''";
        $customerInfo = array();
@@ -259,7 +259,7 @@ include ('../Data/flapi_credentials.php');
          $job->setJobmakerPack(  str_replace($searchedCharacter, $neewCharacter, $value["jobmaker_pack"])  );
          $job->setFilePaths(  str_replace($searchedCharacter, $neewCharacter, $value["file_paths"])  );
          $job->setReverse(  str_replace($searchedCharacter, $neewCharacter, $value["reverse"])  );
-
+         $job->setIdOrder($idOrder);
 
 
          echo json_encode($job->createJob());
