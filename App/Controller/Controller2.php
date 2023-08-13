@@ -184,6 +184,9 @@ include ('../Data/flapi_credentials.php');
        $neewCharacter = "''";
        $customerInfo = array();
        foreach ($result["jobs"] as $item => $value) {
+         $customerInfo[] = $value["addresses"];
+         $customerInfo[] = $value["reseller_details"];
+         $idCustomer = saveCustomer($customerInfo);
 
          $db = new Database();
          $job = new Jobs($db);
@@ -237,7 +240,7 @@ include ('../Data/flapi_credentials.php');
          $job->setPages(  str_replace($searchedCharacter, $neewCharacter, $value["pages"])  );
          $job->setDespatches(  str_replace($searchedCharacter, $neewCharacter, $value["despatches"])  );
 
-        // $job->setAddresses(  str_replace($searchedCharacter, $neewCharacter, $value["addresses"])  );
+         $job->setAddresses($idCustomer);
 
          $job->setRevenue(  str_replace($searchedCharacter, $neewCharacter, $value["revenue"])  );
          $job->setNotes(  str_replace($searchedCharacter, $neewCharacter, $value["notes"])  );
@@ -250,17 +253,15 @@ include ('../Data/flapi_credentials.php');
          $job->setReverse(  str_replace($searchedCharacter, $neewCharacter, $value["reverse"])  );
 
 
-         $customerInfo[] = $value["addresses"];
-         $customerInfo[] = $value["reseller_details"];
-         setCustomer($customerInfo);
 
         // echo json_encode($job->createJob());;
 
        }
       //echo json_encode($result);
      }
-     function setCustomer($customerInfo){
+     function saveCustomer($customerInfo){
     //   echo json_encode($customerInfo);
+    $idCustomer;
     foreach ( $customerInfo[0] as $item => $value) {
       $db = new Database();
       $customer = new Customers($db);
@@ -293,7 +294,9 @@ include ('../Data/flapi_credentials.php');
       $customer->setLine($value["line"]);
       $customer->createCustomer();}
 
+      $idCustomer = $value["despatch_customer_code"];
     }
+    return $idCustomer;
        //echo json_encode($customerInfo[1]);
 
      }
