@@ -85,7 +85,8 @@
       private $not_sure;
       private $PO_received;
       private $idUser;
-
+      private $idOrder;
+      private $idSupplier;
 
       function __construct($conn) {
           $this->conn = $conn;
@@ -338,7 +339,12 @@
       function setIdUser($idUser){
         $this->idUser = $idUser;
       }
-
+      function setIdOrder($idOrder){
+        $this->idOrder = $idOrder;
+      }
+      function setIdSupplier($idSupplier){
+        $this->idSupplier = $idSupplier;
+      }
 
 
        function createJob(){
@@ -363,7 +369,7 @@
               `act_despatch_date`, `UK_tracking_no`, `delivered_date`,
               `nett_sale`, `service_level`, `status_order`, `note`,
               `UK_track_link`, `delivery_image`, `not_sure`, `PO_received`,
-              `idUser`) VALUES (
+              `idUser`, `idOrder`, `idSuppliers`) VALUES (
                            '$this->id',/*id*/
                            '$this->status',/*status*/
                            '$this->customer',/*customer*/
@@ -444,7 +450,9 @@
                            '$this->delivery_image',/*delivery_image*/
                            '$this->not_sure',/*not_sure*/
                            '$this->PO_received',/*PO_received*/
-                           '2' /*idUser*/
+                           '$this->idUser', /*idUser*/
+                           '$this->idOrder',
+                           '$this->idSupplier'
                          )"; //no esta reverse
            $this->conn->conn()->exec($sql);//echo "hola2"; exit;
            $this->conn->close();
