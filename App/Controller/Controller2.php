@@ -260,6 +260,7 @@ include ('../Data/flapi_credentials.php');
          $job->setFilePaths(  str_replace($searchedCharacter, $neewCharacter, $value["file_paths"])  );
          $job->setReverse(  str_replace($searchedCharacter, $neewCharacter, $value["reverse"])  );
          $job->setIdOrder($idOrder);
+         $job->setIdSupplier(1);
 
 
          echo json_encode($job->createJob());
