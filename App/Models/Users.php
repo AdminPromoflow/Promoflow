@@ -51,6 +51,17 @@
              echo $query . "<br>" . $e->getMessage();
            }
        }
+       function getIdUserByEmail(){
+         try{
+           $sql = $this->conn->conn()->query("SELECT `idUser` FROM `Users` WHERE `email` = '$this->email'");
+          $data = $sql->fetch(PDO::FETCH_ASSOC);
+          $this->conn->close();
+          return $data;
+              }
+          catch(PDOException $e){
+              echo $query . "<br>" . $e->getMessage();
+            }
+        }
 
        function createUser(){
          try{

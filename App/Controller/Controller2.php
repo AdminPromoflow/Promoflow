@@ -67,6 +67,12 @@ include ('../Data/flapi_credentials.php');
       $result = json_encode($user->readUserExist());
       echo $result;
       $_SESSION['loginUser'] = 'active';
+
+      $db = new Database();
+      $user = new Users($db);
+      $user->setEmail($_POST['email']);
+      $idUser = $user->getIdUserByEmail();
+      $_SESSION['idUser'] = $idUser;
     }
 
     elseif ($_POST['module']=="verifyLogin") {
@@ -261,6 +267,7 @@ include ('../Data/flapi_credentials.php');
          $job->setReverse(  str_replace($searchedCharacter, $neewCharacter, $value["reverse"])  );
          $job->setIdOrder($idOrder);
          $job->setIdSupplier(1);
+         $job->setIdUser($_SESSION['idUser']);
 
 
          echo json_encode($job->createJob());
