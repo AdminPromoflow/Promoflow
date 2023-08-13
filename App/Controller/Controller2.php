@@ -73,7 +73,7 @@ include ('../Data/flapi_credentials.php');
       $user->setEmail($_POST['email']);
       $idUser = $user->getIdUserByEmail();
       $_SESSION['idUser'] = $idUser;
-      echo $_SESSION['idUser'];
+      echo json_encode($_SESSION['idUser']);
     }
 
     elseif ($_POST['module']=="verifyLogin") {
