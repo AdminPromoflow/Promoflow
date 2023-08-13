@@ -264,7 +264,7 @@ include ('../Data/flapi_credentials.php');
     foreach ( $customerInfo[0] as $item => $value) {
       $db = new Database();
       $customer = new Customers($db);
-      $customer->setId($value["despatch_customer_code"]);
+      $customer->setDespatchCustomerCode($value["despatch_customer_code"]);
       $result2 =  ($customer->verifyRepeatCustomer()["COUNT(*)"]);
 
       //echo $value["despatch_customer_code"]."  ";
