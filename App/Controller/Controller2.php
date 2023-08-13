@@ -263,7 +263,30 @@ include ('../Data/flapi_credentials.php');
     //   echo json_encode($customerInfo);
     foreach ( $customerInfo[0] as $item => $value) {
       //echo $value["despatch_customer_code"]."  ";
-      // code...
+      $db = new Database();
+      $customer = new Customers($db);
+      $customer->setName($value["name"]);
+      $customer->setAddr1($value["addr1"]);
+      $customer->setAddr2($value["addr2"]);
+      $customer->setAddr3($value["addr3"]);
+      $customer->setAddr4($value["addr4"]);
+      $customer->setAddr5($value["addr5"]);
+      $customer->setAddr6($value["addr6"]);
+      $customer->setPostcode($value["postcode"]);
+      $customer->setCountrycode($value["countrycode"]);
+      $customer->setContact($value["contact"]);
+      $customer->setTelephone($value["telephone"]);
+      $customer->setEmail($value["email"]);
+      $customer->setBestName($value["best_name"]);
+      $customer->setCountry($value["country"]);
+      $customer->setQuantity($value["quantity"]);
+      $customer->setDespatchMethod($value["despatch_method"]);
+      $customer->setDespatchMethodName($value["despatch_method_name"]);
+      $customer->setDespatchCustomerCode($value["despatch_customer_code"]);
+      $customer->setDespatchCustomerAddressId($value["despatch_customer_address_id"]);
+      $customer->setLine($value["line"]);
+      $customer->createCustomer();
+
     }
        //echo json_encode($customerInfo[1]);
 

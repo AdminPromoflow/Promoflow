@@ -78,7 +78,7 @@
       function setDespatchCustomerCode($despatch_customer_code ){
         $this->despatch_customer_code = $despatch_customer_code;
       }
-      function setDespatchCustomerAddress_id($despatch_customer_address_id ){
+      function setDespatchCustomerAddressId($despatch_customer_address_id ){
         $this->despatch_customer_address_id = $despatch_customer_address_id;
       }
       function setLine($line){
