@@ -209,7 +209,7 @@ include ('../Data/flapi_credentials.php');
          $db = new Database();
          $job = new Jobs($db);
 
-         echo ($job->getLastDataNo()."HAHSDALKJFLSDKJFLASDKJFLSDJFLASDJL");
+
 
 
          $job->setId(str_replace($searchedCharacter, $neewCharacter, $value["id"]));
@@ -278,7 +278,7 @@ include ('../Data/flapi_credentials.php');
          $job->setIdUser($_SESSION['idUser']);
 
 
-         echo json_encode($job->createJob());
+         echo json_encode($job->createJob()).$job->getLastDataNo()."HAHSDALKJFLSDKJFLASDKJFLSDJFLASDJL";
        }
        }
       //echo json_encode($result);
