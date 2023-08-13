@@ -184,6 +184,14 @@ include ('../Data/flapi_credentials.php');
        $neewCharacter = "''";
        $customerInfo = array();
        foreach ($result["jobs"] as $item => $value) {
+         $db = new Database();
+         $job = new Jobs($db);
+         $job->setId(str_replace($searchedCharacter, $neewCharacter, $value["id"]));
+         $result2 =  ($job->verifyRepeatJob()["COUNT(*)"]);
+
+         //echo $value["despatch_customer_code"]."  ";
+         if ($result2 == '0'){
+
          $customerInfo[] = $value["addresses"];
          $customerInfo[] = $value["reseller_details"];
          $idCustomer = saveCustomer($customerInfo);
@@ -254,8 +262,8 @@ include ('../Data/flapi_credentials.php');
 
 
 
-         echo json_encode($job->createJob());;
-
+         echo json_encode($job->createJob());
+       }
        }
       //echo json_encode($result);
      }

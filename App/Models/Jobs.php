@@ -456,7 +456,7 @@
        }
        function verifyRepeatJob(){
          try{ //SELECT COUNT(*) FROM `Order` WHERE `id` = ''
-          $sql = $this->conn->conn()->query("SELECT COUNT(*) FROM `Order` WHERE `id` = '$this->id'");
+          $sql = $this->conn->conn()->query("SELECT COUNT(*) FROM `Jobs` WHERE `id` = '$this->id'");
           $data = $sql->fetch(PDO::FETCH_ASSOC);
           $this->conn->close();
           return $data;
