@@ -181,6 +181,7 @@ include ('../Data/flapi_credentials.php');
      function setOrdersContent($result){
        $searchedCharacter = "'";
        $neewCharacter = "''";
+       $customerInfo = array();
        foreach ($result["jobs"] as $item => $value) {
 
          $db = new Database();
@@ -219,7 +220,9 @@ include ('../Data/flapi_credentials.php');
          $job->setWidth(  str_replace($searchedCharacter, $neewCharacter, $value["width"])  );
          $job->setBleed(  str_replace($searchedCharacter, $neewCharacter, $value["bleed"])  );
          $job->setResellerWorkgroup(  str_replace($searchedCharacter, $neewCharacter, $value["reseller_workgroup"])  );
-         $job->setResellerDetails(  str_replace($searchedCharacter, $neewCharacter, $value["reseller_details"])  );
+
+         //$job->setResellerDetails(  str_replace($searchedCharacter, $neewCharacter, $value["reseller_details"])  );
+
          $job->setProductSpec(  str_replace($searchedCharacter, $neewCharacter, $value["product_spec"])  );
          $job->setProductDesign(  str_replace($searchedCharacter, $neewCharacter, $value["product_design"])  );
          $job->setProductSpecial(  str_replace($searchedCharacter, $neewCharacter, $value["product_special"])  );
@@ -232,7 +235,9 @@ include ('../Data/flapi_credentials.php');
          $job->setFeeChargedOnJob(  str_replace($searchedCharacter, $neewCharacter, $value["fee_charged_on_job"])  );
          $job->setPages(  str_replace($searchedCharacter, $neewCharacter, $value["pages"])  );
          $job->setDespatches(  str_replace($searchedCharacter, $neewCharacter, $value["despatches"])  );
-         $job->setAddresses(  str_replace($searchedCharacter, $neewCharacter, $value["addresses"])  );
+
+        // $job->setAddresses(  str_replace($searchedCharacter, $neewCharacter, $value["addresses"])  );
+
          $job->setRevenue(  str_replace($searchedCharacter, $neewCharacter, $value["revenue"])  );
          $job->setNotes(  str_replace($searchedCharacter, $neewCharacter, $value["notes"])  );
          $job->setFinishes(  str_replace($searchedCharacter, $neewCharacter, $value["finishes"])  );
@@ -243,11 +248,17 @@ include ('../Data/flapi_credentials.php');
          $job->setFilePaths(  str_replace($searchedCharacter, $neewCharacter, $value["file_paths"])  );
          $job->setReverse(  str_replace($searchedCharacter, $neewCharacter, $value["reverse"])  );
 
+         $customerInfo[] = $searchedCharacter, $neewCharacter, $value["addresses"];
+         $customerInfo[] = $searchedCharacter, $neewCharacter, $value["reseller_details"];
+         setCustomer($customerInfo);
 
-         echo json_encode($job->createJob());;
-        echo "string";
+        // echo json_encode($job->createJob());;
+
        }
       //echo json_encode($result);
+     }
+     function setCustomer($customerInfo){
+       echo json_encode($customerInfo);
      }
 
  ?>
