@@ -254,7 +254,7 @@ include ('../Data/flapi_credentials.php');
 
 
 
-        // echo json_encode($job->createJob());;
+         echo json_encode($job->createJob());;
 
        }
       //echo json_encode($result);
