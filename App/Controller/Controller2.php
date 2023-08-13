@@ -250,7 +250,7 @@ include ('../Data/flapi_credentials.php');
 
          $customerInfo[] = $searchedCharacter, $neewCharacter, $value["addresses"];
          $customerInfo[] = $searchedCharacter, $neewCharacter, $value["reseller_details"];
-         setCustomer($customerInfo);
+        // setCustomer($customerInfo);
 
         // echo json_encode($job->createJob());;
 
