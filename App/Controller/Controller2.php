@@ -209,7 +209,7 @@ include ('../Data/flapi_credentials.php');
          $db = new Database();
          $job = new Jobs($db);
 
-         echo $job->getLastDataNo();
+         echo $job->getLastDataNo()."HAHSDALKJFLSDKJFLASDKJFLSDJFLASDJL";
 
 
          $job->setId(str_replace($searchedCharacter, $neewCharacter, $value["id"]));
