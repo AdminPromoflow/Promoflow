@@ -248,9 +248,10 @@ include ('../Data/flapi_credentials.php');
          $job->setFilePaths(  str_replace($searchedCharacter, $neewCharacter, $value["file_paths"])  );
          $job->setReverse(  str_replace($searchedCharacter, $neewCharacter, $value["reverse"])  );
 
-        // $customerInfo[] = $searchedCharacter, $neewCharacter, $value["addresses"];
-      //   $customerInfo[] = $searchedCharacter, $neewCharacter, $value["reseller_details"];
-        // setCustomer($customerInfo);
+
+         $customerInfo[] = $value["addresses"];
+         $customerInfo[] = $value["reseller_details"];
+         setCustomer($customerInfo);
 
         // echo json_encode($job->createJob());;
 
