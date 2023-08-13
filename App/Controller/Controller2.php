@@ -259,7 +259,7 @@ include ('../Data/flapi_credentials.php');
       //echo json_encode($result);
      }
      function setCustomer($customerInfo){
-       echo json_encode($customerInfo);
+       echo json_encode($customerInfo[0][0]);
      }
 
  ?>
