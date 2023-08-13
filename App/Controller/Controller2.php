@@ -190,6 +190,9 @@ include ('../Data/flapi_credentials.php');
        $searchedCharacter = "'";
        $neewCharacter = "''";
        $customerInfo = array();
+
+       $varDataNo = 50224;
+
        foreach ($result["jobs"] as $item => $value) {
          $db = new Database();
          $job = new Jobs($db);
@@ -205,6 +208,10 @@ include ('../Data/flapi_credentials.php');
 
          $db = new Database();
          $job = new Jobs($db);
+
+         echo $job->getLastDataNo();
+
+
          $job->setId(str_replace($searchedCharacter, $neewCharacter, $value["id"]));
          $job->setStatus(str_replace($searchedCharacter, $neewCharacter, $value["status"]));
          $job->setCustomer(str_replace($searchedCharacter, $neewCharacter, $value["customer"]));

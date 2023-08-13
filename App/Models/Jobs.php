@@ -473,5 +473,17 @@
               echo $query . "<br>" . $e->getMessage();
             }
        }
+
+       function getLastDataNo(){
+         try{ //SELECT COUNT(*) FROM `Order` WHERE `id` = ''
+          $sql = $this->conn->conn()->query("SELECT `data_no` FROM `Jobs`  ORDER BY `data_no` DESC LIMIT 1");
+          $data = $sql->fetch(PDO::FETCH_ASSOC);
+          $this->conn->close();
+          return $data;
+              }
+          catch(PDOException $e){
+              echo $query . "<br>" . $e->getMessage();
+            }
+       }
      }
 ?>
