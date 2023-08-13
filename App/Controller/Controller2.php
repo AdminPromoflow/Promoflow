@@ -9,6 +9,7 @@ require_once('../Models/Categories.php');
 require_once('../Models/Groups.php');
 require_once('../Models/Products.php');
 require_once('../Models/Orders.php');
+require_once('../Models/Customers.php');
 require_once('../Models/Jobs.php');
 require_once('../pest-master/PestJSON.php');
 include ('../Data/flapi_credentials.php');
@@ -261,7 +262,7 @@ include ('../Data/flapi_credentials.php');
      function setCustomer($customerInfo){
     //   echo json_encode($customerInfo);
     foreach ( $customerInfo[0] as $item => $value) {
-      echo $value["despatch_customer_code"]."  ";
+      //echo $value["despatch_customer_code"]."  ";
       // code...
     }
        //echo json_encode($customerInfo[1]);
