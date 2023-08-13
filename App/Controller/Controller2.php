@@ -260,7 +260,7 @@ include ('../Data/flapi_credentials.php');
      }
      function setCustomer($customerInfo){
     //   echo json_encode($customerInfo);
-    foreach ( $customerInfo[0][0] as $item => $value) {
+    foreach ( $customerInfo[0] as $item => $value) {
       echo $value["despatch_customer_code"]."  ";
       // code...
     }
