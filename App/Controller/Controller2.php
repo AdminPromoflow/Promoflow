@@ -71,7 +71,7 @@ include ('../Data/flapi_credentials.php');
       $db = new Database();
       $user = new Users($db);
       $user->setEmail($_POST['email']);
-      $idUser = $user->getIdUserByEmail();
+      $idUser = $user->getIdUserByEmail()["idUser"];
       $_SESSION['idUser'] = $idUser;
       echo json_encode($_SESSION['idUser']);
     }
