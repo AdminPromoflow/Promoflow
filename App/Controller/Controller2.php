@@ -211,8 +211,11 @@ include ('../Data/flapi_credentials.php');
          $job = new Jobs($db);
          $dataNo = $job->getLastDataNo()["data_no"];
 
-         if ($dataNo == NULL || $dataNo == "") {
-           echo "BUENAS BUENAS";
+         if ($dataNo == NULL || $dataNo == "" || $dataNo == false) {
+           $dataNo = 50224;
+         }
+         else {
+           $dataNo = 50224  + 1;
          }
 
 
@@ -273,6 +276,9 @@ include ('../Data/flapi_credentials.php');
          $job->setDespatches(  str_replace($searchedCharacter, $neewCharacter, $value["despatches"])  );
 
          $job->setAddresses($idCustomer);
+         $job->setDataNo($dataNo);
+
+
 
          $job->setRevenue(  str_replace($searchedCharacter, $neewCharacter, $value["revenue"])  );
          $job->setNotes(  str_replace($searchedCharacter, $neewCharacter, $value["notes"])  );
