@@ -123,7 +123,7 @@
             <img  class="buttonLessToSendPO"src="../2-2-Orders/Images/menos.png" alt="">
           </div>
         </div>
-        <div class="containersItemsContentToSendPO">
+        <div id="containersItemsContentToSendPO"class="containersItemsContentToSendPO">
           <div class="containerItemsContentToSendPO">
               <div class="itemContentToSendPO">
                 <h3 >1. Data No*:</h3>
@@ -326,6 +326,8 @@
 <script type="text/javascript">
 //var test = document.getElementById('test');
   function getToSendPO(){
+    var containersItemsContentToSendPO = document.getElementById("containersItemsContentToSendPO");
+
     $.ajax( "../App/Controller/Controller2.php", {
            type: 'post',
            async: false,
@@ -333,17 +335,39 @@
              module: "getToSendPOOrders"
                    },
            success: function(data){
+             containersItemsContentToSendPO.innerHTML = "";
+
              console.log(data);
              var data = jQuery.parseJSON(data);
             for (var i = 0; i < data.length; i++) { // Create each orders
-              alert(data[i]["created_date"]);
-             //  createOrders(data["runs"][i]["id"],  data["runs"][i]["created_date"], i);
+              //alert(data[i]["created_date"]);
+               createToSendPOOrders(data[i]["id"], data[i]["created_date"], i);
              }
+
     //         test.value = "hola";
 
             }
           })
   }
+
+  function createToSendPOOrders(id, date, noDivOrder){
+    var containersItemsContentToSendPO = document.getElementById("containersItemsContentToSendPO");
+
+    containersItemsContentToSendPO.innerHTML +=
+    '<div class="containerItemsToSendPO">' +
+      '<div class="itemToSendPO">' +
+        '<h3>Order: '+ date +'</h3>' +
+        '<div class="openToggleSubitemToSendPO" onclick="" >' +
+          '<img  class="buttonPlusToSendPO"src="../2-2-Orders/Images/mas.png" alt="">' +
+          '<img  class="buttonLessToSendPO"src="../2-2-Orders/Images/menos.png" alt="">' +
+        '</div>' +
+      '</div>' +
+      '<div class="containersItemContentToSendPO">' +
+      '</div>' +
+    '</div>'
+    ;
+  }
+
 
 
 
