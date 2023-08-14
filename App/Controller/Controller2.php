@@ -120,7 +120,7 @@ include ('../Data/flapi_credentials.php');
           die( $e->getMessage());
       }
 
-      //echo(json_encode( $result) );
+      echo(json_encode( $result) );
       setOrdersContent($result, $_POST['idOrder']);
     }
 
@@ -295,7 +295,7 @@ include ('../Data/flapi_credentials.php');
 
 
 
-         echo json_encode($job->createJob() );
+          json_encode($job->createJob() );
        }
        }
       //echo json_encode($result);
