@@ -120,7 +120,7 @@ include ('../Data/flapi_credentials.php');
           die( $e->getMessage());
       }
 
-      //echo(json_encode( $result) );
+      echo(json_encode( $result) );
       setOrdersContent($result, $_POST['idOrder']);
     }
 
@@ -221,9 +221,6 @@ include ('../Data/flapi_credentials.php');
 
          $db = new Database();
          $job = new Jobs($db);
-
-
-
 
          $job->setId(str_replace($searchedCharacter, $neewCharacter, $value["id"]));
          $job->setStatus(str_replace($searchedCharacter, $neewCharacter, $value["status"]));
@@ -338,8 +335,6 @@ include ('../Data/flapi_credentials.php');
       $idCustomer = $value["despatch_customer_code"];
     }
     return $idCustomer;
-       //echo json_encode($customerInfo[1]);
-
      }
 
  ?>
