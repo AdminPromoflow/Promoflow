@@ -204,7 +204,7 @@ include ('../Data/flapi_credentials.php');
 
          $customerInfo[] = $value["addresses"];
          $customerInfo[] = $value["reseller_details"];
-         $idCustomer = saveCustomer($customerInfo);
+         $idCustomer = saveCustomer($customerInfo)[0];
 
 
          $db = new Database();
@@ -300,6 +300,8 @@ include ('../Data/flapi_credentials.php');
      function saveCustomer($customerInfo){
     //   echo json_encode($customerInfo);
     $idCustomer;
+    $customerInfoReturn = array();
+
     foreach ( $customerInfo[0] as $item => $value) {
       $db = new Database();
       $customer = new Customers($db);
@@ -330,11 +332,16 @@ include ('../Data/flapi_credentials.php');
       $customer->setDespatchCustomerCode($value["despatch_customer_code"]);
       $customer->setDespatchCustomerAddressId($value["despatch_customer_address_id"]);
       $customer->setLine($value["line"]);
-      $customer->createCustomer();}
+      $customer->createCustomer();
 
-      $idCustomer = $value["despatch_customer_code"];
     }
-    return $idCustomer;
+      $customerInfoReturn[] = $value["despatch_customer_code"];
+
+      //$idCustomer = $value["despatch_customer_code"];
+    }
+
+
+    return $customerInfoReturn;
      }
 
  ?>
