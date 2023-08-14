@@ -79,7 +79,7 @@
         font-size: 1em;
         font-weight: 300;
         margin: 5px 0px;
-        border: 2px solid #2F4560;
+        border: 2px solid #26384F;
       }
       .openToggleSubitemContentToSendPO{
         position: absolute;
