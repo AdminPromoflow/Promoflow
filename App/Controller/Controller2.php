@@ -150,16 +150,18 @@ include ('../Data/flapi_credentials.php');
       echo $result;
     }
 
+/*------------------------------  get ToSendPO  ------------------------------*/
 
-/*---------------------------------  Customers  ------------------------------*/
+/*-------------------------------  Customers  --------------------------------*/
 
-    /*elseif ($_POST['module']=="getCustomers") {
-      $json = file_get_contents('../../Json/Customer.json');
-      echo ($json);
-    }*/
+    elseif ($_POST['module']=="getToSendPO") {
+      echo "Bueno";
+    }
 
 
-    function setOrders($result){
+/*---------------------------------  Functions  ------------------------------*/
+
+     function setOrders($result){
       //echo "Hola";
 
       foreach ($result["runs"] as $item => $value) {
@@ -185,7 +187,6 @@ include ('../Data/flapi_credentials.php');
         }
       }
      }
-
      function setOrdersContent($result, $idOrder){
        $searchedCharacter = "'";
        $neewCharacter = "''";
@@ -195,159 +196,159 @@ include ('../Data/flapi_credentials.php');
 
        $varDataNo = 50224;
 
-       foreach ($result["jobs"] as $item => $value) {
-         $db = new Database();
-         $job = new Jobs($db);
-         $job->setId(str_replace($searchedCharacter, $neewCharacter, $value["id"]));
-         $result2 =  ($job->verifyRepeatJob()["COUNT(*)"]);
+        foreach ($result["jobs"] as $item => $value) {
+           $db = new Database();
+           $job = new Jobs($db);
+           $job->setId(str_replace($searchedCharacter, $neewCharacter, $value["id"]));
+           $result2 =  ($job->verifyRepeatJob()["COUNT(*)"]);
 
-         //echo $value["despatch_customer_code"]."  ";
-         if ($result2 == '0'){
+           //echo $value["despatch_customer_code"]."  ";
+           if ($result2 == '0'){
 
-         $customerInfo[] = $value["addresses"];
-         $customerInfo[] = $value["reseller_details"];
+           $customerInfo[] = $value["addresses"];
+           $customerInfo[] = $value["reseller_details"];
 
-         $customerInfoReturn = saveCustomer($customerInfo);
-         $idCustomer = $customerInfoReturn[0];
-         $nameCustomer = $customerInfoReturn[1];
+           $customerInfoReturn = saveCustomer($customerInfo);
+           $idCustomer = $customerInfoReturn[0];
+           $nameCustomer = $customerInfoReturn[1];
 
 
-         $db = new Database();
-         $job = new Jobs($db);
-         $dataNo = $job->getLastDataNo()["data_no"];
+           $db = new Database();
+           $job = new Jobs($db);
+           $dataNo = $job->getLastDataNo()["data_no"];
 
-         if ($dataNo == NULL || $dataNo == "" || $dataNo == false) {
-           $dataNo = 50224;
+           if ($dataNo == NULL || $dataNo == "" || $dataNo == false) {
+             $dataNo = 50224;
+           }
+
+           else {
+             $dataNo = intval($dataNo)  + 1;
+           }
+
+           $db = new Database();
+           $job = new Jobs($db);
+
+           $job->setId(str_replace($searchedCharacter, $neewCharacter, $value["id"]));
+           $job->setStatus(str_replace($searchedCharacter, $neewCharacter, $value["status"]));
+           $job->setCustomer(str_replace($searchedCharacter, $neewCharacter, $nameCustomer));
+           $job->setContact(str_replace($searchedCharacter, $neewCharacter, $value["contact"]) );
+           $job->setQuantityAllocated(  str_replace($searchedCharacter, $neewCharacter, $value["quantity_allocated"])  );
+           $job->setQuantityPrinted(  str_replace($searchedCharacter, $neewCharacter, $value["quantity_printed"])  );
+           $job->setQuantityDespatched(  str_replace($searchedCharacter, $neewCharacter, $value["quantity_despatched"])  );
+           $job->setTotalTransfer(  str_replace($searchedCharacter, $neewCharacter, $value["total_transfer"])  );
+           $job->setTotalSelling(  str_replace($searchedCharacter, $neewCharacter, $value["total_selling"])  );
+           $job->setTotal(  str_replace($searchedCharacter, $neewCharacter, $value["total"])  );
+           $job->setProductCode(  str_replace($searchedCharacter, $neewCharacter, $value["product_code"])  );
+           $job->setClientReference(  str_replace($searchedCharacter, $neewCharacter, $value["client_reference"])  );
+           $job->setTotalPrcost(  str_replace($searchedCharacter, $neewCharacter, $value["setTotalPrcost"])  );
+           $job->setTitle(  str_replace($searchedCharacter, $neewCharacter, $value["title"])  );
+           $job->setCategory(  str_replace($searchedCharacter, $neewCharacter, $value["category"])  );
+           $job->setQuantity(  str_replace($searchedCharacter, $neewCharacter, $value["quantity"])  );
+           $job->setAuto081(  str_replace($searchedCharacter, $neewCharacter, $value["auto081"])  );
+           $job->setService(  str_replace($searchedCharacter, $neewCharacter, $value["service"])  );
+           $job->setSupplierReference(  str_replace($searchedCharacter, $neewCharacter, $value["supplier_reference"])  );
+           $job->setReprintof(  str_replace($searchedCharacter, $neewCharacter, $value["reprintof"])  );
+           $job->setReprintas(  str_replace($searchedCharacter, $neewCharacter, $value["reprintas"])  );
+           $job->setReorderof(  str_replace($searchedCharacter, $neewCharacter, $value["reorderof"])  );
+           $job->setReorderas(  str_replace($searchedCharacter, $neewCharacter, $value["reorderas"])  );
+           $job->setProductName(  str_replace($searchedCharacter, $neewCharacter, $value["product_name"])  );
+           $job->setSpec(  str_replace($searchedCharacter, $neewCharacter, $value["spec"])  );
+           $job->setTurnaround(  str_replace($searchedCharacter, $neewCharacter, $value["turnaround"])  );
+           $job->setSchedule(  str_replace($searchedCharacter, $neewCharacter, $value["schedule"])  );
+           $job->setWeight(  str_replace($searchedCharacter, $neewCharacter, $value["weight"])  );
+           $job->setStatusText(  str_replace($searchedCharacter, $neewCharacter, $value["status_text"])  );
+           $job->setStatusNote(  str_replace($searchedCharacter, $neewCharacter, $value["status_note"])  );
+           $job->setHeight(  str_replace($searchedCharacter, $neewCharacter, $value["height"])  );
+           $job->setWidth(  str_replace($searchedCharacter, $neewCharacter, $value["width"])  );
+           $job->setBleed(  str_replace($searchedCharacter, $neewCharacter, $value["bleed"])  );
+           $job->setResellerWorkgroup(  str_replace($searchedCharacter, $neewCharacter, $value["reseller_workgroup"])  );
+
+           //$job->setResellerDetails(  str_replace($searchedCharacter, $neewCharacter, $value["reseller_details"])  );
+
+           $job->setProductSpec(  str_replace($searchedCharacter, $neewCharacter, $value["product_spec"])  );
+           $job->setProductDesign(  str_replace($searchedCharacter, $neewCharacter, $value["product_design"])  );
+           $job->setProductSpecial(  str_replace($searchedCharacter, $neewCharacter, $value["product_special"])  );
+           $job->setProductPartnerCode(  str_replace($searchedCharacter, $neewCharacter, $value["product_partner_code"])  );
+           $job->setProdWorkgroup(  str_replace($searchedCharacter, $neewCharacter, $value["prod_workgroup"])  );
+           $job->setMultifile(  str_replace($searchedCharacter, $neewCharacter, $value["multifile"])  );
+           $job->setExpectedDespatchDate(  str_replace($searchedCharacter, $neewCharacter, $value["expected_despatch_date"])  );
+           $job->setFrontFilename(  str_replace($searchedCharacter, $neewCharacter, $value["front_filename"])  );
+           $job->setReverseFilename(  str_replace($searchedCharacter, $neewCharacter, $value["reverse_filename"])  );
+           $job->setFeeChargedOnJob(  str_replace($searchedCharacter, $neewCharacter, $value["fee_charged_on_job"])  );
+           $job->setPages(  str_replace($searchedCharacter, $neewCharacter, $value["pages"])  );
+           $job->setDespatches(  str_replace($searchedCharacter, $neewCharacter, $value["despatches"])  );
+
+           $job->setAddresses($idCustomer);
+           $job->setDataNo($dataNo);
+
+
+
+           $job->setRevenue(  str_replace($searchedCharacter, $neewCharacter, $value["revenue"])  );
+           $job->setNotes(  str_replace($searchedCharacter, $neewCharacter, $value["notes"])  );
+           $job->setFinishes(  str_replace($searchedCharacter, $neewCharacter, $value["finishes"])  );
+           $job->setOrientation(  str_replace($searchedCharacter, $neewCharacter, $value["orientation"])  );
+           $job->setOrderCode(  str_replace($searchedCharacter, $neewCharacter, $value["order_code"])  );
+           $job->setPackageCode(  str_replace($searchedCharacter, $neewCharacter, $value["package_code"])  );
+           $job->setJobmakerPack(  str_replace($searchedCharacter, $neewCharacter, $value["jobmaker_pack"])  );
+           $job->setFilePaths(  str_replace($searchedCharacter, $neewCharacter, $value["file_paths"])  );
+           $job->setReverse(  str_replace($searchedCharacter, $neewCharacter, $value["reverse"])  );
+           $job->setIdOrder( $idOrder );
+           $job->setIdSupplier(1);
+           $job->setIdUser($_SESSION['idUser']);
+
+
+
+            json_encode($job->createJob() );
          }
-
-         else {
-           $dataNo = intval($dataNo)  + 1;
-         }
-
-         $db = new Database();
-         $job = new Jobs($db);
-
-         $job->setId(str_replace($searchedCharacter, $neewCharacter, $value["id"]));
-         $job->setStatus(str_replace($searchedCharacter, $neewCharacter, $value["status"]));
-         $job->setCustomer(str_replace($searchedCharacter, $neewCharacter, $nameCustomer));
-         $job->setContact(str_replace($searchedCharacter, $neewCharacter, $value["contact"]) );
-         $job->setQuantityAllocated(  str_replace($searchedCharacter, $neewCharacter, $value["quantity_allocated"])  );
-         $job->setQuantityPrinted(  str_replace($searchedCharacter, $neewCharacter, $value["quantity_printed"])  );
-         $job->setQuantityDespatched(  str_replace($searchedCharacter, $neewCharacter, $value["quantity_despatched"])  );
-         $job->setTotalTransfer(  str_replace($searchedCharacter, $neewCharacter, $value["total_transfer"])  );
-         $job->setTotalSelling(  str_replace($searchedCharacter, $neewCharacter, $value["total_selling"])  );
-         $job->setTotal(  str_replace($searchedCharacter, $neewCharacter, $value["total"])  );
-         $job->setProductCode(  str_replace($searchedCharacter, $neewCharacter, $value["product_code"])  );
-         $job->setClientReference(  str_replace($searchedCharacter, $neewCharacter, $value["client_reference"])  );
-         $job->setTotalPrcost(  str_replace($searchedCharacter, $neewCharacter, $value["setTotalPrcost"])  );
-         $job->setTitle(  str_replace($searchedCharacter, $neewCharacter, $value["title"])  );
-         $job->setCategory(  str_replace($searchedCharacter, $neewCharacter, $value["category"])  );
-         $job->setQuantity(  str_replace($searchedCharacter, $neewCharacter, $value["quantity"])  );
-         $job->setAuto081(  str_replace($searchedCharacter, $neewCharacter, $value["auto081"])  );
-         $job->setService(  str_replace($searchedCharacter, $neewCharacter, $value["service"])  );
-         $job->setSupplierReference(  str_replace($searchedCharacter, $neewCharacter, $value["supplier_reference"])  );
-         $job->setReprintof(  str_replace($searchedCharacter, $neewCharacter, $value["reprintof"])  );
-         $job->setReprintas(  str_replace($searchedCharacter, $neewCharacter, $value["reprintas"])  );
-         $job->setReorderof(  str_replace($searchedCharacter, $neewCharacter, $value["reorderof"])  );
-         $job->setReorderas(  str_replace($searchedCharacter, $neewCharacter, $value["reorderas"])  );
-         $job->setProductName(  str_replace($searchedCharacter, $neewCharacter, $value["product_name"])  );
-         $job->setSpec(  str_replace($searchedCharacter, $neewCharacter, $value["spec"])  );
-         $job->setTurnaround(  str_replace($searchedCharacter, $neewCharacter, $value["turnaround"])  );
-         $job->setSchedule(  str_replace($searchedCharacter, $neewCharacter, $value["schedule"])  );
-         $job->setWeight(  str_replace($searchedCharacter, $neewCharacter, $value["weight"])  );
-         $job->setStatusText(  str_replace($searchedCharacter, $neewCharacter, $value["status_text"])  );
-         $job->setStatusNote(  str_replace($searchedCharacter, $neewCharacter, $value["status_note"])  );
-         $job->setHeight(  str_replace($searchedCharacter, $neewCharacter, $value["height"])  );
-         $job->setWidth(  str_replace($searchedCharacter, $neewCharacter, $value["width"])  );
-         $job->setBleed(  str_replace($searchedCharacter, $neewCharacter, $value["bleed"])  );
-         $job->setResellerWorkgroup(  str_replace($searchedCharacter, $neewCharacter, $value["reseller_workgroup"])  );
-
-         //$job->setResellerDetails(  str_replace($searchedCharacter, $neewCharacter, $value["reseller_details"])  );
-
-         $job->setProductSpec(  str_replace($searchedCharacter, $neewCharacter, $value["product_spec"])  );
-         $job->setProductDesign(  str_replace($searchedCharacter, $neewCharacter, $value["product_design"])  );
-         $job->setProductSpecial(  str_replace($searchedCharacter, $neewCharacter, $value["product_special"])  );
-         $job->setProductPartnerCode(  str_replace($searchedCharacter, $neewCharacter, $value["product_partner_code"])  );
-         $job->setProdWorkgroup(  str_replace($searchedCharacter, $neewCharacter, $value["prod_workgroup"])  );
-         $job->setMultifile(  str_replace($searchedCharacter, $neewCharacter, $value["multifile"])  );
-         $job->setExpectedDespatchDate(  str_replace($searchedCharacter, $neewCharacter, $value["expected_despatch_date"])  );
-         $job->setFrontFilename(  str_replace($searchedCharacter, $neewCharacter, $value["front_filename"])  );
-         $job->setReverseFilename(  str_replace($searchedCharacter, $neewCharacter, $value["reverse_filename"])  );
-         $job->setFeeChargedOnJob(  str_replace($searchedCharacter, $neewCharacter, $value["fee_charged_on_job"])  );
-         $job->setPages(  str_replace($searchedCharacter, $neewCharacter, $value["pages"])  );
-         $job->setDespatches(  str_replace($searchedCharacter, $neewCharacter, $value["despatches"])  );
-
-         $job->setAddresses($idCustomer);
-         $job->setDataNo($dataNo);
-
-
-
-         $job->setRevenue(  str_replace($searchedCharacter, $neewCharacter, $value["revenue"])  );
-         $job->setNotes(  str_replace($searchedCharacter, $neewCharacter, $value["notes"])  );
-         $job->setFinishes(  str_replace($searchedCharacter, $neewCharacter, $value["finishes"])  );
-         $job->setOrientation(  str_replace($searchedCharacter, $neewCharacter, $value["orientation"])  );
-         $job->setOrderCode(  str_replace($searchedCharacter, $neewCharacter, $value["order_code"])  );
-         $job->setPackageCode(  str_replace($searchedCharacter, $neewCharacter, $value["package_code"])  );
-         $job->setJobmakerPack(  str_replace($searchedCharacter, $neewCharacter, $value["jobmaker_pack"])  );
-         $job->setFilePaths(  str_replace($searchedCharacter, $neewCharacter, $value["file_paths"])  );
-         $job->setReverse(  str_replace($searchedCharacter, $neewCharacter, $value["reverse"])  );
-         $job->setIdOrder( $idOrder );
-         $job->setIdSupplier(1);
-         $job->setIdUser($_SESSION['idUser']);
-
-
-
-          json_encode($job->createJob() );
-       }
-       }
+        }
       //echo json_encode($result);
      }
      function saveCustomer($customerInfo){
-    //   echo json_encode($customerInfo);
-    $idCustomer;
-    $customerInfoReturn = array();
+      //   echo json_encode($customerInfo);
+      $idCustomer;
+      $customerInfoReturn = array();
 
-    foreach ( $customerInfo[0] as $item => $value) {
-      $db = new Database();
-      $customer = new Customers($db);
-      $customer->setDespatchCustomerCode($value["despatch_customer_code"]);
-      $result2 =  ($customer->verifyRepeatCustomer()["COUNT(*)"]);
+      foreach ( $customerInfo[0] as $item => $value) {
+        $db = new Database();
+        $customer = new Customers($db);
+        $customer->setDespatchCustomerCode($value["despatch_customer_code"]);
+        $result2 =  ($customer->verifyRepeatCustomer()["COUNT(*)"]);
 
-      //echo $value["despatch_customer_code"]."  ";
-      if ($result2 == '0'){
-      $db = new Database();
-      $customer = new Customers($db);
-      $customer->setName($value["name"]);
-      $customer->setAddr1($value["addr1"]);
-      $customer->setAddr2($value["addr2"]);
-      $customer->setAddr3($value["addr3"]);
-      $customer->setAddr4($value["addr4"]);
-      $customer->setAddr5($value["addr5"]);
-      $customer->setAddr6($value["addr6"]);
-      $customer->setPostcode($value["postcode"]);
-      $customer->setCountrycode($value["countrycode"]);
-      $customer->setContact($value["contact"]);
-      $customer->setTelephone($value["telephone"]);
-      $customer->setEmail($value["email"]);
-      $customer->setBestName($value["best_name"]);
-      $customer->setCountry($value["country"]);
-      $customer->setQuantity($value["quantity"]);
-      $customer->setDespatchMethod($value["despatch_method"]);
-      $customer->setDespatchMethodName($value["despatch_method_name"]);
-      $customer->setDespatchCustomerCode($value["despatch_customer_code"]);
-      $customer->setDespatchCustomerAddressId($value["despatch_customer_address_id"]);
-      $customer->setLine($value["line"]);
-      $customer->createCustomer();
+        //echo $value["despatch_customer_code"]."  ";
+        if ($result2 == '0'){
+        $db = new Database();
+        $customer = new Customers($db);
+        $customer->setName($value["name"]);
+        $customer->setAddr1($value["addr1"]);
+        $customer->setAddr2($value["addr2"]);
+        $customer->setAddr3($value["addr3"]);
+        $customer->setAddr4($value["addr4"]);
+        $customer->setAddr5($value["addr5"]);
+        $customer->setAddr6($value["addr6"]);
+        $customer->setPostcode($value["postcode"]);
+        $customer->setCountrycode($value["countrycode"]);
+        $customer->setContact($value["contact"]);
+        $customer->setTelephone($value["telephone"]);
+        $customer->setEmail($value["email"]);
+        $customer->setBestName($value["best_name"]);
+        $customer->setCountry($value["country"]);
+        $customer->setQuantity($value["quantity"]);
+        $customer->setDespatchMethod($value["despatch_method"]);
+        $customer->setDespatchMethodName($value["despatch_method_name"]);
+        $customer->setDespatchCustomerCode($value["despatch_customer_code"]);
+        $customer->setDespatchCustomerAddressId($value["despatch_customer_address_id"]);
+        $customer->setLine($value["line"]);
+        $customer->createCustomer();
 
-    }
-    $customerInfoReturn[] = $value["despatch_customer_code"];
-    $customerInfoReturn[] = $value["name"];
+      }
+      $customerInfoReturn[] = $value["despatch_customer_code"];
+      $customerInfoReturn[] = $value["name"];
 
-      //$idCustomer = $value["despatch_customer_code"];
-    }
+        //$idCustomer = $value["despatch_customer_code"];
+      }
 
 
-    return $customerInfoReturn;
+      return $customerInfoReturn;
      }
 
  ?>
