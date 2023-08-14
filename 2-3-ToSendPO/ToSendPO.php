@@ -19,6 +19,15 @@
       font-size: 1em;
       font-weight: 400;
     }
+    .itemToSendPO input{
+      position: relative;
+      text-align: center;
+      color: rgba(255, 255, 255, .9);
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1em;
+      font-weight: 400;
+    }
     .openToggleSubitemToSendPO{
       position: absolute;
       width: 40px;
@@ -114,6 +123,7 @@
           <div class="containerItemsContentToSendPO">
               <div class="itemContentToSendPO">
                 <h3>1. Code</h3>
+                <input type="text" name="" value="">
 
               </div>
               <div class="containersItemGroup">
