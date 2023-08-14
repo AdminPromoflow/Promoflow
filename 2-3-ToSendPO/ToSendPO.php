@@ -382,7 +382,7 @@
   }
   function getToSendPOContent(idOrder, noDivOrder){
     const containersItemContentToSendPO =  document.querySelectorAll(".containersItemContentToSendPO");
-    const DataNo =  document.querySelectorAll(".DataNo");
+    /*const DataNo =  document.querySelectorAll(".DataNo");
     const Customer =  document.querySelectorAll(".Customer");
     const PrintRef =  document.querySelectorAll(".PrintRef");
     const Project =  document.querySelectorAll(".Project");
@@ -429,7 +429,7 @@
     const DeliveryImage =  document.querySelectorAll(".DeliveryImage");
     const ProductImage =  document.querySelectorAll(".ProductImage");
     const NotSure =  document.querySelectorAll(".NotSure");
-    const POReceived =  document.querySelectorAll(".POReceived");
+    const POReceived =  document.querySelectorAll(".POReceived");*/
 
 
       $.ajax( "../App/Controller/Controller2.php", {
