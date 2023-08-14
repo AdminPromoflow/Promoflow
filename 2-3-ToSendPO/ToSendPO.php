@@ -254,7 +254,7 @@
 
 
                //alert(data[i]["data_no"]);
-                 createToSendPOContent(noDivOrder, data[0]);
+                 createToSendPOContent(noDivOrder, data);
 
               }
             })
@@ -266,7 +266,7 @@
     '<div class="containerItemsContentToSendPO">'+
         '<div class="itemContentToSendPO">'+
           '<h3 >1. Data No*:</h3>'+
-          '<input class="DataNo" type="text" name="" value="'+data["data_no"]+'">'+
+          '<input class="DataNo" type="text" name="" value="'+data[0]["data_no"]+'">'+
         '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >2. Customer:</h3>'+
