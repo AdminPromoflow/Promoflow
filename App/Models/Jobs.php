@@ -485,5 +485,31 @@
               echo $query . "<br>" . $e->getMessage();
             }
        }
+       function getToSendPO(){
+         try{ //SELECT COUNT(*) FROM `Order` WHERE `id` = ''
+          $sql = $this->conn->conn()->query("SELECT  `data_no`,`customer`,`print_ref`,
+              `quantity`, /*supplier*/, /*C-Orden_Date*/,`PO_sent`,`approval_sent`,
+              `expected_despatch_date`, `C_due_date`, `artwork_pre_approved`,`C_artwork`,
+              `C_artwork_visual`,`C_approved_PDF`, `C_approved_visual`, `box_no`,
+              `act_despatch_date`, `UK_tracking_no`,`delivered_date`,  `nett_sale`,
+              /*Customer Reference*/,/*S_Ref(Tabla Users)*/,/*S_Email(Tabla Users)*/,
+              /*Item (Tabla producto)*/,/*size (Tabla producto)*/,/*material (Tabla producto)*/,
+              /*Weigth/Thickness/Capacity (Tabla producto)*/,/*Print(Tabla producto)*/,
+              /*Coverage(Tabla producto)*/,/*Print Style(Tabla producto)*/,
+              /*Finish 1(Tabla producto)*/,/*Finish 2(Tabla producto)*/,
+              /*Finish 3(Tabla producto)*/,`service_level`,`status_order`,
+              `notes`, `note`,/*Company Name(Tabla Users)*/,/*Attn(Tabla Users)*/,
+              /*Tel(Tabla Users)*/,/*Email(Tabla Users)*/,/*Delivery Address(Tabla Customers)*/,
+              `UK_track_link`,  `delivery_image`,/*Product Image(Falto ponerlo tabla job)*/`not_sure`,`PO_received`
+
+              FROM `Jobs`");
+          $data = $sql->fetchAll(PDO::FETCH_ASSOC);
+          $this->conn->close();
+          return $data;
+              }
+          catch(PDOException $e){
+              echo $query . "<br>" . $e->getMessage();
+            }
+       }
      }
 ?>
