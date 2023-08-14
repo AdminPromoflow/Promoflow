@@ -73,11 +73,13 @@
         text-align: center;
         width: 85%;
         left: 50%;
-        background-color: blue;
+        background-color: #7B899A;
         transform: translateX(-50%);
-        color: rgba(255, 255, 255, .8);
+        color: black;
         font-size: 1em;
         font-weight: 300;
+        margin: 3px 0px;
+        border: 2px solid black;
       }
       .openToggleSubitemContentToSendPO{
         position: absolute;
