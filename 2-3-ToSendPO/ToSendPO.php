@@ -330,10 +330,10 @@
            type: 'post',
            async: false,
            data: {
-             module: "getToSendPO"
+             module: "getToSendPOOrders"
                    },
            success: function(data){
-             console.log(data);
+             alert(data);
     //         test.value = "hola";
 
             }
