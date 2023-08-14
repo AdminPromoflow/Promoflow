@@ -205,9 +205,11 @@ include ('../Data/flapi_credentials.php');
          $customerInfo[] = $value["addresses"];
          $customerInfo[] = $value["reseller_details"];
 
-         $customerInfoReturn[] = saveCustomer($customerInfo);
+         /*$customerInfoReturn[] = saveCustomer($customerInfo);
          $idCustomer = $customerInfoReturn[0];
-         $nameCustomer = $customerInfoReturn[1];
+         $nameCustomer = $customerInfoReturn[1];*/
+
+         $idCustomer =  saveCustomer($customerInfo);
 
 
          $db = new Database();
@@ -227,7 +229,7 @@ include ('../Data/flapi_credentials.php');
 
          $job->setId(str_replace($searchedCharacter, $neewCharacter, $value["id"]));
          $job->setStatus(str_replace($searchedCharacter, $neewCharacter, $value["status"]));
-         $job->setCustomer(str_replace($searchedCharacter, $neewCharacter, $nameCustomer));
+         $job->setCustomer(str_replace($searchedCharacter, $neewCharacter, "nameCustomer"));
          $job->setContact(str_replace($searchedCharacter, $neewCharacter, $value["contact"]) );
          $job->setQuantityAllocated(  str_replace($searchedCharacter, $neewCharacter, $value["quantity_allocated"])  );
          $job->setQuantityPrinted(  str_replace($searchedCharacter, $neewCharacter, $value["quantity_printed"])  );
@@ -342,7 +344,7 @@ include ('../Data/flapi_credentials.php');
 
 
 
-    return $customerInfo;
+    return $idCustomer;
      }
 
  ?>
