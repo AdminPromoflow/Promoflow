@@ -186,6 +186,7 @@
     ;
     getToSendPOContent(idOrder, noDivOrder);
   }
+  var dataContentToSentPO;
   function getToSendPOContent(idOrder, noDivOrder){
     const containersItemContentToSendPO =  document.querySelectorAll(".containersItemContentToSendPO");
     /*const DataNo =  document.querySelectorAll(".DataNo");
@@ -249,24 +250,24 @@
                console.log(data);
 
              //alert(data);
-              var data = jQuery.parseJSON(data);
+              dataContentToSentPO = jQuery.parseJSON(data);
               containersItemContentToSendPO[noDivOrder].innerHTML = '';
 
 
                //alert(data[i]["data_no"]);
-                 createToSendPOContent(noDivOrder, data);
+                 createToSendPOContent(noDivOrder);
 
               }
             })
   }
 
-  function createToSendPOContent(noDivOrder, data){
+  function createToSendPOContent(noDivOrder){
     const containersItemContentToSendPO =  document.querySelectorAll(".containersItemContentToSendPO");
     containersItemsContentToSendPO.innerHTML +=
     '<div class="containerItemsContentToSendPO">'+
         '<div class="itemContentToSendPO">'+
           '<h3 >1. Data No*:</h3>'+
-          '<input class="DataNo" type="text" name="" value="'+data[0]["data_no"]+'">'+
+          '<input class="DataNo" type="text" name="" value="'+dataContentToSentPO[0]["data_no"]+'">'+
         '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >2. Customer:</h3>'+
