@@ -126,8 +126,8 @@
         <div class="containersItemsContentToSendPO">
           <div class="containerItemsContentToSendPO">
               <div class="itemContentToSendPO">
-                <h3 id="test">1. Code</h3>
-                <input type="text" name="" value="">
+                <h3 >1. Code</h3>
+                <input id="test" type="text" name="" value="">
 
               </div>
               <div class="containersItemGroup">
@@ -149,6 +149,7 @@ var test = document.getElementById('test');
            success: function(data){
              console.log(data);
              test.style.background = "red";
+             test.value = "hola";
 
             }
           })
