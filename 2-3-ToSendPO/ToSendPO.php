@@ -22,6 +22,7 @@
     .itemToSendPO input{
       position: relative;
       text-align: center;
+      background-color: yellow;
       color: rgba(255, 255, 255, .9);
       top: 50%;
       transform: translateY(-50%);
