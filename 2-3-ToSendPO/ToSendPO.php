@@ -334,6 +334,11 @@
                    },
            success: function(data){
              console.log(data);
+             var data = jQuery.parseJSON(data);
+            for (var i = 0; i < data.length; i++) { // Create each orders
+              alert(data[i]["created_date"]);
+             //  createOrders(data["runs"][i]["id"],  data["runs"][i]["created_date"], i);
+             }
     //         test.value = "hola";
 
             }
