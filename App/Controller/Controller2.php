@@ -278,10 +278,10 @@ include ('../Data/flapi_credentials.php');
          $job->setIdUser($_SESSION['idUser']);
 
 
-         echo $job->getLastDataNo() ;
+        /* echo $job->getLastDataNo() ;
 
          $db = new Database();
-         $job = new Jobs($db);
+         $job = new Jobs($db);*/
          echo json_encode($job->createJob() );
        }
        }
