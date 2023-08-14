@@ -219,7 +219,6 @@ include ('../Data/flapi_credentials.php');
            $dataNo = intval($dataNo)  + 1;
          }
 
-
          $db = new Database();
          $job = new Jobs($db);
 
