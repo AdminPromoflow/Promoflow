@@ -214,10 +214,10 @@ include ('../Data/flapi_credentials.php');
          if ($dataNo == NULL || $dataNo == "" || $dataNo == false) {
            $dataNo = 50224;
          }
-         elseif ($dataNo > 0) {
-           $dataNo = 50224  + 1;
+
+         else {
+           $dataNo = getLastDataNo()["data_no"]  + 1;
          }
-         
 
 
          $db = new Database();
