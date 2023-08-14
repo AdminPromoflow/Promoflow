@@ -356,7 +356,9 @@
           })
   }
 
-  function createToSendPOOrders(id, date, noDivOrder){
+
+
+  function createToSendPOOrders(idOrder, date, noDivOrder){
     var containersItemsContentToSendPO = document.getElementById("containersItemsContentToSendPO");
 
     containersItemsContentToSendPO.innerHTML +=
@@ -372,6 +374,32 @@
       '</div>' +
     '</div>'
     ;
+    getToSendPOContent(idOrder, noDivOrder);
+  }
+
+  function getToSendPOContent(idOrder){
+    const containersItemContentToSendPO =  document.querySelectorAll(".containersItemContentToSendPO");
+
+      $.ajax( "../App/Controller/Controller2.php", {
+             type: 'post',
+             async: false,
+             data: {
+               module: "getToSendPOContent",
+               idOrder: idOrder
+                     },
+             success: function(data){
+               console.log(data);
+
+            //  alert(data);
+              var data = jQuery.parseJSON(data);
+              containersItemContentToSendPO[noDivOrder].innerHTML = '';
+
+              for (var i = 0; i < data.length; i++) {
+              //  alert(data[i][]);
+                 //createJobs(noDivOrder, i);
+              }
+              }
+            })
   }
 
 

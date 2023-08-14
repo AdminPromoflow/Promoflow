@@ -159,7 +159,7 @@ include ('../Data/flapi_credentials.php');
       $order = new Orders($db);
       echo json_encode($order->getToSendPOOrders());
     }
-    elseif ($_POST['module']=="getToSendPO") {
+    elseif ($_POST['module']=="getToSendPOContent") {
       $db = new Database();
       $job = new Jobs($db);
       echo json_encode($job->getToSendPO());
