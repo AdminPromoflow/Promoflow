@@ -377,7 +377,7 @@
     getToSendPOContent(idOrder, noDivOrder);
   }
 
-  function getToSendPOContent(idOrder){
+  function getToSendPOContent(idOrder, noDivOrder){
     const containersItemContentToSendPO =  document.querySelectorAll(".containersItemContentToSendPO");
 
       $.ajax( "../App/Controller/Controller2.php", {
