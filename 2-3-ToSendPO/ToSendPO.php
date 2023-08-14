@@ -114,7 +114,9 @@
         }
 </style>
 <div class="containerTableW3P">
-  <div id="containerCustomers" class="containerCenterTable">
+
+  <div id="containersItemsContentToSendPO" class="containerCenterTable">
+    <!--
     <div class="containerItemsToSendPO">
         <div class="itemToSendPO">
           <h3>Order date</h3>
@@ -123,8 +125,8 @@
             <img  class="buttonLessToSendPO"src="../2-2-Orders/Images/menos.png" alt="">
           </div>
         </div>
-        <div id="containersItemsContentToSendPO"class="containersItemsContentToSendPO">
-          <!--
+        <div id=""class="containersItemsContentToSendPO">
+
           <div class="containerItemsContentToSendPO">
               <div class="itemContentToSendPO">
                 <h3 >1. Data No*:</h3>
@@ -320,10 +322,12 @@
               </div>
 
             </div>
-          -->
+
         </div>
       </div>
+  -->
   </div>
+
 </div>
 <script type="text/javascript">
 //var test = document.getElementById('test');
