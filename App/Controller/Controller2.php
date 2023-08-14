@@ -190,6 +190,8 @@ include ('../Data/flapi_credentials.php');
        $searchedCharacter = "'";
        $neewCharacter = "''";
        $customerInfo = array();
+       $customerInfoReturn = array();
+
 
        $varDataNo = 50224;
 
@@ -204,7 +206,9 @@ include ('../Data/flapi_credentials.php');
 
          $customerInfo[] = $value["addresses"];
          $customerInfo[] = $value["reseller_details"];
-         $idCustomer = saveCustomer($customerInfo)[0];
+
+         $customerInfoReturn = saveCustomer($customerInfo)[0];
+         $idCustomer = $customerInfoReturn[0];
 
 
          $db = new Database();
