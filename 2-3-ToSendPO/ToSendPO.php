@@ -395,7 +395,7 @@
               containersItemContentToSendPO[noDivOrder].innerHTML = '';
 
               for (var i = 0; i < data.length; i++) {
-              //  alert(data[i][]);
+               alert(data[i]["data_no"]);
                  //createJobs(noDivOrder, i);
               }
               }
