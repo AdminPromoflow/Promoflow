@@ -206,6 +206,12 @@ include ('../Data/flapi_credentials.php');
          $customerInfo[] = $value["reseller_details"];
          $idCustomer = saveCustomer($customerInfo);
 
+
+         $db = new Database();
+         $job = new Jobs($db);
+         echo $job->getLastDataNo()."quiero llorar" ;
+
+
          $db = new Database();
          $job = new Jobs($db);
 
@@ -278,10 +284,7 @@ include ('../Data/flapi_credentials.php');
          $job->setIdUser($_SESSION['idUser']);
 
 
-        /* echo $job->getLastDataNo() ;
 
-         $db = new Database();
-         $job = new Jobs($db);*/
          echo json_encode($job->createJob() );
        }
        }
