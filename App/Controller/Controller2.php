@@ -207,7 +207,7 @@ include ('../Data/flapi_credentials.php');
          $customerInfo[] = $value["addresses"];
          $customerInfo[] = $value["reseller_details"];
 
-         $customerInfoReturn = saveCustomer($customerInfo)[0];
+         $customerInfoReturn = saveCustomer($customerInfo);
          $idCustomer = $customerInfoReturn[0];
 
 
