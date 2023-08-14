@@ -148,7 +148,7 @@ var test = document.getElementById('test');
                    },
            success: function(data){
              console.log(data);
-             test.value = "buenas";
+             test.style.background = "red";
 
             }
           })
