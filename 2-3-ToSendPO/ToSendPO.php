@@ -114,7 +114,7 @@
           <div class="containerItemsContentToSendPO">
               <div class="itemContentToSendPO">
                 <h3>1. Code</h3>
-        
+
               </div>
               <div class="containersItemGroup">
               </div>
@@ -124,7 +124,9 @@
   </div>
 </div>
 <script type="text/javascript">
-
+  function getToSendPO(){
+    alert("Buenas");
+  }
 
 
 
