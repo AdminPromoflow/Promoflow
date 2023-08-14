@@ -273,12 +273,11 @@ include ('../Data/flapi_credentials.php');
          $job->setJobmakerPack(  str_replace($searchedCharacter, $neewCharacter, $value["jobmaker_pack"])  );
          $job->setFilePaths(  str_replace($searchedCharacter, $neewCharacter, $value["file_paths"])  );
          $job->setReverse(  str_replace($searchedCharacter, $neewCharacter, $value["reverse"])  );
-         $job->setIdOrder($idOrder);
+         $job->setIdOrder( $idOrder );
          $job->setIdSupplier(1);
          $job->setIdUser($_SESSION['idUser']);
 
-
-         echo json_encode($job->createJob()."QUIERO LLORAR MUCHO".$job->getLastDataNo());
+         echo json_encode( $job->createJob().$job->getLastDataNo() );
        }
        }
       //echo json_encode($result);
