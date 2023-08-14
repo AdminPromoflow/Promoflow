@@ -127,18 +127,180 @@
           <div class="containerItemsContentToSendPO">
               <div class="itemContentToSendPO">
                 <h3 >1. Code</h3>
-                <input id="test" type="text" name="" value="">
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >1. Code</h3>
+                <input id="" type="text" name="" value="">
+              </div>
 
-              </div>
-              <div class="containersItemGroup">
-              </div>
             </div>
         </div>
       </div>
   </div>
 </div>
 <script type="text/javascript">
-var test = document.getElementById('test');
+//var test = document.getElementById('test');
   function getToSendPO(){
     $.ajax( "../App/Controller/Controller2.php", {
            type: 'post',
@@ -148,8 +310,7 @@ var test = document.getElementById('test');
                    },
            success: function(data){
              console.log(data);
-             test.style.background = "red";
-             test.value = "hola";
+    //         test.value = "hola";
 
             }
           })
