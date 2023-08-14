@@ -333,7 +333,7 @@
              module: "getToSendPOOrders"
                    },
            success: function(data){
-             alert(data);
+             console.log(data);
     //         test.value = "hola";
 
             }
