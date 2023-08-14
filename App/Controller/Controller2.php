@@ -216,7 +216,7 @@ include ('../Data/flapi_credentials.php');
          }
 
          else {
-           $dataNo = getLastDataNo()["data_no"]  + 1;
+           $dataNo = intval($dataNo)  + 1;
          }
 
 
