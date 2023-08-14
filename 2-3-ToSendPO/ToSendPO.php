@@ -75,7 +75,7 @@
         left: 50%;
         background-color: #66768A;
         transform: translateX(-50%);
-        color: black;
+        color: white;
         font-size: 1em;
         font-weight: 300;
         margin: 5px 0px;
@@ -126,7 +126,7 @@
         <div class="containersItemsContentToSendPO">
           <div class="containerItemsContentToSendPO">
               <div class="itemContentToSendPO">
-                <h3>1. Code</h3>
+                <h3 id="test">1. Code</h3>
                 <input type="text" name="" value="">
 
               </div>
@@ -138,6 +138,7 @@
   </div>
 </div>
 <script type="text/javascript">
+var test = document.getElementById('test');
   function getToSendPO(){
     $.ajax( "../App/Controller/Controller2.php", {
            type: 'post',
@@ -147,7 +148,7 @@
                    },
            success: function(data){
              console.log(data);
-
+             test.value = "buenas";
 
             }
           })
