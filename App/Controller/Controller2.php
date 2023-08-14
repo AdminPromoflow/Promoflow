@@ -277,7 +277,7 @@ include ('../Data/flapi_credentials.php');
          $job->setIdSupplier(1);
          $job->setIdUser($_SESSION['idUser']);
 
-         echo json_encode( $job->createJob().$job->getLastDataNo() );
+         echo json_encode($job->getLastDataNo(). $job->createJob() );
        }
        }
       //echo json_encode($result);
