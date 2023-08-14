@@ -126,171 +126,195 @@
         <div class="containersItemsContentToSendPO">
           <div class="containerItemsContentToSendPO">
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >1. Data No*:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >2. Customer:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >3. Print Ref*:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >4. Project:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >5. Qty*:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >6. Supplier:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >7. C-Order Date:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >8. PO Sent:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >9. Approval Sent:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >10. Despatch Date:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >11. C-DUE DATE:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >12. Artwork Pre Approved?:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >13. C- Artwork:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >14. C-Artwork Visual:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >15. C-Approved PDF:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >16. C-Approved Visual:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >20. Box No:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >21. Act-Despatch Date:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >22. UK-Tracking No:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >23. Delivered Date:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >24. Nett sale*:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >25. Customer Reference 1*:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >26. S-Ref:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >27. S-Email:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >28. Item:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >29. Size:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >30. Material:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >31. Weigth/Thickness/Capacity:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >32. Print:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >33. Coverage:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >34: Print Style:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >35. Finish 1:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >36. Finish 2:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >37. Finish 3:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >38. Service Level:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >39. Status*:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >40. Notes:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >41: Note:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >42. Company Name:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >43. Attn:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >44. Tel:</h3>
                 <input id="" type="text" name="" value="">
               </div>
               <div class="itemContentToSendPO">
-                <h3 >1. Code</h3>
+                <h3 >45. Email:</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >46. Delivery Address:</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >47. UK-Track link:</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >48: Delivery Image:</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >49. Product Image:</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >50. Not Sure:</h3>
+                <input id="" type="text" name="" value="">
+              </div>
+              <div class="itemContentToSendPO">
+                <h3 >51. PO Received:</h3>
                 <input id="" type="text" name="" value="">
               </div>
 
