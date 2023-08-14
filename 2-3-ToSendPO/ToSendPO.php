@@ -132,7 +132,7 @@
              module: "getToSendPO"
                    },
            success: function(data){
-             alert(data);
+             console.log(data);
 
 
             }
