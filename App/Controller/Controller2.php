@@ -162,7 +162,7 @@ include ('../Data/flapi_credentials.php');
     elseif ($_POST['module']=="getToSendPOContent") {
       $db = new Database();
       $job = new Jobs($db);
-      $job -> = setId($_POST['idOrder']);
+      $job->setId($_POST['idOrder']);
       echo json_encode($job->getToSendPO());
     }
 
