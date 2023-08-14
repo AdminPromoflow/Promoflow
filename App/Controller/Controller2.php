@@ -209,7 +209,7 @@ include ('../Data/flapi_credentials.php');
 
          $db = new Database();
          $job = new Jobs($db);
-         echo json_encode($job->getLastDataNo())."quiero llorar" ;
+         echo json_encode($job->getLastDataNo()["data_no"])."quiero llorar" ;
 
 
          $db = new Database();
