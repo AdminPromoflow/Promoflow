@@ -267,7 +267,7 @@
     '<div class="containerItemsContentToSendPO">'+
         '<div class="itemContentToSendPO">'+
           '<h3 >1. Data No*:</h3>'+
-          '<input class="DataNo" type="text" name="" value="'+dataContentToSentPO[0]["data_no"]+'">'+
+          '<input class="DataNo" type="text" name="" value="">'+
         '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >2. Customer:</h3>'+
