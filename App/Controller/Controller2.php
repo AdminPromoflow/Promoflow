@@ -204,8 +204,10 @@ include ('../Data/flapi_credentials.php');
 
          $customerInfo[] = $value["addresses"];
          $customerInfo[] = $value["reseller_details"];
-         $idCustomer = saveCustomer($customerInfo)[0];
-         $nameCustomer = saveCustomer($customerInfo)[1];
+
+         $customerInfoReturn[] = saveCustomer($customerInfo);
+         $idCustomer = $customerInfoReturn[0];
+         $nameCustomer = $customerInfoReturn[1];
 
 
          $db = new Database();
@@ -289,7 +291,7 @@ include ('../Data/flapi_credentials.php');
          $job->setIdSupplier(1);
          $job->setIdUser($_SESSION['idUser']);
 
-        echo  json_encode($job->createJob() );
+          json_encode($job->createJob() );
        }
        }
      }
