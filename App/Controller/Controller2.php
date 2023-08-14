@@ -335,10 +335,10 @@ include ('../Data/flapi_credentials.php');
       $customer->createCustomer();}
 
       $idCustomer = $value["despatch_customer_code"];
-      $nameCustomer = $value["name"];
+    //  $nameCustomer = $value["name"];
 
-      $customerInfo[] = $idCustomer;
-      $customerInfo[] = $nameCustomer;
+    //  $customerInfo[] = $idCustomer;
+    //  $customerInfo[] = $nameCustomer;
     }
 
 
