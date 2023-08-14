@@ -124,6 +124,7 @@
           </div>
         </div>
         <div id="containersItemsContentToSendPO"class="containersItemsContentToSendPO">
+          <!--
           <div class="containerItemsContentToSendPO">
               <div class="itemContentToSendPO">
                 <h3 >1. Data No*:</h3>
@@ -319,6 +320,7 @@
               </div>
 
             </div>
+          -->
         </div>
       </div>
   </div>
