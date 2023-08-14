@@ -73,7 +73,7 @@
         text-align: center;
         width: 85%;
         left: 50%;
-        background-color: #7B899A;
+        background-color: #66768A;
         transform: translateX(-50%);
         color: black;
         font-size: 1em;
