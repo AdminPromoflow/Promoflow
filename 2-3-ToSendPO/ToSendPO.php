@@ -78,7 +78,7 @@
         color: black;
         font-size: 1em;
         font-weight: 300;
-        margin: 3px 0px;
+        margin: 5px 0px;
         border: 2px solid black;
       }
       .openToggleSubitemContentToSendPO{
