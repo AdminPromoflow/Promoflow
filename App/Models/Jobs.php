@@ -496,7 +496,8 @@
               `notes`, `note`,
               `UK_track_link`,  `delivery_image`,`not_sure`,`PO_received`
 
-              FROM `Jobs`");
+              FROM `Jobs`
+              WHERE `id` = '$this->id'");
           $data = $sql->fetchAll(PDO::FETCH_ASSOC);
           $this->conn->close();
           return $data;
