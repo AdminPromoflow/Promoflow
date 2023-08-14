@@ -19,16 +19,6 @@
       font-size: 1em;
       font-weight: 400;
     }
-    .itemToSendPO input{
-      position: relative;
-      text-align: center;
-      background-color: yellow;
-      color: rgba(255, 255, 255, .9);
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1em;
-      font-weight: 400;
-    }
     .openToggleSubitemToSendPO{
       position: absolute;
       width: 40px;
@@ -73,6 +63,17 @@
         text-align: center;
         width: 85%;
         left: 50%;
+        transform: translateX(-50%);
+        color: rgba(255, 255, 255, .8);
+        font-size: 1em;
+        font-weight: 300;
+      }
+      .itemContentToSendPO input{
+        position: relative;
+        text-align: center;
+        width: 85%;
+        left: 50%;
+        background-color: blue;
         transform: translateX(-50%);
         color: rgba(255, 255, 255, .8);
         font-size: 1em;
