@@ -69,7 +69,7 @@
        }
        function getToSendPOOrders(){
          try{
-           $sql = $this->conn->conn()->query("SELECT * FROM `Orders` ");
+           $sql = $this->conn->conn()->query("SELECT * FROM `Order` ");
           $data = $sql->fetchAll(PDO::FETCH_ASSOC);
           $this->conn->close();
           return $data;
