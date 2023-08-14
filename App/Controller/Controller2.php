@@ -204,7 +204,8 @@ include ('../Data/flapi_credentials.php');
 
          $customerInfo[] = $value["addresses"];
          $customerInfo[] = $value["reseller_details"];
-         $idCustomer = saveCustomer($customerInfo);
+         $idCustomer = saveCustomer($customerInfo)[0];
+         $nameCustomer = saveCustomer($customerInfo)[1];
 
 
          $db = new Database();
@@ -222,12 +223,9 @@ include ('../Data/flapi_credentials.php');
          $db = new Database();
          $job = new Jobs($db);
 
-
-
-
          $job->setId(str_replace($searchedCharacter, $neewCharacter, $value["id"]));
          $job->setStatus(str_replace($searchedCharacter, $neewCharacter, $value["status"]));
-         $job->setCustomer(str_replace($searchedCharacter, $neewCharacter, $value["customer"]));
+         $job->setCustomer(str_replace($searchedCharacter, $neewCharacter, $nameCustomer));
          $job->setContact(str_replace($searchedCharacter, $neewCharacter, $value["contact"]) );
          $job->setQuantityAllocated(  str_replace($searchedCharacter, $neewCharacter, $value["quantity_allocated"])  );
          $job->setQuantityPrinted(  str_replace($searchedCharacter, $neewCharacter, $value["quantity_printed"])  );
@@ -278,8 +276,6 @@ include ('../Data/flapi_credentials.php');
          $job->setAddresses($idCustomer);
          $job->setDataNo($dataNo);
 
-
-
          $job->setRevenue(  str_replace($searchedCharacter, $neewCharacter, $value["revenue"])  );
          $job->setNotes(  str_replace($searchedCharacter, $neewCharacter, $value["notes"])  );
          $job->setFinishes(  str_replace($searchedCharacter, $neewCharacter, $value["finishes"])  );
@@ -293,8 +289,6 @@ include ('../Data/flapi_credentials.php');
          $job->setIdSupplier(1);
          $job->setIdUser($_SESSION['idUser']);
 
-
-
           json_encode($job->createJob() );
        }
        }
@@ -303,6 +297,8 @@ include ('../Data/flapi_credentials.php');
      function saveCustomer($customerInfo){
     //   echo json_encode($customerInfo);
     $idCustomer;
+    $customerInfo = array();
+
     foreach ( $customerInfo[0] as $item => $value) {
       $db = new Database();
       $customer = new Customers($db);
@@ -336,10 +332,16 @@ include ('../Data/flapi_credentials.php');
       $customer->createCustomer();}
 
       $idCustomer = $value["despatch_customer_code"];
-    }
-    return $idCustomer;
-       //echo json_encode($customerInfo[1]);
+      $nameCustomer = $value["name"];
 
+      $customerInfo[] = $idCustomer;
+      $customerInfo[] = $nameCustomer;
+    }
+
+
+
+
+    return $customerInfo;
      }
 
  ?>
