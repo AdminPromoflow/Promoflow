@@ -249,7 +249,7 @@
              success: function(data){
                console.log(data);
 
-             alert(data);
+            // alert(data);
               dataContentToSentPO = jQuery.parseJSON(data);
               containersItemContentToSendPO[noDivOrder].innerHTML = '';
 
