@@ -152,9 +152,15 @@ require_once ('../Data/flapi_credentials.php');
 
 /*-------------------------------  Customers  --------------------------------*/
 
-    elseif ($_POST['module']=="getToSendPO") {
+    elseif ($_POST['module']=="getToSendPOOrders") {
+      $db = new Database();
+      $order = new Orders($db);
+      echo json_encode($order->getToSendPOOrders());
+    }
+    elseif ($_POST['module']=="getToSendPOContent") {
       $db = new Database();
       $job = new Jobs($db);
+      $job->setId($_POST['idOrder']);
       echo json_encode($job->getToSendPO());
     }
 

@@ -67,5 +67,17 @@
               echo $query . "<br>" . $e->getMessage();
             }
        }
+       function getToSendPOOrders(){
+         try{
+           $sql = $this->conn->conn()->query("SELECT * FROM `Order` ");
+          $data = $sql->fetchAll(PDO::FETCH_ASSOC);
+          $this->conn->close();
+          return $data;
+              }
+          catch(PDOException $e){
+              echo $query . "<br>" . $e->getMessage();
+            }
+        }
+       //
      }
 ?>
