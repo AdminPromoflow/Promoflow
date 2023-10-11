@@ -17,9 +17,9 @@
   </head>
   <body>
     <!-- Include the slider component for the index page using PHP -->
-    <?php include "../../views/home/sections/section-1-slider.php" ?>
+    <?php include "../../public/css/login/sections/section-1-home.css" ?>
 
     <!-- Include the JavaScript file for the home section -->
-    <!--<script src="../../public/js/login/sections/section-1-home.js" type="text/javascript"></script>-->
+    <script src="../../public/js/login/sections/section-1-home.js" type="text/javascript"></script>
   </body>
 </html>
