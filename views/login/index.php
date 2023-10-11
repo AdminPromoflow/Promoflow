@@ -20,6 +20,6 @@
     <?php include "../../views/home/sections/section-1-slider.php" ?>
 
     <!-- Include the JavaScript file for the home section -->
-    <script src="../../public/js/login/sections/section-1-home.js" type="text/javascript"></script>
+    <!--<script src="../../public/js/login/sections/section-1-home.js" type="text/javascript"></script>-->
   </body>
 </html>
