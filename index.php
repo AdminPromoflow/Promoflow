@@ -6,7 +6,7 @@
   </head>
   <body>
     <script type="text/javascript">
-    window.open("Home/index.php", "_self");
+    window.open("views/login/index.php", "_self");
     </script>
   </body>
 </html>

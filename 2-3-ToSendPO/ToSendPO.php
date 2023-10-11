@@ -186,6 +186,7 @@
     ;
     getToSendPOContent(idOrder, noDivOrder);
   }
+  
   var dataContentToSentPO;
   function getToSendPOContent(idOrder, noDivOrder){
     const containersItemContentToSendPO =  document.querySelectorAll(".containersItemContentToSendPO");

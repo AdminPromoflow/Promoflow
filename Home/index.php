@@ -199,19 +199,6 @@
            height: 380px;
          }
       }
-  /*    @media screen and (min-width: 480px) {
-
-      }
-      @media screen and (min-width: 768px) {
-
-      }
-      @media screen and (min-width: 1024px) {
-
-      }
-
-      @media screen and (min-width: 1200px) {
-
-      }*/
       @media (orientation: landscape) and (max-width: 750px){
         .bodyLogin{
           position: relative;
