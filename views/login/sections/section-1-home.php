@@ -16,7 +16,7 @@
     <div class="relative">
       <div class="itemContainer">
         <div class="items">
-          <h3>User manager</h3>
+          <h3>User manager..</h3>
         </div>
         <div class="items">
           <h3>W3P </h3>
