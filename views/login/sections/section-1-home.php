@@ -3,10 +3,10 @@
   <div class="menuLoginFixed">
     <div class="menuLogin">
       <div class="containerMenu">
-        <img class="logoImg" src="../../Images/Logo.png" alt="">
+        <img class="logoImg" src="../../public/img/home/sections/section-1-home/Logo.png" alt="">
       </div>
       <div class="containerMenu">
-        <img id="openMenuContainer"  src="../../Images/menuIcon.png" alt="">
+        <img id="openMenuContainer"  src="../../public/img/home/sections/section-1-home/IanLoginPIcture.png" alt="">
       </div>
     </div>
   </div>
