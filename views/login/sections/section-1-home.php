@@ -1,31 +1,48 @@
 <section class="Login">
-  <!--  MENU  -->
-  <div class="menuLoginFixed">
-    <div class="menuLogin">
-      <div class="containerMenu">
-        <img class="logoImg" src="../../public/img/home/sections/section-1-home/Logo.png" alt="">
+  <div  id="spanLoading" class="spanLoading ">
+    <span style="--i:1;"></span>
+    <span style="--i:2;"></span>
+    <span style="--i:3;"></span>
+    <span style="--i:4;"></span>
+    <span style="--i:5;"></span>
+    <span style="--i:6;"></span>
+    <span style="--i:7;"></span>
+    <span style="--i:8;"></span>
+    <span style="--i:9;"></span>
+    <span style="--i:10;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:12;"></span>
+    <span style="--i:13;"></span>
+    <span style="--i:14;"></span>
+    <span style="--i:15;"></span>
+  </div>
+  <div class="menuLogin">
+    <h1>Promoflow</h1>
+    <img src="Images/Logo.png" alt="">
+  </div>
+  <div class="bodyLogin">
+    <div class="boxLogin">
+      <div class="boxLogin2">
+        <div class="contentLogin">
+          <br>
+          <h1>Log in</h1>
+          <h4>Please provide your email and password to access the system.</h4>
+          <br>
+          <h4>Email:</h4>
+          <input class="data" id="emailData" type="text" name="" >
+          <h4>Password:</h4>
+          <input class="data" id="passwordData" type="password" name="" >
+          <div id="access" class="contactTitle">
+            <h3>Access</h3>
+          </div>
+          <br>
+          <h5 id="wrongPassword">The login credentials you entered are incorrect. Please try again</h5>
+        </div>
       </div>
-      <div class="containerMenu">
-        <img id="openMenuContainer"  src="../../public/img/home/sections/section-1-home/IanLoginPIcture.png" alt="">
+      <div class="boxLogin2">
+        <img src="Images/IanLoginPIcture.png" alt="">
+        <h3>Your product management interface is ready for you.</h3>
       </div>
     </div>
   </div>
-
-  <div id="menuContainer"  class="menuContainer">
-    <img id="closeMenu"  src="Images/Close.png" alt="">
-    <div class="relative">
-      <div class="itemContainer">
-        <div class="items">
-          <h3>User manager..</h3>
-        </div>
-        <div class="items">
-          <h3>W3P </h3>
-        </div>
-        <div id="logout" class="itemsLogout">
-          <h3>Logout </h3>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </section>
