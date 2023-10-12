@@ -18,7 +18,7 @@
   </div>
   <div class="menuLogin">
     <h1>Promoflow</h1>
-    <img src="Images/Logo.png" alt="">
+    <img src="../../public/img/home/sections/section-1-home/Logo.png" alt="">
   </div>
   <div class="bodyLogin">
     <div class="boxLogin">
@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="boxLogin2">
-        <img src="Images/IanLoginPIcture.png" alt="">
+        <img src="../../public/img/home/sections/section-1-home/IanLoginPIcture.png" alt="">
         <h3>Your product management interface is ready for you.</h3>
       </div>
     </div>
