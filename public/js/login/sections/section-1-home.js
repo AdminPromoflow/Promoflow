@@ -5,7 +5,7 @@ class Login {
 
     // Create an object with login data
     const data = {
-      module: "login",
+      action: "login",
       email: vars[0].value,     // Get email value from the first element in the 'vars' array
       password: vars[1].value  // Get password value from the second element in the 'vars' array
     };
