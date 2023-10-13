@@ -29,9 +29,9 @@
           <h4>Please provide your email and password to access the system.</h4>
           <br>
           <h4>Email:</h4>
-          <input class="data" id="emailData" type="text" name="" >
+          <input class="data" id="emailLogin" type="text" name="" >
           <h4>Password:</h4>
-          <input class="data" id="passwordData" type="password" name="" >
+          <input class="data" id="passwordLogin" type="password" name="" >
           <div id="access" class="contactTitle">
             <h3>Access</h3>
           </div>
