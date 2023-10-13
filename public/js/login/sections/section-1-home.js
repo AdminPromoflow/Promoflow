@@ -10,6 +10,8 @@ class Login {
       password: passwordLogin.value  // Get password value from the second element in the 'vars' array
     };
 
+    alert(emailLogin.value + "  " + passwordLogin.value);
+
     // Initialize event listeners for the login button and password input field
     access.addEventListener("click", function () {
       if (loginClass.validateEmail() && loginClass.validatePassword()) {
