@@ -83,6 +83,8 @@ class ApiHandler {
         // Create a database connection
         $connection = new Database();
 
+        echo "Ahí vamos";exit;
+
         // Create a new Users instance and set user data
         $user = new Users($connection);
         $user->setEmail($data->email);
