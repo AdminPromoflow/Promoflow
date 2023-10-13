@@ -1,10 +1,7 @@
 // Define a class called Login
 class Login {
   constructor() {
-    const url = "../../controller/user-controller.php"; // Replace with your API endpoint URL
-
-
-
+    const url = "../../controller/user-controller.php"; 
 
     // Initialize event listeners for the login button and password input field
     access.addEventListener("click", function () {
@@ -29,7 +26,7 @@ class Login {
             email: emailLogin.value,     // Get email value from the first element in the 'vars' array
             password: passwordLogin.value  // Get password value from the second element in the 'vars' array
           };
-          
+
           loginClass.makeAjaxRequestLogin(url, data);
         }
       }
