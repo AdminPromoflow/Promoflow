@@ -82,7 +82,7 @@ class ApiHandler {
         // Logic to process user login
         // Implement your login logic here and handle any errors appropriately.
         $response = array("message" => "Login successful");
-        echo json_encode($response);
+        echo json_encode("Lo logramos");
     }
 }
 
