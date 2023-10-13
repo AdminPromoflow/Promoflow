@@ -83,7 +83,7 @@ class ApiHandler {
         // Create a database connection
         echo "Ahí vamos";exit;
 
-        $connection = new Database();
+      /*  $connection = new Database();
 
 
         // Create a new Users instance and set user data
@@ -101,7 +101,7 @@ class ApiHandler {
         } else {
           $response = array("message" => "Login no successful");
           echo json_encode("No lo logramos");
-        }
+        }*/
 
 
     }
