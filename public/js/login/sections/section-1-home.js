@@ -3,18 +3,18 @@ class Login {
   constructor() {
     const url = "../../controller/user-controller.php"; // Replace with your API endpoint URL
 
-    // Create an object with login data
-    const data = {
-      action: "login",
-      email: emailLogin.value,     // Get email value from the first element in the 'vars' array
-      password: passwordLogin.value  // Get password value from the second element in the 'vars' array
-    };
+
 
 
     // Initialize event listeners for the login button and password input field
     access.addEventListener("click", function () {
       if (loginClass.validateEmail() && loginClass.validatePassword()) {
-        alert(emailLogin.value + " hola " + passwordLogin.value);
+        // Create an object with login data
+        const data = {
+          action: "login",
+          email: emailLogin.value,     // Get email value from the first element in the 'vars' array
+          password: passwordLogin.value  // Get password value from the second element in the 'vars' array
+        };
 
         loginClass.makeAjaxRequestLogin(url, data);
       }
@@ -23,6 +23,13 @@ class Login {
     document.querySelector('#passwordLogin').addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
         if (loginClass.validateEmail() && loginClass.validatePassword()) {
+          // Create an object with login data
+          const data = {
+            action: "login",
+            email: emailLogin.value,     // Get email value from the first element in the 'vars' array
+            password: passwordLogin.value  // Get password value from the second element in the 'vars' array
+          };
+          
           loginClass.makeAjaxRequestLogin(url, data);
         }
       }
