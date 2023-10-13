@@ -17,7 +17,7 @@ class Login {
       }
     });
 
-    document.querySelector('#passwordData').addEventListener('keypress', function (e) {
+    document.querySelector('#passwordLogin').addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
         if (loginClass.validateEmail() && loginClass.validatePassword()) {
           loginClass.makeAjaxRequestLogin(url, data);
