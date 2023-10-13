@@ -5,7 +5,7 @@ class Users {
 
     // Initialize event listeners for the login button and password input field
     access.addEventListener("click", function () {
-      if (loginClass.validateEmail() && loginClass.validatePassword()) {
+      if (usersClass.validateEmail() && usersClass.validatePassword()) {
         // Create an object with login data
         const data = {
           action: "login",
@@ -13,13 +13,13 @@ class Users {
           password: passwordLogin.value  // Get password value from the second element in the 'vars' array
         };
 
-        loginClass.makeAjaxRequestLogin(url, data);
+        usersClass.makeAjaxRequestLogin(url, data);
       }
     });
 
     document.querySelector('#passwordLogin').addEventListener('keypress',        function (e) {
       if (e.key === 'Enter') {
-        if (loginClass.validateEmail() && loginClass.validatePassword()) {
+        if (usersClass.validateEmail() && usersClass.validatePassword()) {
           // Create an object with login data
           const data = {
             action: "login",
@@ -27,7 +27,7 @@ class Users {
             password: passwordLogin.value  // Get password value from the second element in the 'vars' array
           };
 
-          loginClass.makeAjaxRequestLogin(url, data);
+          usersClass.makeAjaxRequestLogin(url, data);
         }
       }
        });
