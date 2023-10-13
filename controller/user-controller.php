@@ -21,7 +21,7 @@ class ApiHandler {
                         break;
 
                     case "login":
-                        $this->handleLogin();
+                        $this->handleLogin($data);
                         break;
 
                     default:
@@ -52,7 +52,7 @@ class ApiHandler {
 
         // Validate user data using the Security class
         $security = new Security();
-        $var = $security->validateUserData($name, $email, $password);
+        $var = $security->validateUserDataRegistration($name, $email, $password);
 
         if (!!$var) {
             // Create a database connection
@@ -78,11 +78,29 @@ class ApiHandler {
     }
 
     // Function to handle user login
-    private function handleLogin() {
+    private function handleLogin($data) {
         // Logic to process user login
-        // Implement your login logic here and handle any errors appropriately.
-        $response = array("message" => "Login successful");
-        echo json_encode("Lo logramos");
+        // Create a database connection
+        $connection = new Database();
+
+        // Create a new Users instance and set user data
+        $user = new Users($connection);
+        $user->setEmail($data->email);
+
+        // Create the user in the database
+        $storedHash = $user->getPaswordUserByEmail();
+        $password = $data->password;
+
+        if (password_verify($password, $storedHash)) {
+
+          $response = array("message" => "Login successful");
+          echo json_encode("Lo logramos");
+        } else {
+          $response = array("message" => "Login no successful");
+          echo json_encode("No lo logramos");
+        }
+
+
     }
 }
 

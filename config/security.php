@@ -1,15 +1,15 @@
 <?php
 class Security {
 
-    public static function validateUserData($username, $email, $password) {
+    public static function validateUserDataRegistration($username, $email, $password) {
         // Check if fields are not empty
-        if (empty($username) || empty($email) || empty($password)) {
-            return false;
+        if (empty($username) || empty($email) || empty($password)){
+          return false;
         }
 
         // Check email format
        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            return $email;
+            return false;
         }
 
         // Check if the username already exists in the database
@@ -18,7 +18,6 @@ class Security {
         }
 
         // Escape data before storing it in the database
-
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT); // Hash the password
 
         // If everything is fine, return the secure data

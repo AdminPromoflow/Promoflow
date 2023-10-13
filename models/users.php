@@ -50,6 +50,28 @@ class Users {
       throw new Exception("Error in the user verification query.");
     }
   }
+  public function getPasswordUserByEmail() {
+    try {
+      // Prepare the SQL query with placeholders
+      $sql = $this->connection->getConnection()->prepare("SELECT `passwordUser` FROM `Users` WHERE `emailUser` = :email");
+
+      // Bind the email parameter
+      $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
+
+      // Execute the query
+      $sql->execute();
+
+      // Fetch the password
+      $password = $sql->fetchColumn(); // Retrieve the password as a single value
+
+      return $password;
+    } catch (PDOException $e) {
+      // Handle any exceptions and provide an error message
+      echo "Error in the query: " . $e->getMessage();
+      throw new Exception("Error in the user verification query.");
+    }
+  }
+
 
   /*
    * Create a new user with the provided name, email, and password.
