@@ -21,7 +21,8 @@ class ApiHandler {
                         break;
 
                     case "login":
-                        $this->handleLogin($data);
+                    echo "Buenas";
+                      //  $this->handleLogin($data);
                         break;
 
                     default:
