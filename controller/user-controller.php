@@ -6,8 +6,9 @@ class ApiHandler {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Get the raw JSON data from the request body
             $rawData = file_get_contents("php://input");
+            echo ($rawData);exit;
+
             $data = json_decode($rawData);
-            echo json_encode($data->action);exit;
 
 
             // Check if JSON data is valid and contains an "action" field
