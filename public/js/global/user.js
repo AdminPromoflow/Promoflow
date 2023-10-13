@@ -79,7 +79,7 @@ class Users {
       })
       .then(data => {
         alert(data);
-        if (data["COUNT(*)"] == 1) {
+        /*if (data["COUNT(*)"] == 1) {
           window.open("../Dashboard/", "_self");
         } else {
           setTimeout(function () {
@@ -87,7 +87,7 @@ class Users {
           }, 3000);
           wrongPassword.display = "block";
           spanLoading.display = "none";
-        }
+        }*/
       })
       .catch(error => {
         console.error("Error:", error);
