@@ -14,7 +14,7 @@ class Login {
     // Initialize event listeners for the login button and password input field
     access.addEventListener("click", function () {
       if (loginClass.validateEmail() && loginClass.validatePassword()) {
-        alert(emailLogin.value + "  " + passwordLogin.value);
+        alert(emailLogin.value + " hola " + passwordLogin.value);
 
         loginClass.makeAjaxRequestLogin(url, data);
       }
