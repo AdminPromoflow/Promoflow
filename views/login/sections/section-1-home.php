@@ -18,6 +18,7 @@
   </div>
   <div class="menuLogin">
     <h1>Promoflow</h1>
+    <h3>Maintenance in progress. Our website will be back online soon.</h3>
     <img src="../../public/img/home/sections/section-1-home/Logo.png" alt="">
   </div>
   <div class="bodyLogin">
