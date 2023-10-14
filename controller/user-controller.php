@@ -2,7 +2,6 @@
 class ApiHandler {
     // Function to handle incoming requests
     public function handleRequest() {
-      echo json_encode("Ahí vamos");exit;
 
         // Check if a POST request was received
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -81,35 +80,32 @@ class ApiHandler {
 
     // Function to handle user login
     private function handleLogin($data) {
-      // Logic to process user login
-      // Create a database connection
+        // Logic to process user login
+        // Create a database connection
+        $connection = new Database();
 
+        // Create a new Users instance and set user data
+        $user = new Users($connection);
+        $user->setEmail($data->email);
 
-      $connection = new Database();
+        // Create the user in the database
+        $storedHash = $user->getPaswordUserByEmail();
+        $password = $data->password;
 
-
-      // Create a new Users instance and set user data
-      $user = new Users($connection);
-      $user->setEmail($data->email);
-
-      // Create the user in the database
-      $storedHash = $user->getPaswordUserByEmail();
-      $password = $data->password;
-
-      if (password_verify($password, $storedHash)) {
-
-        $response = array("message" => "Login successful");
-        echo json_encode("Lo logramos");
-      } else {
-        $response = array("message" => "Login no successful");
-        echo json_encode("No lo logramos");
-      }
+        if (password_verify($password, $storedHash)) {
+            $response = array("message" => "Login successful");
+            echo json_encode("Lo logramos");
+        } else {
+            $response = array("message" => "Login not successful");
+            echo json_encode("No lo logramos");
+        }
+    }
 }
 
 // Include required files
-//require_once '../config/database.php';
-//require_once '../config/security.php';
-//require_once '../models/users.php';
+require_once '../config/database.php';
+require_once '../config/security.php';
+require_once '../models/users.php';
 
 // Create an instance of the ApiHandler class and handle the request
 $apiHandler = new ApiHandler();
