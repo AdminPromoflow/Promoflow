@@ -8,7 +8,6 @@ class ApiHandler {
             $rawData = file_get_contents("php://input");
 
             $data = json_decode($rawData);
-            json_decode("hola");exit;
 
             // Check if JSON data is valid and contains an "action" field
             if ($data !== null && isset($data->action)) {
@@ -22,6 +21,8 @@ class ApiHandler {
                         break;
 
                     case "login":
+                    json_decode("hola");exit;
+
                         $this->handleLogin($data);
                         break;
 
