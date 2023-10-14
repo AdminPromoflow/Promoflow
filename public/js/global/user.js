@@ -64,30 +64,23 @@ class Users {
 
   // Function to make the AJAX request
   makeAjaxRequestLogin(url, data) {
+    // Make the request using the Fetch API
     fetch(url, {
-      method: "POST",
+      method: "POST", // HTTP POST method to send data
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json" // Indicate that you're sending JSON
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data) // Convert the JSON object to a JSON string and send it
     })
       .then(response => {
         if (response.ok) {
-          return response.json();
+          return response.text(); // or response.json() if you expect a JSON response
         }
         throw new Error("Network error.");
       })
-      .then(responseData => {
-        alert(responseData);
-        /*if (responseData["COUNT(*)"] == 1) {
-          window.open("../Dashboard/", "_self");
-        } else {
-          setTimeout(function () {
-            // Código a ejecutar después de un retraso
-          }, 3000);
-          wrongPassword.display = "block";
-          spanLoading.display = "none";
-        }*/
+      .then(data => {
+        // The code inside this function will run when the request is complete
+        alert(data); // Here you can handle the received response
       })
       .catch(error => {
         console.error("Error:", error);
