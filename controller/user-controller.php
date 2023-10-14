@@ -82,6 +82,7 @@ class ApiHandler {
 
     // Function to handle user login
     private function handleLogin($data) {
+      exit;
         // Logic to process user login
         // Create a database connection
         $connection = new Database();
