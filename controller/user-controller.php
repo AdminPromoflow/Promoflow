@@ -94,9 +94,8 @@ class ApiHandler {
             $user->setEmail($data->email);
 
             // Create the user in the database
-            $storedHash = $user->getPaswordUserByEmail();
-            echo json_encode($data);exit;
-
+            $storedHash = $user->getPasswordUserByEmail();
+            echo json_encode($data)exit;
             $password = $data->password;
 
             if (password_verify($password, $storedHash)) {
