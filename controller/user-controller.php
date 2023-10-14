@@ -23,7 +23,7 @@ class ApiHandler {
                     case "login":
                     json_decode($data->action);exit;
 
-                        $this->handleLogin($data);
+                        $apiHandler->handleLogin($data);
                         break;
 
                     default:
