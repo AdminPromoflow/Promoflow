@@ -85,6 +85,7 @@ class ApiHandler {
         // Logic to process user login
         // Create a database connection
         $connection = new Database();
+        echo json_encode($data);
         exit;
 
         // Create a new Users instance and set user data
