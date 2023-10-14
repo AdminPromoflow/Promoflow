@@ -19,6 +19,12 @@
   <div class="menuLogin">
     <h1>Promoflow</h1>
     <h3>Maintenance in progress. Our website will be back online soon.</h3>
+    <style media="screen">
+      .menuLogin h3{
+        color: white;
+        font-weight: 300;
+      }
+    </style>
     <img src="../../public/img/home/sections/section-1-home/Logo.png" alt="">
   </div>
   <div class="bodyLogin">
