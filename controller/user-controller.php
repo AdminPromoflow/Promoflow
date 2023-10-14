@@ -3,7 +3,7 @@ class ApiHandler {
     // Function to handle incoming requests
     public function handleRequest() {
         // Check if a POST request was received
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      /*  if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Get the raw JSON data from the request body
             $rawData = file_get_contents("php://input");
 
@@ -41,7 +41,7 @@ class ApiHandler {
             // The request is not a valid POST request
             http_response_code(405); // Method Not Allowed
             echo json_encode(array("message" => "Method not allowed"));
-        }
+        }*/
     }
 
     // Function to handle user registration
