@@ -21,6 +21,7 @@ class ApiHandler {
                         break;
 
                     case "login":
+                    echo json_encode("Ahí vamos");exit;
                         $this->handleLogin($data);
                         break;
 
@@ -81,7 +82,7 @@ class ApiHandler {
     private function handleLogin($data) {
       // Logic to process user login
       // Create a database connection
-      echo json_encode("Ahí vamos");exit;
+
 
       $connection = new Database();
 
