@@ -21,7 +21,7 @@ class ApiHandler {
                         break;
 
                     case "login":
-                        $this->handleLogin(json_decode($rawData));
+                        $this->handleLogin($data);
                         break;
 
                     default:
