@@ -21,9 +21,7 @@ class ApiHandler {
                         break;
 
                     case "login":
-                        $apiHandler->handleLogin($data);
-                        json_decode($data->action);exit;
-
+                        $this->handleLogin($data);
                         break;
 
                     default:
@@ -80,29 +78,39 @@ class ApiHandler {
         }
     }
 
+    // ...
+
     // Function to handle user login
     private function handleLogin($data) {
-
         // Logic to process user login
         // Create a database connection
         $connection = new Database();
 
         // Create a new Users instance and set user data
         $user = new Users($connection);
-        $user->setEmail($data->email);
 
-        // Create the user in the database
-        $storedHash = $user->getPaswordUserByEmail();
-        $password = $data->password;
+        // Verifica si $data es un objeto y si contiene la propiedad "email"
+        if (is_object($data) && property_exists($data, 'email')) {
+            $user->setEmail($data->email);
 
-        if (password_verify($password, $storedHash)) {
-            $response = array("message" => "Login successful");
-            echo json_encode("Lo logramos");
+            // Create the user in the database
+            $storedHash = $user->getPaswordUserByEmail();
+            $password = $data->password;
+
+            if (password_verify($password, $storedHash)) {
+                $response = array("message" => "Login successful");
+                echo json_encode($response); // Usar un array en json_encode
+            } else {
+                $response = array("message" => "Login not successful");
+                echo json_encode($response); // Usar un array en json_encode
+            }
         } else {
-            $response = array("message" => "Login not successful");
-            echo json_encode("No lo logramos");
+            // Si falta la propiedad "email" en $data
+            $response = array("message" => "Invalid data for login");
+            echo json_encode($response);
         }
     }
+
 }
 
 // Include required files
