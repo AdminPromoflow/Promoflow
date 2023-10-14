@@ -81,7 +81,7 @@ class ApiHandler {
     // ...
 
     // Function to handle user login
-    private function handleLogin($data) {/*
+    private function handleLogin($data) {
         // Logic to process user login
         // Create a database connection
         $connection = new Database();
@@ -109,7 +109,7 @@ class ApiHandler {
             $response = array("message" => "Invalid data for login");
             echo json_encode($response);
         }
-    */}
+    }
 
 }
 
