@@ -22,6 +22,8 @@ class ApiHandler {
 
                     case "login":
                         $apiHandler->handleLogin($data);
+                        json_decode($data->action);exit;
+
                         break;
 
                     default:
@@ -80,7 +82,6 @@ class ApiHandler {
 
     // Function to handle user login
     private function handleLogin($data) {
-      json_decode($data->action);exit;
 
         // Logic to process user login
         // Create a database connection
