@@ -64,8 +64,7 @@ class Users {
 
   // Function to make the AJAX request
   makeAjaxRequestLogin(url, data) {
-    alert("dskjf");
-  /*  fetch(url, {
+    fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -78,13 +77,13 @@ class Users {
         }
         throw new Error("Network error.");
       })
-      .then(data => {
-        alert(data);
-        if (data["COUNT(*)"] == 1) {
+      .then(responseData => {
+        alert(responseData);
+        if (responseData["COUNT(*)"] == 1) {
           window.open("../Dashboard/", "_self");
         } else {
           setTimeout(function () {
-            // Code to be executed after a delay
+            // Código a ejecutar después de un retraso
           }, 3000);
           wrongPassword.display = "block";
           spanLoading.display = "none";
@@ -92,8 +91,9 @@ class Users {
       })
       .catch(error => {
         console.error("Error:", error);
-      });*/
+      });
   }
+
 }
 
 // Select DOM elements and initialize the Users class
