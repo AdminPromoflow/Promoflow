@@ -23,6 +23,7 @@
       .menuLogin h3{
         color: white;
         font-weight: 300;
+        padding-left: 15px;
       }
     </style>
     <img src="../../public/img/home/sections/section-1-home/Logo.png" alt="">
