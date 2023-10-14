@@ -21,6 +21,8 @@ class ApiHandler {
                         break;
 
                     case "login":
+                    json_decode("hola");exit;
+
                         $this->handleLogin($data);
                         break;
 
@@ -45,7 +47,6 @@ class ApiHandler {
 
     // Function to handle user registration
     private function handleRegistration($data) {
-      json_decode("hola");exit;
 
         // Extract user registration data from JSON
         $name = $data->nameRegister;
