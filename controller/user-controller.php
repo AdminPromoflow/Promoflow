@@ -21,8 +21,7 @@ class ApiHandler {
                         break;
 
                     case "login":
-                    echo "Buenas";exit;
-                      //  $this->handleLogin($data);
+                        $this->handleLogin($data);
                         break;
 
                     default:
@@ -80,32 +79,29 @@ class ApiHandler {
 
     // Function to handle user login
     private function handleLogin($data) {
-        // Logic to process user login
-        // Create a database connection
-        echo "Ahí vamos";exit;
+      // Logic to process user login
+      // Create a database connection
+      echo json_encode("Ahí vamos");exit;
 
-      /*  $connection = new Database();
-
-
-        // Create a new Users instance and set user data
-        $user = new Users($connection);
-        $user->setEmail($data->email);
-
-        // Create the user in the database
-        $storedHash = $user->getPaswordUserByEmail();
-        $password = $data->password;
-
-        if (password_verify($password, $storedHash)) {
-
-          $response = array("message" => "Login successful");
-          echo json_encode("Lo logramos");
-        } else {
-          $response = array("message" => "Login no successful");
-          echo json_encode("No lo logramos");
-        }*/
+      $connection = new Database();
 
 
-    }
+      // Create a new Users instance and set user data
+      $user = new Users($connection);
+      $user->setEmail($data->email);
+
+      // Create the user in the database
+      $storedHash = $user->getPaswordUserByEmail();
+      $password = $data->password;
+
+      if (password_verify($password, $storedHash)) {
+
+        $response = array("message" => "Login successful");
+        echo json_encode("Lo logramos");
+      } else {
+        $response = array("message" => "Login no successful");
+        echo json_encode("No lo logramos");
+      }
 }
 
 // Include required files

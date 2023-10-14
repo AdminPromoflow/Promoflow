@@ -50,7 +50,7 @@ class Users {
       throw new Exception("Error in the user verification query.");
     }
   }
-/*  public function getPasswordUserByEmail() {
+  public function getPasswordUserByEmail() {
     try {
       // Prepare the SQL query with placeholders
       $sql = $this->connection->getConnection()->prepare("SELECT `passwordUser` FROM `Users` WHERE `emailUser` = :email");
@@ -70,7 +70,7 @@ class Users {
       echo "Error in the query: " . $e->getMessage();
       throw new Exception("Error in the user verification query.");
     }
-  }*/
+  }
 
 
   /*
