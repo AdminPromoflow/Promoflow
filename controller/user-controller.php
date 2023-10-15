@@ -2,13 +2,14 @@
 class ApiHandler {
     // Function to handle incoming requests
     public function handleRequest() {
+      echo json_encode($data)exit;
+
         // Check if a POST request was received
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Get the raw JSON data from the request body
             $rawData = file_get_contents("php://input");
 
             $data = json_decode($rawData);
-            echo json_encode($data)exit;
 
 
             // Check if JSON data is valid and contains an "action" field
