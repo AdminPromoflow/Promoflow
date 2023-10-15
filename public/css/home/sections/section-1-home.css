@@ -20,7 +20,8 @@
   background-color: rgba(210, 220, 234, .3);
   border-radius: 5px;
   left: 50%;
-  width: 300px;
+  width: 70%;
+  min-width: 300px;
   border-radius: 1px solid black;
   transform: translateX(-50%);
   display: flex;
