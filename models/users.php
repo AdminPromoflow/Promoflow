@@ -52,7 +52,6 @@ class Users {
   }
   public function getPasswordUserByEmail() {
     try {
-      echo json_encode($data)exit;
 
       // Prepare the SQL query with placeholders
       $sql = $this->connection->getConnection()->prepare("SELECT `passwordUser` FROM `Users` WHERE `emailUser` = :email");
