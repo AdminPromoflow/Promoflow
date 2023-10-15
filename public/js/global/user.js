@@ -80,7 +80,8 @@ class Users {
       })
       .then(data => {
         // The code inside this function will run when the request is complete
-        alert(data["message"]); // Here you can handle the received response
+        var objetoJSON = JSON.parse(data);
+        alert(objetoJSON["message"]); // Here you can handle the received response
       })
       .catch(error => {
         console.error("Error:", error);
