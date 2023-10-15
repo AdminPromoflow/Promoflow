@@ -105,9 +105,9 @@ class ApiHandler {
 
             if (password_verify($password, $storedHash)) {
                 $response = array("message" => "Login successful");
-                echo json_encode($response); // Usar un array en json_encode
+                echo
             } else {
-                $response = array("message" => "Login not successful");
+                $response = array("message" => false);
                 echo json_encode($response); // Usar un array en json_encode
             }
         } else {
