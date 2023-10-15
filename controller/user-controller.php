@@ -63,7 +63,6 @@ class ApiHandler {
         if (!!$var) {
             // Create a database connection
             $connection = new Database();
-            exit;
 
             // Create a new Users instance and set user data
             $user = new Users($connection);
@@ -98,6 +97,7 @@ class ApiHandler {
         // Verifica si $data es un objeto y si contiene la propiedad "email"
         if (is_object($data) && property_exists($data, 'email')) {
             $user->setEmail($data->email);
+            exit;
 
             // Create the user in the database
             $storedHash = $user->getPasswordUserByEmail();
