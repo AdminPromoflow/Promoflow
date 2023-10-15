@@ -103,7 +103,7 @@ class ApiHandler {
             $password = $data->password;
 
 
-            if (password_verify($password, $storedHash)) {
+            if (password_verify($password, $password)) {//CAMBIAR!!!!
                 $response = array("message" => "Login successful");
                 echo json_encode($response); // Usar un array en json_encode
             } else {
