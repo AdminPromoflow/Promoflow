@@ -101,6 +101,7 @@ class ApiHandler {
             // Create the user in the database
             $storedHash = $user->getPasswordUserByEmail();
             $password = $data->password;
+            exit;
 
             if (password_verify($password, $storedHash)) {
                 $response = array("message" => "Login successful");
