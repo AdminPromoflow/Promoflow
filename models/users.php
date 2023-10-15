@@ -52,13 +52,13 @@ class Users {
   }
   public function getPasswordUserByEmail() {
     try {
-      exit;
 
       // Prepare the SQL query with placeholders
       $sql = $this->connection->getConnection()->prepare("SELECT `passwordUser` FROM `Users` WHERE `emailUser` = :email");
 
       // Bind the email parameter
       $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
+      exit;
 
       // Execute the query
       $sql->execute();
