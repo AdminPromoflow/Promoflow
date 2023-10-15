@@ -102,7 +102,7 @@ class ApiHandler {
             $storedHash = $user->getPasswordUserByEmail();
             $password = $data->password;
 
-            echo json_encode("string");
+            echo json_encode($data);
 
             if (password_verify($password, $storedHash)) {
                 $response = array("message" => "Login successful");
