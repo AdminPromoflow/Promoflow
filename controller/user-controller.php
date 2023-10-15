@@ -1,17 +1,17 @@
 <?php
+// Start the session
+session_start();
+
 class ApiHandler {
     // Function to handle incoming requests
     public function handleRequest() {
-
-        // Check if a POST request was received
+        // Check if the request is POST
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Get the raw JSON data from the request body
+            // Get raw JSON data from the request body
             $rawData = file_get_contents("php://input");
 
-
-
+            // Decode the JSON data
             $data = json_decode($rawData);
-
 
             // Check if JSON data is valid and contains an "action" field
             if ($data !== null && isset($data->action)) {
@@ -23,12 +23,9 @@ class ApiHandler {
                     case "register":
                         $this->handleRegistration($data);
                         break;
-
                     case "login":
-
                         $this->handleLogin($data);
                         break;
-
                     default:
                         // Unknown action
                         http_response_code(400); // Bad Request
@@ -50,7 +47,6 @@ class ApiHandler {
 
     // Function to handle user registration
     private function handleRegistration($data) {
-
         // Extract user registration data from JSON
         $name = $data->nameRegister;
         $email = $data->emailRegister;
@@ -77,13 +73,11 @@ class ApiHandler {
             $response = array("message" => "Registration successful");
             echo json_encode($response);
         } else {
-            // User data validation failed, user may already exist
+            // User data validation failed; the user may already exist
             $response = array("message" => "Registration not successful. User already exists");
             echo json_encode($response);
         }
     }
-
-    // ...
 
     // Function to handle user login
     private function handleLogin($data) {
@@ -94,7 +88,7 @@ class ApiHandler {
         // Create a new Users instance and set user data
         $user = new Users($connection);
 
-        // Verifica si $data es un objeto y si contiene la propiedad "email"
+        // Check if $data is an object and if it contains the "email" property
         if (is_object($data) && property_exists($data, 'email')) {
             $user->setEmail($data->email);
 
@@ -102,21 +96,20 @@ class ApiHandler {
             $storedHash = $user->getPasswordUserByEmail();
             $password = $data->password;
 
-
             if (password_verify($password, $storedHash)) {
                 $response = array("message" => true);
-                echo json_encode($response); // Usar un array en json_encode
+                $_SESSION['logged_in'] = true;
+                echo json_encode($response);
             } else {
                 $response = array("message" => "Login not successful");
-                echo json_encode($response); // Usar un array en json_encode
+                echo json_encode($response);
             }
         } else {
-            // Si falta la propiedad "email" en $data
+            // If the "email" property is missing in $data
             $response = array("message" => "Invalid data for login");
             echo json_encode($response);
         }
     }
-
 }
 
 // Include required files

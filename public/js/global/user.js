@@ -81,7 +81,7 @@ class Users {
       .then(data => {
         // The code inside this function will run when the request is complete
         var objetoJSON = JSON.parse(data);
-        if (!objetoJSON["message"]) {//CAMBIAR
+        if (!objetoJSON["message"]) {
           window.open("../../views/home/index.php", "_self");
         }
         else {
