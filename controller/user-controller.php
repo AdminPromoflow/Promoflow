@@ -107,7 +107,7 @@ class ApiHandler {
                 $response = array("message" => "Login successful");
                 echo json_encode($response); // Usar un array en json_encode
             } else {
-                $response = array("message" => "Login not successful");
+                $response = array("message" => false);
                 echo json_encode($response); // Usar un array en json_encode
             }
         } else {
