@@ -60,7 +60,7 @@ class Users {
           $sql = $this->connection->getConnection()->prepare("SELECT `password` FROM `Users` WHERE `email` = :email");
 
           // Bind the email parameter
-          $sql->bindParam(':email', $this->email, PDO::PARAM_STR);exit;
+          $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
 
           // Execute the query
           $sql->execute();
