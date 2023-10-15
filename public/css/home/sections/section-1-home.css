@@ -21,12 +21,12 @@
   background-color: rgba(210, 220, 234, .3);
   border-radius: 5px;
   left: 50%;
-  top: 40%;
-  transform: translate(-50% , -50%);
+  transform: translateX(-50%);
   width: 70%;
   height: 40%;
   min-width: 300px;
   border-radius: 1px solid black;
+  
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
