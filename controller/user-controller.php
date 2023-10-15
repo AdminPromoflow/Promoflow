@@ -21,6 +21,8 @@ class ApiHandler {
                         break;
 
                     case "login":
+                    echo json_encode($data)exit;
+
                         $this->handleLogin($data);
                         break;
 
@@ -88,7 +90,6 @@ class ApiHandler {
 
         // Create a new Users instance and set user data
         $user = new Users($connection);
-        echo json_encode($data)exit;
 
         // Verifica si $data es un objeto y si contiene la propiedad "email"
         if (is_object($data) && property_exists($data, 'email')) {
