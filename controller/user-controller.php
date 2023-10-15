@@ -2,7 +2,6 @@
 class ApiHandler {
     // Function to handle incoming requests
     public function handleRequest() {
-      exit;
 
         // Check if a POST request was received
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -64,6 +63,7 @@ class ApiHandler {
         if (!!$var) {
             // Create a database connection
             $connection = new Database();
+            exit;
 
             // Create a new Users instance and set user data
             $user = new Users($connection);
