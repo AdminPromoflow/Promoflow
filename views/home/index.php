@@ -437,7 +437,7 @@
 
     </style>
 
-    <section class="Login">
+    <section class="menu">
       <!--  MENU  -->
       <div class="menuLoginFixed">
         <div class="menuLogin">
@@ -460,33 +460,6 @@
             <div class="items">
               <h3>W3P </h3>
             </div>
-          <!--  <div class="items">
-              <h3>Client PO & Art to C2R</h3>
-            </div>
-            <div class="items">
-              <h3>C2R PO & Art Supplier</h3>
-            </div>
-            <div class="items">
-              <h3>Proof from supplier to C2R</h3>
-            </div>
-            <div class="items">
-              <h3>Approval from client</h3>
-            </div>
-            <div class="items">
-              <h3>Approval from C2R to supplier</h3>
-            </div>
-            <div class="items">
-              <h3>To Production</h3>
-            </div>
-            <div class="items">
-              <h3>Despatch</h3>
-            </div>
-            <div class="items">
-              <h3>Invoice</h3>
-            </div>
-            <div class="items">
-              <h3>Lanyard for you</h3>
-            </div>-->
             <div id="logout" class="itemsLogout">
               <h3>Logout </h3>
             </div>
@@ -499,109 +472,6 @@
     <?php include "../1-ClientsManager/ClientsManager.php" ?>
     <?php include "../2-W3P/W3P.php" ?>
 
-    <script type="text/javascript">
-    /* verifyLogin */
-    verifyLogin();
-    function verifyLogin() {
-      $.ajax( "../App/Controller/Controller2.php", {
-      type: 'post',
-      async: false,
-      data: {
-        module: "verifyLogin",
-      },
-      success: function(data){
-        //var data = jQuery.parseJSON(data);
-        if (data == 1) {
-
-        }
-        else {
-          window.open("../index.php", "_self");
-        }
-
-      }
-    }
-    )
-    }
-
-
-
-
-    /* Menu */
-
-    /* Declaration of variables*/
-    var closeMenu = document.getElementById('closeMenu');
-    var menuContainer = document.getElementById('menuContainer');
-    var openMenuContainer = document.getElementById('openMenuContainer');
-
-    /* Close Menu*/
-    closeMenu.addEventListener("click", function(){
-    menuContainer.style.display = "none";
-    })
-    /* Open Menu*/
-    openMenuContainer.addEventListener("click", function(){
-    menuContainer.style.display = "block";
-    })
-
-
-
-
-  const items = document.querySelectorAll(".items");
-    const bodyLogin = document.querySelectorAll(".bodyLogin");
-    var containerOn = 1;
-
-
-
-    for (let i = 0; i < bodyLogin.length; i++) {
-
-      bodyLogin[i].style.display = "none";
-      bodyLogin[containerOn].style.display = "block";
-
-
-      items[i].addEventListener("click", function(){
-
-        if (bodyLogin[i].style.display == "none"){
-          containerOn  = i;
-          bodyLogin[i].style.display = "block";
-          turnOffOtherContainers();
-          menuContainer.style.display = "none";
-        }
-        else {
-          menuContainer.style.display = "none";
-        }
-      }
-    )
-    }
-
-    function turnOffOtherContainers(){
-      for (let i = 0; i < items.length; i++) { // Cambiar el 3 por optionAddToCard2.length
-        if (i != containerOn) {
-          bodyLogin[i].style.display = "none";
-        }
-      }
-    }
-
-    /* Logout */
-    var logout = document.getElementById('logout');
-
-    logout.addEventListener("click", function(){
-      $.ajax( "../App/Controller/Controller2.php", {
-      type: 'post',
-      async: false,
-      data: {
-        module: "logout",
-      },
-      success: function(data){
-        //alert(data);
-      //  var data = jQuery.parseJSON(data);
-
-     }
-    }
-    )
-      menuContainer.style.display = "none";
-      window.open("../index.php", "_self");
-    })
-
-    </script>
 
 
   </body>
