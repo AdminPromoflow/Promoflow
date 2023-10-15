@@ -58,10 +58,10 @@ class Users {
 
       // Bind the email parameter
       $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
+      exit;
 
       // Execute the query
       $sql->execute();
-      exit;
 
       // Fetch the password
       $password = $sql->fetchColumn(); // Retrieve the password as a single value
