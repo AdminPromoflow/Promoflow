@@ -2,14 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Promoflow</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="../../public/css/global/menu.css">
   </head>
   <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
     <style media="screen">
       body{
         position: relative;
@@ -45,21 +47,7 @@
 
       }
 
-      .menuLogin{
-        position: relative;
-        height: 100px;
-        width: 98%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgb(49,70,95);
-        background: linear-gradient(90deg, rgba(49,70,95,1) 27%, rgba(141,151,163,1) 72%, rgba(252,251,252,1) 100%);
-        margin: 20px 0;
-        border-radius: 5px;
 
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
 
       .bodyLogin{
         position: relative;
@@ -188,21 +176,7 @@
         font-weight: 300;
         font-size: 1em;
       }
-      .menuLogin img{
-        position: absolute;
-        margin-right: 30px;
-        height: 55%;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        filter: drop-shadow(2px 2px 3px rgb(50,50,50));
-      }
-      .menuLogin h1{
-        font-size: 3em;
-        margin-left: 30px;
-        font-weight: 400;
-        text-shadow: 2px 2px 5px rgb(50,50,50);
-      }
+
 
       @media screen and (min-width: 480px) {
 
@@ -216,56 +190,11 @@
       @media screen and (min-width: 1200px) {
 
       }
-      .containerMenu{
-        position: relative;
-        width: 48%;
-      }
-      .containerMenu img{
-        position: absolute;
-        height: 60%;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-      }
-      .containerMenu:nth-child(2) img{
-        right: 5px;
-        height: 30%;
-        transition: .5s;
-      }
-      .containerMenu:nth-child(2) img:hover{
-        filter: drop-shadow(0px 0px 1px black);
-      }
-      .containerMenu:nth-child(2) img:active{
-        filter: drop-shadow(0px 0px 0px black);
-      }
-      .menuContainer{
-        position: fixed;
-        display: none;
-        top: 4px;
-        right: 4px;
-        background-color: rgba(47, 69, 96, .97);
-        height: 100%;
-        max-width: 320px;
-        z-index: 10;
-        width: 98%;
-        border-radius: 5px;
-      }
-      .relative{
-        position: relative;
-      }
-      .itemContainer{
-        position: relative;
-        padding: 10px;
-        margin-top: 70px;
-        height: 70vh;
-        overflow-y: scroll;
-      }
-      .items{
-        padding: 5px;
-        background-color: gold;
-        cursor: pointer;
-        margin: 3px 0;
-      }
+
+
+
+
+
       .itemsLogout{
         padding: 5px;
         background-color: gold;
@@ -318,22 +247,7 @@
         font-weight: 300;
         color: rgba(240, 250, 240, 1);
       }
-      .menuContainer img{
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        height: 30px;
-        z-index: 11;
-        cursor: pointer;
-        filter: drop-shadow(0px 0px 2px black);
-        transition: .4s;
-      }
-      .menuContainer img:hover{
-        filter: drop-shadow(0px 0px 4px black);
-      }
-      .menuContainer img:active{
-        filter: drop-shadow(0px 0px 2px black);
-      }
+
       .navigateTable{
         position: relative;
         padding-top: 50px;
@@ -418,11 +332,7 @@
         padding: 4px;
       }
 
-      .logoImg{
-        position: absolute;
-        left: 20px;
-        height: 40%!important;
-      }
+
 
       .containerCenterTable{
         position: relative;
@@ -437,37 +347,8 @@
 
     </style>
 
-    <section class="menu">
-      <!--  MENU  -->
-      <div class="menuLoginFixed">
-        <div class="menuLogin">
-          <div class="containerMenu">
-            <img class="logoImg" src="Images/Logo.png" alt="">
-          </div>
-          <div class="containerMenu">
-            <img id="openMenuContainer"  src="Images/menuIcon.png" alt="">
-          </div>
-        </div>
-      </div>
+    <?php include "../../views/global/menu.php" ?>
 
-      <div id="menuContainer"  class="menuContainer">
-        <img id="closeMenu"  src="Images/Close.png" alt="">
-        <div class="relative">
-          <div class="itemContainer">
-            <div class="items">
-              <h3>User manager</h3>
-            </div>
-            <div class="items">
-              <h3>W3P </h3>
-            </div>
-            <div id="logout" class="itemsLogout">
-              <h3>Logout </h3>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
 
     <?php include "../1-ClientsManager/ClientsManager.php" ?>
     <?php include "../2-W3P/W3P.php" ?>
