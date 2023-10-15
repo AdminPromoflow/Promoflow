@@ -195,58 +195,7 @@
 
 
 
-      .itemsLogout{
-        padding: 5px;
-        background-color: gold;
-        cursor: pointer;
-        margin: 3px 0;
-        background-color: rgba(33, 46, 63, 1);
-      }
-      .itemsLogout h3{
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        color: white;
-        font-weight: 300;
-        color: rgba(240, 250, 240, 1);
-      }
-      .itemsLogout:hover {
-        background-color: rgba(33, 46, 63, .7);
-      }
-      .itemsLogout:active {
-        background-color: rgba(33, 46, 63, 1);
-      }
-
-      .items:nth-child(odd) {
-        background-color: rgba(33, 46, 63, 1);
-      }
-      .items:nth-child(even) {
-        background-color: rgba(109, 114, 126, 1);
-      }
-
-
-      .items:nth-child(odd):hover {
-        background-color: rgba(33, 46, 63, .7);
-      }
-      .items:nth-child(even):hover {
-        background-color: rgba(109, 114, 126, .7);
-      }
-
-
-      .items:nth-child(odd):active {
-        background-color: rgba(33, 46, 63, 1);
-      }
-      .items:nth-child(even):active {
-        background-color: rgba(109, 114, 126, 1);
-      }
-      .items h3{
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        color: white;
-        font-weight: 300;
-        color: rgba(240, 250, 240, 1);
-      }
+      
 
       .navigateTable{
         position: relative;
