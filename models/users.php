@@ -29,37 +29,41 @@ class Users {
   /*
    * Check if a user with the given email already exists in the database.
    */
-  public function checkIfUserExistsByEmail() {
-    try {
-      // Prepare the SQL query with placeholders
-      $sql = $this->connection->getConnection()->prepare("SELECT COUNT(*) FROM `Users` WHERE `emailUser` = :email");
+ public function checkIfUserExistsByEmail() {
+     try {
+         // Prepare the SQL query with placeholders
+         $sql = $this->connection->getConnection()->prepare("SELECT COUNT(*) FROM `Users` WHERE `email` = :email");
 
-      // Bind the email parameter
-      $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
+         // Bind the email parameter
+         $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
 
-      // Execute the query
-      $sql->execute();
+         // Execute the query
+         $sql->execute();
 
-      // Fetch the user count
-      $userCount = $sql->fetch(PDO::FETCH_ASSOC);
+         // Fetch the user count
+         $userCount = $sql->fetch(PDO::FETCH_ASSOC);
 
-      return $userCount;
-    } catch(PDOException $e) {
-      // Handle any exceptions and provide an error message
-      echo "Error in the query: " . $e->getMessage();
-      throw new Exception("Error in the user verification query.");
-    }
-  }
+         // Close the database connection
+         $this->connection->closeConnection();
+
+         return $userCount;
+     } catch(PDOException $e) {
+         // Handle any exceptions and provide an error message
+         echo "Error in the query: " . $e->getMessage();
+         throw new Exception("Error in the user verification query.");
+     }
+ }
+
   public function getPasswordUserByEmail() {
       try {
           // Prepare the SQL query with placeholders
-          $sql = $this->connection->getConnection()->prepare("SELECT `passwordUser` FROM `Users` WHERE `emailUser` = :email");
+          $sql = $this->connection->getConnection()->prepare("SELECT `password` FROM `Users` WHERE `email` = :email");
 
           // Bind the email parameter
           $sql->bindParam(':email', $this->email, PDO::PARAM_STR);exit;
 
           // Execute the query
-          $sql->execute();
+          $sql->execute();exit;
 
           // Fetch the password
           $password = $sql->fetchColumn(); // Retrieve the password as a single value
