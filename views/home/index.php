@@ -331,9 +331,6 @@
         background-color: rgba(210, 220, 234,1);
         padding: 4px;
       }
-
-
-
       .containerCenterTable{
         position: relative;
         width: 280px;
@@ -344,16 +341,17 @@
         transform: translateX(-50%);
       }
 
-
     </style>
 
     <?php include "../../views/global/menu.php" ?>
 
 
-    <?php include "../1-ClientsManager/ClientsManager.php" ?>
-    <?php include "../2-W3P/W3P.php" ?>
+    <?php //include "../1-ClientsManager/ClientsManager.php" ?>
+    <?php //include "../2-W3P/W3P.php" ?>
 
 
+    <script src="../../public/js/global/menu.js" type="text/javascript">
 
+    </script>
   </body>
 </html>
