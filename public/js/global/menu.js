@@ -1,46 +1,24 @@
+// Define a Menu class
+class Menu {
+  constructor() {
+    // Open Menu: Add event listener to display the menu container
+    openMenuContainer.addEventListener("click", function() {
+      menuContainer.style.display = "block";
+    });
 
-    /* Menu */
+    // Close Menu: Add event listener to hide the menu container
+    closeMenu.addEventListener("click", function() {
+      menuContainer.style.display = "none";
+    });
 
-    /* Declaration of variables*/
-    var closeMenu = document.getElementById('closeMenu');
-    var menuContainer = document.getElementById('menuContainer');
-    var openMenuContainer = document.getElementById('openMenuContainer');
+  }
+}
 
-    /* Close Menu*/
-    closeMenu.addEventListener("click", function(){
-    menuContainer.style.display = "none";
-    })
-    /* Open Menu*/
-    openMenuContainer.addEventListener("click", function(){
-    menuContainer.style.display = "block";
-    })
+// Get DOM elements
+var closeMenu = document.getElementById('closeMenu'); // Close menu button
+var menuContainer = document.getElementById('menuContainer'); // Menu container
+var openMenuContainer = document.getElementById('openMenuContainer'); // Open menu button
+const items = document.querySelectorAll(".items"); // Select all elements with class "items"
 
-
-
-
-  const items = document.querySelectorAll(".items");
-    const bodyLogin = document.querySelectorAll(".bodyLogin");
-    var containerOn = 1;
-
-
-
-    for (let i = 0; i < bodyLogin.length; i++) {
-
-      bodyLogin[i].style.display = "none";
-      bodyLogin[containerOn].style.display = "block";
-
-
-      items[i].addEventListener("click", function(){
-
-        if (bodyLogin[i].style.display == "none"){
-          containerOn  = i;
-          bodyLogin[i].style.display = "block";
-          turnOffOtherContainers();
-          menuContainer.style.display = "none";
-        }
-        else {
-          menuContainer.style.display = "none";
-        }
-      }
-    )
-    }
+// Create an instance of the Menu class to handle menu functionality
+const menuClass = new Menu();
