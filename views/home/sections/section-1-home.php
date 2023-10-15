@@ -4,22 +4,17 @@
 
     <div class="itemUsersManager">
       <img src="../1-ClientsManager/Images/create.png" alt="">
-      <h3>Create</h3>
+      <h3>W3P</h3>
     </div>
 
-    <div class="itemUsersManager" id="openRead">
+    <div class="itemUsersManager" id="">
       <img src="../1-ClientsManager/Images/Read.png" alt="">
-      <h3>Read</h3>
+      <h3>AMAZON</h3>
     </div>
 
-    <div class="itemUsersManager" id="openUpdate">
+    <div class="itemUsersManager" id="">
       <img src="../1-ClientsManager/Images/update.png" alt="">
-      <h3>Update</h3>
-    </div>
-
-    <div class="itemUsersManager" id="openDelete">
-      <img src="../1-ClientsManager/Images/DeleteIcon.png" alt="">
-      <h3>Delete</h3>
+      <h3>LANYARDS FOR YOU</h3>
     </div>
     </div>
 </section>
