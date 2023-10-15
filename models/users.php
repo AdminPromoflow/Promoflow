@@ -64,8 +64,10 @@ class Users {
 
       // Fetch the password
       $password = $sql->fetchColumn(); // Retrieve the password as a single value
+      exit;
 
       return $password;
+
     } catch (PDOException $e) {
       // Handle any exceptions and provide an error message
       echo "Error in the query: " . $e->getMessage();

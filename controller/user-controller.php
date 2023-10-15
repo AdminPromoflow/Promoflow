@@ -100,7 +100,6 @@ class ApiHandler {
 
             // Create the user in the database
             $storedHash = $user->getPasswordUserByEmail();
-            exit;
 
             $password = $data->password;
 
