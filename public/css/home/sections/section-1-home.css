@@ -42,7 +42,6 @@
   height: calc(3em + 3vw);
   margin: calc(0.7em + 0.7vw);
   cursor: pointer;
-  background-color: red;
 }
 .itemUsersManager img{
   position: relative;
