@@ -20,7 +20,7 @@
 }
 .containerUsersManagerBottoms{
   position: relative;
-  background-color: rgba(210, 220, 234, .3);
+  background-color: rgb(72,90,112);
   border-radius: 5px;
   left: 50%;
   transform: translateX(-50%);
