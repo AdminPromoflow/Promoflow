@@ -37,7 +37,7 @@
 .itemUsersManager{
   position: relative;
   min-width: 10px;
-  width: calc(4em + 4vw);
+  width: calc(5em + 5vw);
   padding: 0px;
   height: calc(2em + 2vw);
   margin: calc(0.7em + 0.7vw);
