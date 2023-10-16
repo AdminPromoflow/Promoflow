@@ -1,5 +1,7 @@
 <section class="bodyLogin">
-  <h2 class="titleBodyLogin">Clients Manager</h2>
+  <h1 class="titleBodyLogin">Dashboard</h1>
+
+  <h2>Welcome! Please select one of the following options:</h2>
   <div class="containerUsersManagerBottoms">
 
     <div class="itemUsersManager">

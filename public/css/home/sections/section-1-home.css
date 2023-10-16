@@ -18,6 +18,15 @@
   padding: 15px;
   margin: 4vw;
 }
+.bodyLogin h2{
+  position: relative;
+  color: white;
+  text-align: center;
+  font-weight: 300;
+  font-size: calc(0.6em + 0.6vw);
+  padding: 15px;
+  margin: 4vw;
+}
 .containerUsersManagerBottoms{
   position: relative;
   background-color: rgb(92,108,128);
