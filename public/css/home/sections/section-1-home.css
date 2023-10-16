@@ -39,7 +39,7 @@
   min-width: 10px;
   width: 200px;
   padding: 0px;
-  height: 80px;
+  height: calc(1em + 1vw);
   margin: calc(0.7em + 0.7vw);
   cursor: pointer;
   background-color: red;
