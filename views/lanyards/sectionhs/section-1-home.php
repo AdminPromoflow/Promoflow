@@ -13,6 +13,5 @@
       <img src="../../public/img/lanyards/sections/customers.png" alt="">
       <h3>Customers</h3>
     </div>
-
   </div>
 </section>

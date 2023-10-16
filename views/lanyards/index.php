@@ -14,7 +14,7 @@
 
     <!-- Include CSS files for styling -->
     <link rel="stylesheet" href="../../public/css/global/menu.css">
-    <link rel="stylesheet" href="../../public/css/home/sections/section-1-home.css">
+    <link rel="stylesheet" href="../../public/css/lanyards/sections/section-1-home.css">
     <link rel="stylesheet" href="../../public/css/home/style.css">
 </head>
 <body>
