@@ -27,6 +27,7 @@
   min-width: 300px;
   max-width: 60%;
   border-radius: 1px solid black;
+  padding: 3vw 0;
 
   display: flex;
   justify-content: center;
