@@ -3,16 +3,16 @@
   <div class="menuLoginFixed">
     <div class="menuLogin">
       <div class="containerMenu">
-        <img class="logoImg" src="../../public/img/global/menu/logo.png" alt="">
+        <img class="logoImg" src="../../assets/img/global/menu/logo.png" alt="">
       </div>
       <div class="containerMenu">
-        <img id="openMenuContainer"  src="../../public/img/global/menu/menu-icon.png" alt="">
+        <img id="openMenuContainer"  src="../../assets/img/global/menu/menu-icon.png" alt="">
       </div>
     </div>
   </div>
 
   <div id="menuContainer"  class="menuContainer">
-    <img id="closeMenu"  src="../../public/img/global/menu/close.png" alt="">
+    <img id="closeMenu"  src="../../assets/img/global/menu/close.png" alt="">
     <div class="relative">
       <div class="itemContainer">
         <div class="itemsMenu">
