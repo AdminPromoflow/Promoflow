@@ -13,13 +13,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Include the CSS stylesheet for the home section -->
-    <link rel="stylesheet" href="../../public/css/login/sections/section-1-home.css">
+    <link rel="stylesheet" href="../../assets/css/login/sections/section-1-home.css">
   </head>
   <body>
     <!-- Include the slider component for the index page using PHP -->
     <?php include "../../views/login/sections/section-1-home.php" ?>
 
     <!-- Include the JavaScript file for the home section -->
-    <script src="../../public/js/global/user.js" type="text/javascript"></script>
+    <script src="../../assets/js/global/user.js" type="text/javascript"></script>
   </body>
 </html>

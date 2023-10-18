@@ -13,9 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Include CSS files for styling -->
-    <link rel="stylesheet" href="../../public/css/global/menu.css">
-    <link rel="stylesheet" href="../../public/css/home/sections/section-1-home.css">
-    <link rel="stylesheet" href="../../public/css/home/style.css">
+    <link rel="stylesheet" href="../../assets/css/global/menu.css">
+    <link rel="stylesheet" href="../../assets/css/home/sections/section-1-home.css">
+    <link rel="stylesheet" href="../../assets/css/home/style.css">
 </head>
 <body>
     <!-- Include the menu and section components using PHP include -->
@@ -23,6 +23,6 @@
     <?php include "../../views/home/sections/section-1-home.php" ?>
 
     <!-- Include JavaScript file for interactive functionality -->
-    <script src="../../public/js/global/menu.js" type="text/javascript"></script>
+    <script src="../../assets/js/global/menu.js" type="text/javascript"></script>
 </body>
 </html>

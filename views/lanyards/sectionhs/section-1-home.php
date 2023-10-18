@@ -9,9 +9,11 @@
   <div class="containerUsersManagerBottoms">
 
     <!-- User Option 3 -->
-    <div class="itemUsersManager">
-      <img src="../../public/img/lanyards/sections/customers.png" alt="">
-      <h3>Customers</h3>
-    </div>
+    <a href="../../views/lanyards-customers/index.php">
+      <div class="itemUsersManager">
+        <img src="../../public/img/lanyards/sections/customers.png" alt="">
+        <h3>Customers</h3>
+      </div>
+    </a>
   </div>
 </section>
