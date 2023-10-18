@@ -4,7 +4,6 @@
 
   <div class="customerBox">
     <div class="imgCustomer">
-
     </div>
     <div class="nameCustomer">
 
@@ -13,5 +12,4 @@
 
     </div>
   </div>
-
 </section>
