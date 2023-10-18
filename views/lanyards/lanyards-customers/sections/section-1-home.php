@@ -4,5 +4,9 @@
 
   <div class="customerBox">
   </div>
+  <div class="customerBox">
+  </div>
+  <div class="customerBox">
+  </div>
 
 </section>
