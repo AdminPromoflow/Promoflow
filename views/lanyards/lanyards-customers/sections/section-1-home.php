@@ -3,10 +3,15 @@
   <h1 class="titleBodyLogin">Lanyard Customers</h1>
 
   <div class="customerBox">
-  </div>
-  <div class="customerBox">
-  </div>
-  <div class="customerBox">
+    <div class="imgCustomer">
+
+    </div>
+    <div class="nameCustomer">
+
+    </div>
+    <div class="emailCustomer">
+
+    </div>
   </div>
 
 </section>

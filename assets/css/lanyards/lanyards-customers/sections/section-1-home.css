@@ -29,6 +29,21 @@
   margin: calc(0.3em + 0.3vw);
   background-color: #192B42;
 }
-.customerBox{
-
+.imgCustomer{
+  position: relative;
+  width: 50px;
+  height: 100%;
+  background-color: green;
+}
+.nameCustomer{
+  position: relative;
+  width: calc(40% - 25px);
+  height: 100%;
+  background-color: orange;
+}
+.emailCustomer{
+  position: relative;
+  width: calc(60% - 25px);
+  height: 100%;
+  background-color: gold;
 }
