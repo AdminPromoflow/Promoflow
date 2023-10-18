@@ -9,10 +9,10 @@
       </div>
     </div>
     <div class="nameCustomer">
-
+      <p>Alejandra Paola Rozo Chiquiza</p>
     </div>
     <div class="emailCustomer">
-
+      <p>aelnajard@gmail.xom</p>
     </div>
   </div>
 </section>
