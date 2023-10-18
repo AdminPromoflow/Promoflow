@@ -66,4 +66,5 @@
 .customerBox p{
   position: relative;
   color: white;
+  padding-left: calc(0.3em + 0.3vw);
 }
