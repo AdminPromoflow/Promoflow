@@ -12,7 +12,7 @@
       <p>Alejandra Paola Rozo Chiquiza</p>
     </div>
     <div class="emailCustomer">
-      <p>aelnajard@gmail.xom</p>
+      <p>aelnajard@gmail.com</p>
     </div>
   </div>
 </section>
