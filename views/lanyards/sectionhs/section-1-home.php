@@ -11,7 +11,7 @@
     <!-- User Option 3 -->
     <a href="../../views/lanyards/lanyards-customers/index.php">
       <div class="itemUsersManager">
-        <img src="../../public/img/lanyards/sections/customers.png" alt="">
+        <img src="../../../public/img/lanyards/sections/customers.png" alt="">
         <h3>Customers</h3>
       </div>
     </a>
