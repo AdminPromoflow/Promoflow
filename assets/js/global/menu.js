@@ -13,25 +13,17 @@ class Menu {
 
   }
    changePathImageOpenLogin(level) {
-      // Directorio base para las imágenes
-      var baseDirectory = "../";
-
-      // Ajustar el directorio base según el nivel
-      if (level === 2) {
-          baseDirectory = "../../";
-      }
-
-      // Rutas de las imágenes
-      var logoImagePath = baseDirectory + "assets/img/global/menu/logo.png";
-      var openMenuImagePath = baseDirectory + "assets/img/global/menu/menu-icon.png";
-      var closeMenuImagePath = baseDirectory + "assets/img/global/menu/close.png";
-
-      // Cambiar las fuentes de las imágenes
-      logoImg.src = logoImagePath;
-      openMenuContainer.src = openMenuImagePath;
-      closeMenu.src = closeMenuImagePath;
+     var directory = 1;
+     if (level  == 1) {
+       directory = "../../";
+     }
+     else if (level  == 2) {
+       directory = "../../../";
+     }
+     logoImg.src = directory + "assets/img/global/menu/logo.png";
+     openMenuContainer.src = directory + "assets/img/global/menu/menu-icon.png";
+     closeMenu.src = directory + "assets/img/global/menu/close.png";
   }
-
 }
 
 // Get DOM elements
