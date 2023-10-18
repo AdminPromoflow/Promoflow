@@ -18,13 +18,14 @@
     <link rel="stylesheet" href="../../../assets/css/home/style.css">
 </head>
 <body>
+  <!-- Include JavaScript file for interactive functionality -->
+  <script src="../../../assets/js/global/menu.js" type="text/javascript"></script>
+  <script  src="../../../assets/js/lanyards/lanyards-customers/sections/section-1-home.js" type="text/javascript"></script>
     <!-- Include the menu and section components using PHP include -->
     <?php include "../../../views/global/menu.php"?>
     <?php include "../../../views/lanyards/lanyards-customers/sections/section-1-home.php"?>
 
-    <!-- Include JavaScript file for interactive functionality -->
-    <script src="../../../assets/js/global/menu.js" type="text/javascript"></script>
-    <script  src="../../../assets/js/lanyards/lanyards-customers/sections/section-1-home.js" type="text/javascript"></script>
+
 
 </body>
 </html>
