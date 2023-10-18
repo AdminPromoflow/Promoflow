@@ -1,0 +1,1 @@
+menuClass.changePathImageOpenLogin(2);

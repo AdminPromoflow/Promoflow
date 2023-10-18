@@ -12,9 +12,22 @@ class Menu {
     });
 
   }
+   changePathImageOpenLogin(level) {
+     var directory = 1;
+     if (level  == 1) {
+       directory = "../../";
+     }
+     else if (level  == 2) {
+       directory = "../../../";
+     }
+     logoImg.src = directory + "assets/img/global/menu/logo.png";
+     openMenuContainer.src = directory + "assets/img/global/menu/menu-icon.png";
+     closeMenu.src = directory + "assets/img/global/menu/close.png";
+  }
 }
 
 // Get DOM elements
+var logoImg = document.getElementById('logoImg'); // logoImg menu
 var closeMenu = document.getElementById('closeMenu'); // Close menu button
 var menuContainer = document.getElementById('menuContainer'); // Menu container
 var openMenuContainer = document.getElementById('openMenuContainer'); // Open menu button

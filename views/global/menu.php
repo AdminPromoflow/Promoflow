@@ -3,7 +3,7 @@
   <div class="menuLoginFixed">
     <div class="menuLogin">
       <div class="containerMenu">
-        <img class="logoImg" src="../../assets/img/global/menu/logo.png" alt="">
+        <img id="logoImg" class="logoImg" src="../../assets/img/global/menu/logo.png" alt="">
       </div>
       <div class="containerMenu">
         <img id="openMenuContainer"  src="../../assets/img/global/menu/menu-icon.png" alt="">
