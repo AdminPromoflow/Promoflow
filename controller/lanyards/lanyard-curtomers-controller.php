@@ -5,6 +5,7 @@ session_start();
 class LanyardCustomersApiHandler {
     // Function to handle incoming requests
     public function handleRequest() {
+      exit;
         // Check if the request is POST
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Get raw JSON data from the request body
