@@ -44,7 +44,7 @@ class LanyardCustomersApiHandler {
 
     // Function to handle user login
     private function handleGetAllLanyardCustomers($data) {
-      echo ($rawData);  exit;
+      echo json_encode($data);  exit;
 
         // Logic to process user login
         // Create a database connection
