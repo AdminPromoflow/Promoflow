@@ -88,7 +88,6 @@ class LanyardCustomersApiHandler {
       curl_close($ch);
 
       // Procesa la respuesta
-      echo 'Respuesta del servicio:';
       echo $response;
 
     }
