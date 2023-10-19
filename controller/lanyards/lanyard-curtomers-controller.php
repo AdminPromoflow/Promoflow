@@ -9,7 +9,6 @@ class LanyardCustomersApiHandler {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Get raw JSON data from the request body
             $rawData = file_get_contents("php://input");
-          echo ($rawData);  exit;
 
             // Decode the JSON data
             $data = json_decode($rawData);
@@ -45,6 +44,8 @@ class LanyardCustomersApiHandler {
 
     // Function to handle user login
     private function handleGetAllLanyardCustomers($data) {
+      echo ($rawData);  exit;
+
         // Logic to process user login
         // Create a database connection
         $connection = new Database();
