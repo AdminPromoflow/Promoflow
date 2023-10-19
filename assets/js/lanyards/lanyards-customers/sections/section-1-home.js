@@ -51,19 +51,19 @@ class LanyardCustomers {
         '</div>'+
 
         '<div class="nameCustomer">'+
-          '<p>Alejandra Paola Rozo Chiquiza</p>'+
+          '<p>'+data[i]["nameUser"]+'</p>'+
         '</div>'+
 
         '<div class="emailCustomer">'+
-          '<p>aelnajard@gmail.com</p>'+
+          '<p>'+data[i]["emailUser"]+'</p>'+
         '</div>'+
 
       '</div>';
 
 
 
-    //  alert(data[i]["nameUser"]);
-    //  alert(data[i]["emailUser"]);
+      alert(data[i]["nameUser"]);
+      alert(data[i]["emailUser"]);
 
     }
   }
