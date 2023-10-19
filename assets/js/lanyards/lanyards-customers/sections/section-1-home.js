@@ -67,7 +67,7 @@ class LanyardCustomers {
 
 
     }
-    const circleImgCustomer = document.querySelectorAll('circleImgCustomer');
+    const circleImgCustomer = document.querySelectorAll('.circleImgCustomer');
     alert(circleImgCustomer.length);
 
 
