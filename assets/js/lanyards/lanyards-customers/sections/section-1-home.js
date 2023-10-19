@@ -1,5 +1,6 @@
 class LanyardCustomers {
   constructor() {
+    alert("buenas");
     menuClass.changePathImageOpenLogin(2);
     const url = "../../../controller/lanyards/lanyard-curtomers-controller.php";
     const data = {
