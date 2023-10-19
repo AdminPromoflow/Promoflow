@@ -10,7 +10,7 @@ class LanyardCustomers {
   // Function to make the AJAX request
   makeAjaxRequestGetAllLanyardCustomers(url, data) {
     // Make the request using the Fetch API
-  /*  fetch(url, {
+    fetch(url, {
       method: "POST", // HTTP POST method to send data
       headers: {
         "Content-Type": "application/json" // Indicate that you're sending JSON
@@ -31,7 +31,7 @@ class LanyardCustomers {
       })
       .catch(error => {
         console.error("Error:", error);
-      });*/
+      });
   }
 }
 
