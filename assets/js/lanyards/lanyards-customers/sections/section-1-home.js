@@ -29,9 +29,9 @@ class LanyardCustomers {
         var objetoJSON = JSON.parse(data);
 
         this.creteCustomers(objetoJSON);
-        const circleImgCustomer = document.querySelectorAll('circleImgCustomer');
 
-        this.getRandomColor(circleImgCustomer);
+
+      //  this.getRandomColor(circleImgCustomer);
 
       })
       .catch(error => {
@@ -67,15 +67,17 @@ class LanyardCustomers {
 
 
     }
+    const circleImgCustomer = document.querySelectorAll('circleImgCustomer');
+    alert(circleImgCustomer.length);
+
 
   }
   getRandomColor(circleImgCustomer) {
-    alert(circleImgCustomer.length);
 
-    for (var i = 0; i < circleImgCustomer.length; i++) {
+  /*  for (var i = 0; i < circleImgCustomer.length; i++) {
       alert("circleImgCustomer[i].style.color");
 
-    }
+    }*/
   const letters = '0123456789ABCDEF';
   let color = '#';
   for (let i = 0; i < 6; i++) {
