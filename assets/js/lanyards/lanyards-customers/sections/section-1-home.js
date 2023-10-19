@@ -41,7 +41,7 @@ class LanyardCustomers {
 
     for (var i = 0; i < data.length; i++) {
 
-      listCustomers.innerHTML + =
+      listCustomers.innerHTML =+
 
       '<div class="customerBox">'+
         '<div class="imgCustomer">'+
