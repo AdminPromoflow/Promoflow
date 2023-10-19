@@ -68,7 +68,7 @@ class LanyardCustomers {
     const circleImgCustomer = document.querySelectorAll('circleImgCustomer');
 
     for (var i = 0; i < circleImgCustomer.length; i++) {
-      alert(circleImgCustomer[i].style.color);
+      alert("circleImgCustomer[i].style.color");
 
     }
   }
