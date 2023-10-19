@@ -5,7 +5,7 @@ class LanyardCustomers {
     const data = {
       action: "getAllLanyardCustomers"
     };
-    lanyardCustomersClass.makeAjaxRequestGetAllLanyardCustomers(url, data);
+    this.makeAjaxRequestGetAllLanyardCustomers(url, data);
   }
   // Function to make the AJAX request
   makeAjaxRequestGetAllLanyardCustomers(url, data) {
