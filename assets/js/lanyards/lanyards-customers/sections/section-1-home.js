@@ -37,20 +37,32 @@ class LanyardCustomers {
   }
 
   creteCustomers(data){
+    listCustomers.innerHTML  = "";
 
     for (var i = 0; i < data.length; i++) {
-      alert(data[i]["nameUser"]);
-      alert(data[i]["emailUser"]);
+
+      listCustomers.innerHTML + =
+
+      '<div class="customerBox">'+
+        '<div class="imgCustomer">'+
+          '<div class="circleImgCustomer">'+
+          '</div>'+
+        '</div>'+
+        '<div class="nameCustomer">'+
+          '<p>Alejandra Paola Rozo Chiquiza</p>'+
+        '</div>'+
+        '<div class="emailCustomer">'+
+          '<p>aelnajard@gmail.com</p>'+
+        '</div>'+
+      '</div>';
+
+
+
+    //  alert(data[i]["nameUser"]);
+    //  alert(data[i]["emailUser"]);
 
     }
-
-
-
-
-
-
-
   }
 }
-
+var listCustomers = document.getElementById("listCustomers");
 const lanyardCustomersClass = new LanyardCustomers();
