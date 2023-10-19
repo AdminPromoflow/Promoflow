@@ -42,42 +42,8 @@ class LanyardCustomersApiHandler {
         }
     }
 
-    // Function to handle user registration
-    private function handleGetAllLanyardCustomers($data) {
-        // Extract user registration data from JSON
-        $name = $data->nameRegister;
-        $email = $data->emailRegister;
-        $password = $data->passwordRegister;
-
-        // Validate user data using the Security class
-        $security = new Security();
-        $var = $security->validateUserDataRegistration($name, $email, $password);
-
-        if (!!$var) {
-            // Create a database connection
-            $connection = new Database();
-
-            // Create a new Users instance and set user data
-            $user = new Users($connection);
-            $user->setName($var['username']);
-            $user->setEmail($var['email']);
-            $user->setPassword($var['password']);
-
-            // Create the user in the database
-            $user->createUser();
-
-            // Send a success response
-            $response = array("message" => "Registration successful");
-            echo json_encode($response);
-        } else {
-            // User data validation failed; the user may already exist
-            $response = array("message" => "Registration not successful. User already exists");
-            echo json_encode($response);
-        }
-    }
-
     // Function to handle user login
-    private function handleLogin($data) {
+    private function handleGetAllLanyardCustomers($data) {
         // Logic to process user login
         // Create a database connection
         $connection = new Database();
@@ -88,20 +54,8 @@ class LanyardCustomersApiHandler {
         // Check if $data is an object and if it contains the "email" property
         if (is_object($data) && property_exists($data, 'email')) {
             $user->setEmail($data->email);
-
-            // Create the user in the database
-            $storedHash = $user->getPasswordUserByEmail();
-            $password = $data->password;
-
-            if (password_verify($password, $storedHash)) {
-                $response = array("message" => true);
-                $_SESSION['logged_in'] = true;
-                echo json_encode($response);
-            } else {
-                $response = array("message" => "Login not successful");
-                echo json_encode($response);
-            }
-        } else {
+        }
+        else {
             // If the "email" property is missing in $data
             $response = array("message" => "Invalid data for login");
             echo json_encode($response);
