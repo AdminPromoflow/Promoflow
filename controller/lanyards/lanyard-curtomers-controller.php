@@ -9,7 +9,7 @@ class LanyardCustomersApiHandler {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Get raw JSON data from the request body
             $rawData = file_get_contents("php://input");
-          json_decode($rawData);  exit;
+          echo ($rawData);  exit;
 
             // Decode the JSON data
             $data = json_decode($rawData);
