@@ -63,12 +63,25 @@ class LanyardCustomers {
       '</div>';
 
 
+    }
 
-      alert(data[i]["nameUser"]);
-      alert(data[i]["emailUser"]);
+    const circleImgCustomer = document.querySelectorAll('circleImgCustomer');
+
+    for (var i = 0; i < circleImgCustomer.length; i++) {
+      alert(circleImgCustomer[i].style.color);
 
     }
   }
+  getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
 }
 var listCustomers = document.getElementById("listCustomers");
+
 const lanyardCustomersClass = new LanyardCustomers();
