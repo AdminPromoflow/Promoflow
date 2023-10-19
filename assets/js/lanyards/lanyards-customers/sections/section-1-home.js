@@ -24,14 +24,32 @@ class LanyardCustomers {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+
         // The code inside this function will run when the request is complete
         var objetoJSON = JSON.parse(data);
+
+        this.creteCustomers(objetoJSON);
 
       })
       .catch(error => {
         console.error("Error:", error);
       });
+  }
+
+  creteCustomers(data){
+
+    for (var i = 0; i < data.length; i++) {
+      alert(data[i]["nameUser"]);
+      alert(data[i]["emailUser"]);
+
+    }
+
+
+
+
+
+
+
   }
 }
 
