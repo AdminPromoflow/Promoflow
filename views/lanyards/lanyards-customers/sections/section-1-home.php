@@ -21,7 +21,6 @@
     <div class="customerBox">
       <div class="imgCustomer">
         <div class="circleImgCustomer">
-
         </div>
       </div>
       <div class="nameCustomer">
@@ -35,7 +34,6 @@
     <div class="customerBox">
       <div class="imgCustomer">
         <div class="circleImgCustomer">
-
         </div>
       </div>
       <div class="nameCustomer">
