@@ -27,15 +27,14 @@
   transform: translateX(-50%);
   border-radius: 10px;
   margin: calc(0.3em + 0.3vw);
-  background-color: #192B42;
-
+  background-color: #435264;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
 }
 .customerBox:nth-child(odd){
-  background-color: red;
+  background-color: #192B42;
  }
 .imgCustomer{
   position: relative;
