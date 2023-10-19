@@ -44,31 +44,55 @@ class LanyardCustomersApiHandler {
 
     // Function to handle user login
     private function handleGetAllLanyardCustomers($data) {
-      echo json_encode($data);  exit;
+    //  echo json_encode($data);  exit;
+      // Token de autenticación
+      $token = "ZaPWPtiQvAjwWBFXvOzu3Cfo4PUZiQ4f"; // Reemplaza esto con tu token real
 
-        // Logic to process user login
-        // Create a database connection
-        $connection = new Database();
+      // Datos que deseas enviar en la solicitud POST
+      $data = array(
+          'action' => 'getAllLanyardCustomers'
+      );
 
-        // Create a new Users instance and set user data
-        $user = new Users($connection);
+      // URL del servicio
+      $service_url = 'https://lanyardsforyou.com/LandingPage/controller/customers/get-customers-controller.php'; // Reemplaza con la URL de tu servicio real
 
-        // Check if $data is an object and if it contains the "email" property
-        if (is_object($data) && property_exists($data, 'email')) {
-            $user->setEmail($data->email);
-        }
-        else {
-            // If the "email" property is missing in $data
-            $response = array("message" => "Invalid data for login");
-            echo json_encode($response);
-        }
+      // Configura la solicitud
+      $ch = curl_init($service_url);
+
+      // Configura los encabezados, incluyendo el token de autenticación
+      $headers = array(
+          'Content-Type: application/json',
+          'Auth-Token: ' . $token
+      );
+      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+      // Configura la solicitud como POST
+      curl_setopt($ch, CURLOPT_POST, 1);
+
+      // Codifica los datos como JSON
+      $json_data = json_encode($data);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, $json_data);
+
+      // Configura la opción para recibir la respuesta
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+      // Realiza la solicitud
+      $response = curl_exec($ch);
+
+      // Verifica si hubo errores
+      if ($response === false) {
+          die('Error al realizar la solicitud: ' . curl_error($ch));
+      }
+
+      // Cierra la sesión cURL
+      curl_close($ch);
+
+      // Procesa la respuesta
+      echo 'Respuesta del servicio:';
+      echo $response;
+
     }
 }
-
-// Include required files
-//require_once '../config/database.php';
-//require_once '../config/security.php';
-//require_once '../models/users.php';
 
 // Create an instance of the ApiHandler class and handle the request
 $lanyardCustomersApiHandler = new LanyardCustomersApiHandler();
