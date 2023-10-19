@@ -34,6 +34,9 @@
   flex-direction: row;
   align-items: center;
 }
+.customerBox:nth-child(odd){
+  background-color: red;
+ }
 .imgCustomer{
   position: relative;
   width: 80px;
