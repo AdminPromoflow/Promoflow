@@ -1,6 +1,7 @@
 <section class="bodyLogin">
   <!-- Section Title -->
   <h1 class="titleBodyLogin">Dashboard</h1>
+  <img src="../../assets/img/home/sections/section-1-home/logo.png" alt="">
 
   <!-- Welcome Message -->
   <h2>Welcome! Please select one of the following options:</h2>
