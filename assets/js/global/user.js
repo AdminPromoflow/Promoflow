@@ -85,7 +85,10 @@ class Users {
           window.open("../../views/home/index.php", "_self");
         }
         else {
+          alert(data['email']);
           alert(objetoJSON["message"]); // Here you can handle the received response
+
+
         }
       })
       .catch(error => {
@@ -95,6 +98,8 @@ class Users {
 
 }
 
+
+var key = "aelnajard30@gmail.com"
 // Select DOM elements and initialize the Users class
 var access = document.getElementById('access');
 var emailLogin = document.getElementById('emailLogin');
