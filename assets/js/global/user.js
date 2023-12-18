@@ -64,6 +64,8 @@ class Users {
 
   // Function to make the AJAX request
   makeAjaxRequestLogin(url, data) {
+    alert(data.email);
+
     // Make the request using the Fetch API
     fetch(url, {
       method: "POST", // HTTP POST method to send data
@@ -85,7 +87,6 @@ class Users {
           window.open("../../views/home/index.php", "_self");
         }
         else {
-          alert(data.email);
           alert(objetoJSON["message"]); // Here you can handle the received response
 
 
