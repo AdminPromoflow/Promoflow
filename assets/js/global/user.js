@@ -85,7 +85,7 @@ class Users {
           window.open("../../views/home/index.php", "_self");
         }
         else {
-          alert(data['email']);
+          alert(data.email);
           alert(objetoJSON["message"]); // Here you can handle the received response
 
 
