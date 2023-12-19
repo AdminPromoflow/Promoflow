@@ -63,17 +63,15 @@ class Users {
   }
 
   // Function to make the AJAX request
-  makeAjaxRequestLogin(url, data) {
+  makeAjaxRequestLogin(url, data2) {
 
     // Make the request using the Fetch API
     fetch(url, {
       method: "POST", // HTTP POST method to send data
-      async: false,
-
       headers: {
         "Content-Type": "application/json" // Indicate that you're sending JSON
       },
-      body: JSON.stringify(data) // Convert the JSON object to a JSON string and send it
+      body: JSON.stringify(data2) // Convert the JSON object to a JSON string and send it
     })
       .then(response => {
         if (response.ok) {
@@ -88,7 +86,7 @@ class Users {
           window.open("../../views/home/index.php", "_self");
         }
         else {
-          alert(data.email);
+          alert(data2.email);
 
           alert(objetoJSON["message"]); // Here you can handle the received response
 
