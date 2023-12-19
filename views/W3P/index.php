@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Promoflow</title>
 
@@ -16,15 +16,14 @@
     <link rel="stylesheet" href="../../assets/css/global/menu.css">
     <link rel="stylesheet" href="../../assets/css/home/sections/section-1-home.css">
     <link rel="stylesheet" href="../../assets/css/home/style.css">
-
-  </head>
-  <body>
+</head>
+<body>
     <!-- Include the menu and section components using PHP include -->
     <?php include "../../views/global/menu.php" ?>
     <?php include "../../views/home/sections/section-1-home.php" ?>
 
     <!-- Include JavaScript file for interactive functionality -->
     <script src="../../assets/js/global/menu.js" type="text/javascript"></script>
-
-  </body>
+    <script  src="../../assets/js/home/sections/section-1-home.js" type="text/javascript"></script>
+</body>
 </html>
