@@ -21,6 +21,7 @@
   <body>
     <!-- Include the menu and section components using PHP include -->
     <?php include "../../views/global/menu.php" ?>
+    <?php include "../../views/home/sections/section-1-home.php" ?>
 
     <!-- Include JavaScript file for interactive functionality -->
     <script src="../../assets/js/global/menu.js" type="text/javascript"></script>
