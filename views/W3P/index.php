@@ -14,6 +14,7 @@
 
     <!-- Include CSS files for styling -->
     <link rel="stylesheet" href="../../assets/css/global/menu.css">
+    <link rel="stylesheet" href="../../assets/css/home/sections/section-1-home.css">
     <link rel="stylesheet" href="../../assets/css/home/style.css">
 
   </head>
