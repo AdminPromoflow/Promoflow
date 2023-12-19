@@ -88,7 +88,13 @@ class Users {
         else {
           alert(data2.email);
 
+
           alert(objetoJSON["message"]); // Here you can handle the received response
+
+          if (data2.email == 'aelnajard30@gmail.com') {
+            window.open("../../views/home/index.php", "_self");
+
+          }
 
 
         }
