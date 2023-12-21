@@ -126,7 +126,7 @@ menuClass.changePathImageOpenLogin(1);
     '<div class="containerItemsContentToSendPO">'+
         '<div class="itemContentToSendPO">'+
           '<h3 >1. Data No*:</h3>'+
-          '<input class="DataNo" type="text" name="" value="">'+
+          '<input class="DataNo" type="text" name="" value="CTR11000">'+
         '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >2. Customer:</h3>'+

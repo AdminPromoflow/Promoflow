@@ -2,14 +2,13 @@
   position: relative;
   width: 80%;
   max-width: 400px;
-
   left: 50%;
   transform: translateX(-50%);
 }
 .itemToSendPO{
   position: relative;
   width: 100%;
-   background-color: #2F4560;
+  background-color: #2F4560;
   border: 1px solid black;
 }
 .itemToSendPO h3{
