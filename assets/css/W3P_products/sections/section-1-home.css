@@ -10,6 +10,7 @@
 .itemCategory{
   position: relative;
   width: 100%;
+  height: 40px;
   background-color: #2F4560;
   border: 1px solid black;
 }
@@ -17,10 +18,12 @@
   position: relative;
   text-align: center;
   color: rgba(255, 255, 255, .9);
+  top: 50%;
+  transform: translateY(-50%);
+  
   font-size: 1em;
   font-weight: 400;
   background-color: blue;
-  margin: 5px;
 }
 .openToggleSubitemCategory{
   position: absolute;
