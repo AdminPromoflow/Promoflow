@@ -130,7 +130,7 @@ menuClass.changePathImageOpenLogin(1);
         '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >2. Customer:</h3>'+
-          '<input class="Customer" type="text" name="" value="">'+
+          '<input class="Customer" type="text" name="" value="Moorside High School">'+
          '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >3. Print Ref*:</h3>'+
