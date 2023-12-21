@@ -72,7 +72,7 @@ body{
 }
 .bodyLogin h2{
   position: relative;
-  color: white;
+  color: black;
   text-align: center;
   font-weight: 300;
   font-size: calc(1em + 1vw);
