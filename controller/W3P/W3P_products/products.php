@@ -9,7 +9,7 @@ require_once('../../../models/W3P/W3P_products/Products.php');
       $db = new Database();
       $category = new Categories($db);
       $result = json_encode($category->getCategories());
-    /*  echo $result;*/
+      echo $result;
     }
 
   /*  elseif ($_POST['module']=="getGroups") {
