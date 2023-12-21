@@ -14,9 +14,9 @@
 
       function getGroups(){
         try{
-          $sql = $this->conn->conn()->query("SELECT `code`, `name` FROM `product_group` WHERE `prodcat` = '$this->idCategory'");
+          $sql = $this->conn->getConnection()->query("SELECT `code`, `name` FROM `product_group` WHERE `prodcat` = '$this->idCategory'");
          $data = $sql->fetchAll(PDO::FETCH_ASSOC);
-         $this->conn->close();
+         $this->conn->closeConnection();
          return $data;
              }
          catch(PDOException $e){
