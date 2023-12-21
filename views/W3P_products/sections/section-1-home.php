@@ -1,11 +1,10 @@
 <div class="navigateTable">
-  <a href="#"><img id="" src="../../assets/img/W3P_products/sections/section-1-home/arrow.png" alt=""></a>
-
+  <img id="" src="../../assets/img/W3P_products/sections/section-1-home/arrow.png" alt="">
   <div class="textNavigatorTable">
     <h3>Products</h3>
   </div>
-  <a href="#"><img id="" src="../../assets/img/W3P_products/sections/section-1-home/arrow.png" alt=""></a>
 
+  <img id="" src="../../assets/img/W3P_products/sections/section-1-home/arrow.png" alt="">
 </div>
 <div class="bodyLogin">
   <!-- Welcome Message -->
