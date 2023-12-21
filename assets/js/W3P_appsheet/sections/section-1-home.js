@@ -20,9 +20,6 @@ menuClass.changePathImageOpenLogin(1);
               //alert(data[i]["created_date"]);
                createToSendPOOrders(data[i]["id"], data[i]["created_date"], i);
              }
-
-    //         test.value = "hola";
-
             }
           })
   }
