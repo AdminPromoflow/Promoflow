@@ -2,7 +2,6 @@
 menuClass.changePathImageOpenLogin(1);
 
 /*--------------------------  Get orders from API  ---------------------------*/
-getOrders();
   function getOrders(){
     var containerOrders = document.getElementById("containerOrders");
     $.ajax( "../../controller/W3P/W3P_orders/orders.php", {
@@ -101,7 +100,12 @@ getOrders();
 
 /*------------------------------  Create jobs  -------------------------------*/
 
+
   var noDivJobSelected = 0;
+
+  alert("Es:" + noDivJobSelected);
+
+
   function createJobs(noDivOrder, noDivJob){
     const containersItemJob =  document.querySelectorAll(".containersItemJob");
 
@@ -119,7 +123,6 @@ getOrders();
     '</div>'
     ;
 
-    alert("Es:" + noDivJobSelected);
 
     getContent(noDivJob,  noDivJobSelected);  //Create content
     showContent(noDivJobSelected); //Show all the content
@@ -354,3 +357,4 @@ getOrders();
     '</div>'
     ;
   }
+  getOrders();
