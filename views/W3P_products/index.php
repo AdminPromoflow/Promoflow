@@ -16,6 +16,8 @@
       <link rel="stylesheet" href="../../assets/css/global/menu.css">
       <link rel="stylesheet" href="../../assets/css/W3P_products/sections/section-1-home.css">
       <link rel="stylesheet" href="../../assets/css/W3P_products/style.css">
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
   <body>
       <!-- Include the menu and section components using PHP include -->
