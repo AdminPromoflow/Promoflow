@@ -1,7 +1,7 @@
 <div class="navigateTable">
   <img id="" src="../../assets/img/W3P_products/sections/section-1-home/arrow.png" alt="">
   <div class="textNavigatorTable">
-    <h3>Products</h3>
+    <h3>Orders</h3>
   </div>
 
   <img id="" src="../../assets/img/W3P_products/sections/section-1-home/arrow.png" alt="">
