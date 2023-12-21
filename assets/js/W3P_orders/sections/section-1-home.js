@@ -356,3 +356,11 @@ menuClass.changePathImageOpenLogin(1);
     ;
   }
   getOrders();
+
+
+
+  const openAppsheet = document.getElementById("openAppsheet");
+
+  openAppsheet.addEventListener("click", function(){
+    window.open("../../views/W3P_appsheet/index.php", "_self");
+  });
