@@ -7,7 +7,6 @@ getCategories();
 
   function getCategories(){
     var containersItemsCategory = document.getElementById("containersItemsCategory");
-    alert("Bueno");
     $.ajax( "../../controller/W3P/W3P_products/products.php", {
            type: 'post',
            async: false,
