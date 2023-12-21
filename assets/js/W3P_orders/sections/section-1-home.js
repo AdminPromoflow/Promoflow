@@ -125,6 +125,8 @@ getOrders();
     showContent(noDivJobSelected); //Hide all content --> we have twice this function of hide all
     noDivJobSelected = noDivJobSelected + 1;
 
+    alert("Es:" + noDivJobSelected);
+
   }
 
 
@@ -153,7 +155,6 @@ getOrders();
 /*---------------------------  Get content's job  ----------------------------*/
 
   function getContent(noDivJob, noDivJobSelected){
-    alert(noDivJob + "  " + noDivJobSelected);
     const containersItemsContent =  document.querySelectorAll(".containersItemsContent");
     var value;
     var itemHierarchy = "";
