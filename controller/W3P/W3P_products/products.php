@@ -3,9 +3,8 @@ require_once('../../../config/database.php');
 require_once('../../../models/W3P/W3P_products/Categories.php');
 require_once('../../../models/W3P/W3P_products/Groups.php');
 require_once('../../../models/W3P/W3P_products/Products.php');
-echo json_encode("string");
 
-
+/*
     elseif ($_POST['module']=="getCategories") {
       $db = new Database();
       $category = new Categories($db);
@@ -28,5 +27,5 @@ echo json_encode("string");
       $result = json_encode($product->getProducts());
       echo $result;
     }
-
+*/
  ?>
