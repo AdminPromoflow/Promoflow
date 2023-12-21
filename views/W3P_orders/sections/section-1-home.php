@@ -10,7 +10,7 @@
   <!-- Welcome Message -->
   <h2>Please expand to see the orders:</h2>
   <div class="containerTableW3P">
-    <div id="containersItemsCategory"  class="containerCenterTable">
+    <div id="containerOrders" class="containerCenterTable">
     </div>
   </div>
 </div>
