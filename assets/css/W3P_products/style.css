@@ -17,9 +17,6 @@ body{
   border-radius: 5px;
   padding: 1.5vw 0;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .titleBodyLogin{
   position: relative;
