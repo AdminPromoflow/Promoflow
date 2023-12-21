@@ -17,8 +17,8 @@
           <div class="itemToSendPO">
             <h3>Order date</h3>
             <div class="openToggleSubitemToSendPO" onclick="showCategories(\ + noDivToSendPO  + \);" >
-              <img  class="buttonPlusToSendPO"src="../2-2-Orders/Images/mas.png" alt="">
-              <img  class="buttonLessToSendPO"src="../2-2-Orders/Images/menos.png" alt="">
+              <img  class="buttonPlusToSendPO"src="../../assets/img/W3P_appsheet/sections/section-1-home/mas.png" alt="">
+              <img  class="buttonLessToSendPO"src="../../assets/img/W3P_appsheet/sections/section-1-home/menos.png" alt="">
             </div>
           </div>
           <div id=""class="containersItemsContentToSendPO">
