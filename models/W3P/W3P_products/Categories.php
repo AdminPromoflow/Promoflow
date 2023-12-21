@@ -10,7 +10,7 @@
 
       function getCategories(){
         try{
-          $sql = $this->conn->conn()->query("SELECT * FROM `product_category` ");
+        //  $sql = $this->conn->conn()->query("SELECT * FROM `product_category` ");
         // $data = $sql->fetchAll(PDO::FETCH_ASSOC);
         // $this->conn->close();
         // return $data;
