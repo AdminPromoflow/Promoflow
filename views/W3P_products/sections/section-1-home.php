@@ -1,4 +1,7 @@
-<div class="containerTableW3P">
-  <div id="containersItemsCategory"  class="containerCenterTable">
+
+<section class="bodyLogin">
+  <div class="containerTableW3P">
+    <div id="containersItemsCategory"  class="containerCenterTable">
+    </div>
   </div>
-</div>
+</section>
