@@ -13,18 +13,21 @@
     <!-- User Option 1 -->
     <a href="">
     <div class="itemUsersManager">
+      <img src="../../assets/img/W3P/sections/section-1-home/products.png" alt="">
       <h3>Products</h3>
     </div>
     </a>
     <!-- User Option 2 -->
     <a href="">
     <div class="itemUsersManager">
+      <img src="../../assets/img/W3P/sections/section-1-home/orders.png" alt="">
       <h3>Orders</h3>
     </div>
     </a>
     <!-- User Option 3 -->
     <a href="">
     <div class="itemUsersManager">
+      <img src="../../assets/img/W3P/sections/section-1-home/appsheet.png" alt="">
       <h3>AppSheet</h3>
     </div>
     </a>
