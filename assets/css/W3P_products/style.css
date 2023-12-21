@@ -17,6 +17,8 @@ body{
   border-radius: 5px;
   padding: 1.5vw 0;
 
+  overflow-y: scroll;
+
 }
 .navigateTable{
   position: relative;
