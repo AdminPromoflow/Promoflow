@@ -3,12 +3,6 @@
   <div class="textNavigatorTable">
     <h3>Products</h3>
   </div>
-  <div class="textNavigatorTable">
-    <h3>Orders</h3>
-  </div>
-  <div class="textNavigatorTable">
-    <h3>ToSendPO</h3>
-  </div>
 
   <img id="rightArrowW3P" src="../../assets/img/W3P_products/sections/section-1-home/arrow.png" alt="">
 </div>
