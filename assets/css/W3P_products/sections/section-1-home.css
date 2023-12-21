@@ -59,7 +59,6 @@
   .itemGroup{
     position: relative;
     width: 100%;
-    padding: 4px;
     background-color: #55677D;
     border: 1px solid black;
     max-width: 400px
@@ -172,7 +171,6 @@
       .itemProductContent{
         position: relative;
         width: 100%;
-        padding: 4px;
         background-color: #A0AAB7;
         border: 1px solid black;
       }
