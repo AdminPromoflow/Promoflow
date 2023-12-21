@@ -75,7 +75,7 @@ body{
 .bodyLogin h2{
   position: relative;
   color: white;
-  text-align: left;
+  text-align: center;
   font-weight: 300;
   font-size: calc(.6em + .6vw);
   padding: 15px;
