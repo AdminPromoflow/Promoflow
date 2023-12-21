@@ -8,7 +8,7 @@ getCategories();
   function getCategories(){
     var containersItemsCategory = document.getElementById("containersItemsCategory");
 
-    $.ajax( "../../controller/W3P/W3P_products/products.php", {
+    $.ajax( "../../../controller/W3P/W3P_products/products.php", {
            type: 'post',
            async: false,
            data: {
@@ -71,7 +71,7 @@ getCategories();
 /*--------------------------------  Get groups  ------------------------------*/
   function getGroups(code, noDivCategory){
       const containersItemGroup = document.querySelectorAll(".containersItemGroup");
-      $.ajax( "../../controller/W3P/W3P_products/products.php", {
+      $.ajax( "../../../controller/W3P/W3P_products/products.php", {
            type: 'post',
            async: false,
            data: {
@@ -142,7 +142,7 @@ getCategories();
   function getProducts(codeG){
   //  alert("Group: " + codeG + noDivGroup);
     const containersItemProduct = document.querySelectorAll(".containersItemProduct");
-    $.ajax( "../../controller/W3P/W3P_products/products.php", {
+    $.ajax( "../../../controller/W3P/W3P_products/products.php", {
            type: 'post',
            async: false,
            data: {
