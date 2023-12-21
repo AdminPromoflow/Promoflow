@@ -17,12 +17,10 @@
   position: relative;
   text-align: center;
   color: rgba(255, 255, 255, .9);
-  top: 50%;
-  transform: translateY(-50%);
   font-size: 1em;
   font-weight: 400;
   background-color: blue;
-  margin: 0;
+  margin: 0 5px;
 }
 .openToggleSubitemCategory{
   position: absolute;
