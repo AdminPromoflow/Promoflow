@@ -1,12 +1,15 @@
 
     .containerItemsOrder{
       position: relative;
-      width: 100%;
+      width: 80%;
+      max-width: 400px;
+
+      left: 50%;
+      transform: translateX(-50%);
     }
     .itemOrder{
       position: relative;
       width: 100%;
-      height: 40px;
       background-color: #2F4560;
       border: 1px solid black;
     }
@@ -14,10 +17,10 @@
       position: relative;
       text-align: center;
       color: rgba(255, 255, 255, .9);
-      top: 50%;
-      transform: translateY(-50%);
       font-size: 1em;
-      font-weight: 400;
+      font-weight: 300;
+      margin: 8px 0px;
+
     }
     .openToggleSubitemOrder{
       position: absolute;
@@ -54,7 +57,6 @@
     .itemJob{
       position: relative;
       width: 100%;
-      padding: 4px;
       background-color: #55677D;
       border: 1px solid black;
     }
@@ -64,6 +66,7 @@
       color: rgba(255, 255, 255, .8);
       font-size: 1em;
       font-weight: 400;
+      margin: 8px 0px;
     }
     .openToggleSubitemJob{
       position: absolute;
@@ -100,7 +103,6 @@
     .itemContent{
       position: relative;
       width: 100%;
-      padding: 4px;
       background-color: #7B899A;
       border: 1px solid black;
     }
@@ -113,6 +115,7 @@
       color: rgba(255, 255, 255, .8);
       font-size: 1em;
       font-weight: 300;
+      margin: 8px 0px;
     }
     .openToggleSubitemContent{
       position: absolute;
@@ -154,7 +157,6 @@
     .itemContentL2{
       position: relative;
       width: 100%;
-      padding: 4px;
       background-color: #A0AAB7;
       border: 1px solid black;
     }
@@ -167,6 +169,7 @@
       color: rgba(255, 255, 255, .8);
       font-size: 1em;
       font-weight: 300;
+      margin: 8px 0px;
       overflow-x: scroll;
     }
     .openToggleSubitemContentL2{
@@ -209,7 +212,6 @@
       .itemContentL3{
         position: relative;
         width: 100%;
-        padding: 4px;
         background-color: #C6CCD4;
         border: 1px solid black;
       }
@@ -222,6 +224,7 @@
         color: #2F4560;
         font-size: 1em;
         font-weight: 300;
+        margin: 8px 0px;
         overflow-x: scroll;
       }
       .openToggleSubitemContentL3{
