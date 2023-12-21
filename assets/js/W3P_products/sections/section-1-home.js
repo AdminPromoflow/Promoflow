@@ -105,7 +105,7 @@ getCategories();
         '<div class="itemGroup">'+
            '<h3> '+ nameG +'</h3>'+
            '<div class="openToggleSubitemGroup" onclick="showGroups(\'' + noCurrentGroup  + '\');" >'+
-             '<img  class="buttonPlusGroup"src="../../assets/img/W3P_products/sections/section-1-home/menos.png" alt="">'+
+             '<img  class="buttonPlusGroup"src="../../assets/img/W3P_products/sections/section-1-home/mas.png" alt="">'+
              '<img  class="buttonLessGroup"src="../../assets/img/W3P_products/sections/section-1-home/menos.png" alt="">'+
            '</div>'+
           '</div>'+
