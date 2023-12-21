@@ -183,7 +183,7 @@ getCategories();
     const openOrders = document.getElementById("openOrders");
 
     openOrders.addEventListener("click", function(){
-      alert("haha");
+      window.open("../../views/W3P_orders/index.php", "_self");
     });
 
 
