@@ -179,15 +179,6 @@ getCategories();
 
 
 
-
-    const openOrders = document.getElementById("openOrders");
-
-    openOrders.addEventListener("click", function(){
-      alert("haha");
-    });
-
-
-
     /*
     select
         `product_group`.code AS 'GROUP CODE', `product_group`.name AS 'GROUP',  `product`.id AS 'PRODUCT CODE', `product`.name AS 'PRODUCT'

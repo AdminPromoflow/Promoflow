@@ -4,7 +4,7 @@
     <h3>Products</h3>
   </div>
 
-  <img id="openOrders" src="../../assets/img/W3P_products/sections/section-1-home/arrow.png" alt="">
+  <img id="" src="../../assets/img/W3P_products/sections/section-1-home/arrow.png" alt="">
 </div>
 <div class="bodyLogin">
   <!-- Welcome Message -->
