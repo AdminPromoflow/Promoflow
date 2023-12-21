@@ -7,8 +7,8 @@ require_once('../../../models/W3P/W3P_products/Products.php');
 
     if ($_POST['module']=="getCategories") {
       $db = new Database();
-    /*  $category = new Categories($db);
-      $result = json_encode($category->getCategories());
+      $category = new Categories($db);
+    /*  $result = json_encode($category->getCategories());
       echo $result;*/
     }
 
