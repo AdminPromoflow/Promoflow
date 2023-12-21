@@ -1,4 +1,5 @@
 <?php
+echo "string";exit;
 require_once('../../../config/database.php');
 require_once('../../../models/W3P/W3P_products/Products.php');
 
