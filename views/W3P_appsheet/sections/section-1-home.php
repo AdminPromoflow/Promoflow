@@ -23,14 +23,8 @@
           </div>
           <div id=""class="containersItemsContentToSendPO">
 
-
-
           </div>
         </div>
-
-
-
-
 
     </div>
 
