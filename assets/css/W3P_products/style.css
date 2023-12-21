@@ -63,7 +63,7 @@ body{
 }
 .titleBodyLogin{
   position: relative;
-  color: white;
+  color: black;
   text-align: center;
   font-weight: 600;
   font-size: calc(1.5em + 1.5vw);
