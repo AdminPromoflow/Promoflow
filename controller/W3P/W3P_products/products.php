@@ -1,9 +1,8 @@
 <?php
-echo "string";exit;
-require_once('../../../config/database.php');
+echo "string";
+/*require_once('../../../config/database.php');
 require_once('../../../models/W3P/W3P_products/Products.php');
 
-/*---------------------------------  Products  -------------------------------*/
 
     elseif ($_POST['module']=="getCategories") {
       $db = new Database();
@@ -27,5 +26,5 @@ require_once('../../../models/W3P/W3P_products/Products.php');
       $result = json_encode($product->getProducts());
       echo $result;
     }
-
+*/
  ?>
