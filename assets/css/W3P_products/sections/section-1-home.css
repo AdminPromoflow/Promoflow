@@ -1,8 +1,8 @@
 
 .containerItemsCategory{
   position: relative;
-  width: 100%;
-  max-width: 295px;
+  width: 80%;
+  max-width: 400px;
 
   left: 50%;
   transform: translateX(-50%);
