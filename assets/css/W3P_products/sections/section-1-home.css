@@ -69,7 +69,6 @@
   .itemGroup h3{
     position: relative;
     text-align: center;
-    width: 68%;
     left: 50%;
     transform: translateX(-50%);
     color: rgba(255, 255, 255, .8);
@@ -121,12 +120,14 @@
     .itemProduct h3{
       position: relative;
       text-align: center;
-      width: 85%;
+      width: 80%;
       left: 50%;
       transform: translateX(-50%);
       color: rgba(255, 255, 255, .8);
       font-size: 1em;
       font-weight: 300;
+      margin: 5px 0px;
+
     }
     .openToggleSubitemProduct{
       position: absolute;
