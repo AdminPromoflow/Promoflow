@@ -119,13 +119,13 @@ getOrders();
     '</div>'
     ;
 
+    alert("Es:" + noDivJobSelected);
 
     getContent(noDivJob,  noDivJobSelected);  //Create content
     showContent(noDivJobSelected); //Show all the content
     showContent(noDivJobSelected); //Hide all content --> we have twice this function of hide all
     noDivJobSelected = noDivJobSelected + 1;
 
-    alert("Es:" + noDivJobSelected);
 
   }
 
