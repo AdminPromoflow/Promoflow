@@ -5,7 +5,7 @@ menuClass.changePathImageOpenLogin(1);
 
   function getOrders(){
     var containerOrders = document.getElementById("containerOrders");
-    $.ajax( "../App/Controller/Controller2.php", {
+    $.ajax( "../../controller/W3P/W3P_orders/orders.php", {
            type: 'post',
            async: false,
            data: {
@@ -19,7 +19,6 @@ menuClass.changePathImageOpenLogin(1);
            for (var i = 0; i < data["runs"].length; i++) { // Create each orders
               createOrders(data["runs"][i]["id"],  data["runs"][i]["created_date"], i);
             }
-
             }
           })
    }
@@ -35,8 +34,8 @@ menuClass.changePathImageOpenLogin(1);
       '<div class="itemOrder">' +
         '<h3>Order: '+ dateOrder +'</h3>' +
         '<div class="openToggleSubitemOrder" onclick="showJobs(\'' + noDivOrder  + '\');" >' +
-          '<img  class="buttonPlusOrder"src="../2-2-Orders/Images/mas.png" alt="">' +
-          '<img  class="buttonLessOrder"src="../2-2-Orders/Images/menos.png" alt="">' +
+          '<img  class="buttonPlusOrder"src="../../assets/img/W3P_orders/sections/section-1-home/mas.png" alt="">' +
+          '<img  class="buttonLessOrder"src="../../assets/img/W3P_orders/sections/section-1-home/menos.png" alt="">' +
         '</div>' +
       '</div>' +
       '<div class="containersItemJob">' +
@@ -77,7 +76,7 @@ menuClass.changePathImageOpenLogin(1);
   function getJobs(noDivOrder, idOrder){
     const containersItemJob =  document.querySelectorAll(".containersItemJob");
 
-      $.ajax( "../App/Controller/Controller2.php", {
+      $.ajax( "../../controller/W3P/W3P_orders/orders.php", {
              type: 'post',
              async: false,
              data: {
@@ -111,8 +110,8 @@ menuClass.changePathImageOpenLogin(1);
       '<div class="itemJob">' +
         '<h3>Job: ' +  (noDivJob +1) +'</h3>' +
         '<div class="openToggleSubitemJob"  onclick="showContent(\'' + noDivJobSelected + '\');" >' + //onclick="createContent(\'' + numberDivJob + '\',\'' + numberJobOn + '\');"
-          '<img  class="buttonPlusJob"src="../2-2-Orders/Images/mas.png" alt="">' +
-          '<img  class="buttonLessJob"src="../2-2-Orders/Images/menos.png" alt="">' +
+          '<img  class="buttonPlusJob"src="../../assets/img/W3P_orders/sections/section-1-home/mas.png" alt="">' +
+          '<img  class="buttonLessJob"src="../../assets/img/W3P_orders/sections/section-1-home/menos.png" alt="">' +
         '</div>' +
       '</div>' +
       '<div class="containersItemsContent">' +
@@ -177,8 +176,8 @@ menuClass.changePathImageOpenLogin(1);
     if (checkValue.substring(1,7) ==  "object") {
       value = "";
       itemHierarchy =  '<div class="openToggleSubitemContent" onclick="showItemsContent(\'' + noDivitemHierarchy + '\',\'' + noDivContentSelected +'\');">' +    //
-                        '<img  class="buttonPlusContent"src="../2-2-Orders/Images/mas.png" alt="">' +
-                        '<img  class="buttonLessContent"src="../2-2-Orders/Images/menos.png" alt="">' +
+                        '<img  class="buttonPlusContent"src="../../assets/img/W3P_orders/sections/section-1-home/mas.png" alt="">' +
+                        '<img  class="buttonLessContent"src="../../assets/img/W3P_orders/sections/section-1-home/menos.png" alt="">' +
                       '</div>'
     }else{
        itemHierarchy = "";
@@ -279,8 +278,8 @@ menuClass.changePathImageOpenLogin(1);
       '<div class="itemContentL2">' +
         '<h3>'+nameContentOn +  (noDivItemsContent+1)+': ' +'</h3>' +
         '<div class="openToggleSubitemContentL2" onclick="showItemsContent2(\'' + numberDivContentL3 +'\');">' +
-         '<img  class="buttonPlusContentL2"src="../2-2-Orders/Images/mas.png" alt="">' +
-         '<img  class="buttonLessContentL2"src="../2-2-Orders/Images/menos.png" alt="">' +
+         '<img  class="buttonPlusContentL2"src="../../assets/img/W3P_orders/sections/section-1-home/mas.png" alt="">' +
+         '<img  class="buttonLessContentL2"src="../../assets/img/W3P_orders/sections/section-1-home/menos.png" alt="">' +
        '</div>' +
       '</div>' +
       '<div class="containersItemsContentL3">' +
