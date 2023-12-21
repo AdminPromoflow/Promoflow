@@ -103,8 +103,6 @@ menuClass.changePathImageOpenLogin(1);
 
   var noDivJobSelected = 0;
 
-  alert("Es:" + noDivJobSelected);
-
 
   function createJobs(noDivOrder, noDivJob){
     const containersItemJob =  document.querySelectorAll(".containersItemJob");
@@ -332,7 +330,7 @@ menuClass.changePathImageOpenLogin(1);
 
 /*--------------------------  Get items's Content3  --------------------------*/
 
-  function  getContent3(  noDivItemsContent, noDivJob, nameContentOn){
+  function  getContent3(noDivItemsContent, noDivJob, nameContentOn){
 
     for (var i = 0; i < dataJob[noDivJob][nameContentOn].length; i++) {
       const containersItemsContentL3 =  document.querySelectorAll(".containersItemsContentL3");
