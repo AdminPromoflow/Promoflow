@@ -153,7 +153,7 @@ getOrders();
 /*---------------------------  Get content's job  ----------------------------*/
 
   function getContent(noDivJob, noDivJobSelected){
-    alrt(noDivJob + "  " + noDivJobSelected);
+    alert(noDivJob + "  " + noDivJobSelected);
     const containersItemsContent =  document.querySelectorAll(".containersItemsContent");
     var value;
     var itemHierarchy = "";
