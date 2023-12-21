@@ -1,5 +1,7 @@
 <?php
 require_once('../../../config/database.php');
+require_once('../../../models/W3P/W3P_products/Categories.php');
+require_once('../../../models/W3P/W3P_products/Groups.php');
 require_once('../../../models/W3P/W3P_products/Products.php');
 echo json_encode("string");
 
