@@ -141,8 +141,8 @@ menuClass.changePathImageOpenLogin(1);
           '<input class="Project" type="text" name="" value="">'+
         '</div>'+
         '<div class="itemContentToSendPO">'+
-          '<h3 >5. Qty*: 150</h3>'+
-          '<input class="Qty" type="text" name="" value="">'+
+          '<h3 >5. Qty*: </h3>'+
+          '<input class="Qty" type="text" name="" value="150">'+
         '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >6. Supplier:</h3>'+
