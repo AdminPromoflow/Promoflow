@@ -126,7 +126,7 @@ menuClass.changePathImageOpenLogin(1);
     '<div class="containerItemsContentToSendPO">'+
         '<div class="itemContentToSendPO">'+
           '<h3 >1. Data No*:</h3>'+
-          '<input class="DataNo" type="text" name="" value="CTR11000">'+
+          '<input class="DataNo" type="text" name="" value="CTR11004">'+
         '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >2. Customer:</h3>'+
@@ -141,7 +141,7 @@ menuClass.changePathImageOpenLogin(1);
           '<input class="Project" type="text" name="" value="">'+
         '</div>'+
         '<div class="itemContentToSendPO">'+
-          '<h3 >5. Qty*:</h3>'+
+          '<h3 >5. Qty*: 150</h3>'+
           '<input class="Qty" type="text" name="" value="">'+
         '</div>'+
         '<div class="itemContentToSendPO">'+
