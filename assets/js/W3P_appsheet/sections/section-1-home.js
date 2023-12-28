@@ -106,7 +106,7 @@ menuClass.changePathImageOpenLogin(1);
                idOrder: idOrder
                      },
              success: function(data){
-               //alert(data);
+               console.log(data);
 
             // alert(data);
               dataContentToSentPO = jQuery.parseJSON(data);
@@ -114,16 +114,13 @@ menuClass.changePathImageOpenLogin(1);
 
 
                //alert(data[i]["data_no"]);
-                 createToSendPOContent(noDivOrder, data[i]);
+                 createToSendPOContent(noDivOrder);
 
               }
             })
   }
 
-  function createToSendPOContent(noDivOrder, data){
-  //  alert(data["addresses"]["name"]);
-
-
+  function createToSendPOContent(noDivOrder){
     const containersItemContentToSendPO =  document.querySelectorAll(".containersItemContentToSendPO");
     containersItemsContentToSendPO.innerHTML +=
     '<div class="containerItemsContentToSendPO">'+
