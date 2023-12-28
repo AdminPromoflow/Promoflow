@@ -106,7 +106,7 @@ menuClass.changePathImageOpenLogin(1);
                idOrder: idOrder
                      },
              success: function(data){
-               alert(data);
+               //alert(data);
 
             // alert(data);
               dataContentToSentPO = jQuery.parseJSON(data);
