@@ -106,7 +106,7 @@ menuClass.changePathImageOpenLogin(1);
                idOrder: idOrder
                      },
              success: function(data){
-               console.log(data);
+               alert(data);
 
             // alert(data);
               dataContentToSentPO = jQuery.parseJSON(data);
@@ -114,13 +114,14 @@ menuClass.changePathImageOpenLogin(1);
 
 
                //alert(data[i]["data_no"]);
-                 createToSendPOContent(noDivOrder);
+                 createToSendPOContent(noDivOrder, data[i]);
 
               }
             })
   }
 
-  function createToSendPOContent(noDivOrder){
+  function createToSendPOContent(noDivOrder, data){
+
     const containersItemContentToSendPO =  document.querySelectorAll(".containersItemContentToSendPO");
     containersItemsContentToSendPO.innerHTML +=
     '<div class="containerItemsContentToSendPO">'+
