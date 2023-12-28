@@ -121,6 +121,8 @@ menuClass.changePathImageOpenLogin(1);
   }
 
   function createToSendPOContent(noDivOrder, data){
+  //  alert(data["addresses"]["name"]);
+
 
     const containersItemContentToSendPO =  document.querySelectorAll(".containersItemContentToSendPO");
     containersItemsContentToSendPO.innerHTML +=
