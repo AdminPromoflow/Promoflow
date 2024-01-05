@@ -1,5 +1,5 @@
 .charging{
-  position: sticky;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   top: 0px;
@@ -11,7 +11,7 @@
   align-items: center;
 }
 .iconCharging{
-  position: absolute;
+  position: relative;
   height: 80px;
   width: 120px;
   background-color: rgba(255, 255, 255, 1);
