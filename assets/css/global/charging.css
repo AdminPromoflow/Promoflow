@@ -44,6 +44,8 @@
   width: 0%;
   background-color: white;
   overflow: hidden;
+  animation: charge 1s ease infinite;
+
 }
 @keyframes rotate {
   from {
@@ -55,9 +57,11 @@
 }
 @keyframes charge {
   from {
-    width: 0%;
+    transform: translateX(0%);
+
   }
   to {
-    width: 100%;
+    transform: translateX(50%);
+
   }
 }
