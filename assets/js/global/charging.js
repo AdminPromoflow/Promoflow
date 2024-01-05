@@ -12,6 +12,7 @@ class Charging {
               clearInterval(interval);
               if (finalPercentage == 100) {
                 progressBarCharging.style.width = '0%';
+                alert(finalPercentage);
                 //charging.style.display = "none";
               }
           }
