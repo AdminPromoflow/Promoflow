@@ -16,9 +16,9 @@ class Charging {
                   if (currentPercentage === 100) {
                       alert("¡La barra de progreso ha alcanzado el 100%!");
                   }
-              }, 100); // Retraso de 100 milisegundos
+              }, 200); // Retraso de 100 milisegundos
           }
-      }, 20); // Adjust the timing here to control the speed
+      }, 5); // Adjust the timing here to control the speed
   }
 
 
