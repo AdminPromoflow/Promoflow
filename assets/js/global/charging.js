@@ -1,6 +1,6 @@
 class Charging {
   constructor() {
-    setTimeout(this.hideProgressBar, 3000);
+    setTimeout(this.hideProgressBar, 2000);
   }
    showProgressBar() {
      charging.style.display = "flex";
