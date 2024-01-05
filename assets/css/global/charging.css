@@ -42,8 +42,7 @@
   width: 0%;
   background-color: white;
   overflow: hidden;
-  animation: charge 1s ease infinite;
-
+  animation: rotate 1s ease infinite;
 }
 @keyframes rotate {
   from {
