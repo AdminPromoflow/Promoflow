@@ -12,7 +12,7 @@ class Charging {
               clearInterval(interval);
               // Si se alcanza el 100%, muestra el alert
             if (currentPercentage === 100) {
-              //  alert("¡La barra de progreso ha alcanzado el 100%!");
+                alert("¡La barra de progreso ha alcanzado el 100%!");
             }
 
           }
