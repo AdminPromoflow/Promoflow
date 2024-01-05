@@ -55,24 +55,23 @@
   text-align: center;
 }
 @keyframes rotate {
-  0% {
+  from {
     transform: rotate(0deg);
   }
-50% {
+  to {
     transform: rotate(360deg);
-  }
-  100%{
-    transform: rotate(0deg);
-
   }
 }
 @keyframes charge {
-  from {
+  0% {
     transform: translateX(0%);
 
   }
-  to {
+  50% {
     transform: translateX(250%);
 
+  }
+  100%{
+    transform: translateX(0%);
   }
 }
