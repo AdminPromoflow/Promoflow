@@ -37,7 +37,7 @@
   margin: 20px 0;
 }
 .progressBarCharging{
-  position: absolute;
+  position: relative;
   top: 00px;
   left: 0px;
   height: 100%;
