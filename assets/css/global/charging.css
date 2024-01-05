@@ -44,7 +44,6 @@
   width: 0%;
   background-color: white;
   overflow: hidden;
-  transition: width 1s ease;
 }
 @keyframes rotate {
   from {
