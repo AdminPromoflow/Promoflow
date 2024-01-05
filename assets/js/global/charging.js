@@ -21,7 +21,7 @@ class Charging {
 
 
           }
-      }, 200); // Adjust the timing here to control the speed
+      }, seconds); // Adjust the timing here to control the speed
 
   }
 
