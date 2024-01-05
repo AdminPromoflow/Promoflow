@@ -10,9 +10,10 @@ class Charging {
 
           if (currentPercentage >= finalPercentage) {
               clearInterval(interval);
+              alert(currentPercentage);
           }
       }, 5); // Adjust the timing here to control the speed
-      alert("hi");
+
   }
 
 
