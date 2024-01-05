@@ -1,12 +1,11 @@
 class Charging {
   constructor() {
-    setTimeout(this.hideProgressBar, 1000);
+    setTimeout(this.hideProgressBar, 3000);
   }
    showProgressBar() {
      charging.style.display = "flex";
   }
   hideProgressBar() {
-    alert("algo pasó");
     charging.style.display = "none";
  }
 
