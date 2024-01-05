@@ -26,7 +26,11 @@
   position: relative;
   height: 40%;
   animation: rotate 6s linear infinite;
-
+}
+.barCharging{
+  width: 90px;
+  height: 30px;
+  background-color: white;
 }
 @keyframes rotate {
   from {
