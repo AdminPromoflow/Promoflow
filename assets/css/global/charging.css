@@ -29,11 +29,21 @@
   animation: rotate 6s linear infinite;
 }
 .barCharging{
+  position: relative;
   width: 180px;
   height: 10px;
   border: 3px solid white;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .2);
   margin: 20px 0;
+}
+.progressBarCharging{
+  position: absolute;
+  top: 00px;
+  left: 0px;
+  height: 100%;
+  width: 300%;
+  background-color: green;
+  overflow: hidden;
 }
 @keyframes rotate {
   from {
