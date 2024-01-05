@@ -1,4 +1,7 @@
 
+
+
+
 var progressBarCharging = document.getElementById("progressBarCharging");
 
 
