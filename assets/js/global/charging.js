@@ -3,6 +3,7 @@ class Charging {
 
   }
    fillProgressBarProgressively(finalPercentage) {
+     charging.style.display = "block";
 
       let currentPercentage = 0;
       const interval = setInterval(() => {
