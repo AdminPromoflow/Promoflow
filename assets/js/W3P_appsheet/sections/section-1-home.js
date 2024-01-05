@@ -18,7 +18,7 @@ menuClass.changePathImageOpenLogin(1);
              var data = jQuery.parseJSON(data);
             for (var i = 0; i < data.length; i++) { // Create each orders
               //alert(data[i]["created_date"]);
-               createToSendPOOrders(data[i]["id"], data[i]["created_date"], i);
+              // createToSendPOOrders(data[i]["id"], data[i]["created_date"], i);
              }
             }
           })
