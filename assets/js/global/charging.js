@@ -6,6 +6,7 @@ class Charging {
      charging.style.display = "flex";
   }
   hideProgressBar() {
+    alert("algo pasó");
     charging.style.display = "none";
  }
 
