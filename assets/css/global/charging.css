@@ -24,7 +24,7 @@
 }
 .iconCharging img{
   position: relative;
-  height: 60%;
+  height: 30%;
   animation: rotate 6s linear infinite;
 
 }
