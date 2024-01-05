@@ -44,7 +44,7 @@
   width: 30%;
   background-color: white;
   overflow: hidden;
-  animation: charge 4s ease infinite;
+  animation: charge 4s linear infinite;
 
 }
 .charging h4{
