@@ -30,7 +30,7 @@
   animation: rotate 6s linear infinite;
 }
 .barCharging{
-  width: 90px;
+  width: 180px;
   height: 30px;
   background-color: white;
 }
