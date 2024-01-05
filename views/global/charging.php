@@ -1,4 +1,4 @@
-<section class="charging">
+<section id="charging" class="charging">
   <div class="iconCharging">
     <img src="../../assets/img/global/charging/logo.png" alt="">
   </div>
