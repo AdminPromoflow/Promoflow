@@ -7,6 +7,7 @@ menuClass.changePathImageOpenLogin(1);
 var open_W3P_products = document.getElementById("open_W3P_products");
 
 open_W3P_products.addEventListener("click", function(){
+  chargingClass.fillProgressBarProgressively(100, 200);
   alert("alert");
   //../../views/W3P_products/index.php
 });
