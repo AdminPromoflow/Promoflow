@@ -51,6 +51,8 @@
   font-size: 1.2em;
   color: white;
   font-weight: 200;
+  margin: 0;
+  text-align: center;
 }
 @keyframes rotate {
   from {
