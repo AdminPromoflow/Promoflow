@@ -3,4 +3,3 @@ menuClass.changePathImageOpenLogin(1);
 
 
 chargingClass.fillProgressBarProgressively(100);
-chargingClass.hideChargingPanel();
