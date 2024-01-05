@@ -42,7 +42,7 @@
   width: 0%;
   background-color: white;
   overflow: hidden;
-  animation: charge 6s linear infinite;
+  animation: charge 1s ease infinite;
 
 }
 @keyframes rotate {
