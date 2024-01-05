@@ -1,5 +1,5 @@
 .charging{
-  position: fixed;
+  position: sticky;
   width: 100vw;
   height: 100vh;
   top: 0px;
