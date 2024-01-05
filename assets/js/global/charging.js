@@ -2,27 +2,8 @@ class Charging {
   constructor() {
 
   }
-   fillProgressBarProgressively(finalPercentage, seconds) {
+   showProgressBar() {
      charging.style.display = "flex";
-
-      let currentPercentage = 0;
-      const interval = setInterval(() => {
-          currentPercentage++;
-          progressBarCharging.style.width = currentPercentage + '%';
-          if (progressBarCharging.style.width == "100%") {
-            this.fillProgressBarProgressively(0) ;
-            charging.style.display = "none";
-          }
-
-
-          if (currentPercentage >= finalPercentage) {
-
-              clearInterval(interval);
-
-
-          }
-      }, seconds); // Adjust the timing here to control the speed
-
   }
 
 
@@ -31,7 +12,6 @@ class Charging {
 
 
 
-var progressBarCharging = document.getElementById("progressBarCharging");
 var charging = document.getElementById("charging");
 
 
