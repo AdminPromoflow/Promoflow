@@ -2,7 +2,7 @@ class Charging {
   constructor() {
 
   }
-  fillProgressBarProgressively(finalPercentage) {
+   fillProgressBarProgressively(finalPercentage) {
       let currentPercentage = 0;
       const interval = setInterval(() => {
           currentPercentage++;
@@ -10,16 +10,13 @@ class Charging {
 
           if (currentPercentage >= finalPercentage) {
               clearInterval(interval);
+
               // Si se alcanza el 100%, muestra el alert
-            if (currentPercentage === 100) {
-                alert("¡La barra de progreso ha alcanzado el 100%!");
-            }
-
+              if (currentPercentage === 100) {
+                  alert("¡La barra de progreso ha alcanzado el 100%!");
+              }
           }
-
-
-      }, 2); // Adjust the timing here to control the speed
-
+      }, 20); // Adjust the timing here to control the speed
   }
 
 
