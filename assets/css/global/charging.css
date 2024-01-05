@@ -1,0 +1,34 @@
+.charging{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 30;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iconCharging{
+  position: relative;
+  height: 80px;
+  animation: rotate 3s linear infinite;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iconCharging img{
+  position: relative;
+  width: 100%;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(160deg);
+  }
+}
