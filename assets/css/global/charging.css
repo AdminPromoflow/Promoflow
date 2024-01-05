@@ -11,7 +11,7 @@
   align-items: center;
 }
 .iconCharging{
-  position: relative;
+  position: absolute;
   height: 80px;
   width: 120px;
   background-color: rgba(255, 255, 255, 1);
