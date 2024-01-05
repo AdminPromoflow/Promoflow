@@ -12,7 +12,7 @@ function fillProgressBarProgressively(finalPercentage) {
         progressBarCharging.style.width = currentPercentage + '%';
 
         if (currentPercentage >= finalPercentage) {
-            fillProgressBarProgressively(finalPercentage);
+            clearInterval(interval);
         }
     }, 20); // Adjust the timing here to control the speed
 }
