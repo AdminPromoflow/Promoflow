@@ -11,7 +11,7 @@
   <div class="containerUsersManagerBottoms">
 
     <!-- User Option 1 -->
-    <a href="../../views/W3P_products/index.php">
+    <a id="open_W3P_products" href="">
     <div class="itemUsersManager">
       <img src="../../assets/img/W3P/sections/section-1-home/products.png" alt="">
       <h3>Products</h3>
