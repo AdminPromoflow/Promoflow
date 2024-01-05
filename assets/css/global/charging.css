@@ -63,15 +63,12 @@
   }
 }
 @keyframes charge {
-  0% {
+  from {
     transform: translateX(0%);
 
   }
-  50% {
-    transform: translateX(250%);
+  to {
+    transform: translateX(450%);
 
-  }
-  100%{
-    transform: translateX(0%);
   }
 }
