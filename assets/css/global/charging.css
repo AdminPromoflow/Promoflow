@@ -16,6 +16,6 @@
   z-index: 50;
 }
 .iconCharging img{
-  position: absolute;
-  width: 120px;
+  position: relative;
+  width: 100%;
 }
