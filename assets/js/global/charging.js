@@ -14,7 +14,7 @@ function fillProgressBarProgressively(finalPercentage) {
         if (currentPercentage >= finalPercentage) {
             clearInterval(interval);
         }
-    }, 10); // Adjust the timing here to control the speed
+    }, 2); // Adjust the timing here to control the speed
 }
 
 // Call the function
