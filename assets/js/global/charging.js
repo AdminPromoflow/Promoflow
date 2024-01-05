@@ -11,11 +11,12 @@ class Charging {
           if (currentPercentage >= finalPercentage) {
               clearInterval(interval);
           }
+          if (finalPercentage ==  100) {
+            progressBarCharging.style.width = '0%';
+            charging.style.display = "none";
+          }
       }, 2); // Adjust the timing here to control the speed
-      if (finalPercentage ==  100) {
-        progressBarCharging.style.width = '0%';
-        charging.style.display = "none";
-      }
+
   }
 
 }
