@@ -8,12 +8,14 @@ class Charging {
           currentPercentage++;
           progressBarCharging.style.width = currentPercentage + '%';
           if (progressBarCharging.style.width == "100%") {
-            alert(progressBarCharging.style.width);
+            this.fillProgressBarProgressively(0) ;
+            //charging.style.display = "none";
 
           }
 
 
           if (currentPercentage >= finalPercentage) {
+
               clearInterval(interval);
 
 
