@@ -4,5 +4,15 @@
   height: 100vw;
   top: 0px;
   left: 0px;
-  background-color: rgba(0, 0, 0, .5)
+  background-color: rgba(0, 0, 0, .5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iconCharging{
+  position: relative;
+  height: 80px;
+  width: 120px;
+  background-color: rgba(255, 255, 255, 1);
 }

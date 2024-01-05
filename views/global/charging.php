@@ -1,3 +1,5 @@
 <section class="charging">
-<h1>Hola</h1>
+  <div class="iconCharging">
+    <img src="../../assets/img/global/charging/logo.png" alt="">
+  </div>
 </section>
