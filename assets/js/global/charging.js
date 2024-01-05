@@ -7,7 +7,10 @@ class Charging {
       const interval = setInterval(() => {
           currentPercentage++;
           progressBarCharging.style.width = currentPercentage + '%';
-          alert(progressBarCharging.style.width);
+          if (progressBarCharging.style.width == "100%") {
+            alert(progressBarCharging.style.width);
+
+          }
 
 
           if (currentPercentage >= finalPercentage) {
