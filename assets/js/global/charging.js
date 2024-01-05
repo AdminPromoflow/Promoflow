@@ -14,7 +14,7 @@ class Charging {
       }, 2); // Adjust the timing here to control the speed
       if (finalPercentage ==  100) {
         progressBarCharging.style.width = '0%';
-        charging.style.display = none;
+        charging.style.display = "none";
       }
   }
 
