@@ -11,8 +11,8 @@ class Charging {
           if (currentPercentage >= finalPercentage) {
               clearInterval(interval);
               if (finalPercentage == 100) {
-                progressBarCharging.style.width = '0%';
-                charging.style.display = "none";
+                //progressBarCharging.style.width = '0%';
+                //charging.style.display = "none";
               }
           }
 
