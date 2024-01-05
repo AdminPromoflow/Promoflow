@@ -5,19 +5,17 @@
 var progressBarCharging = document.getElementById("progressBarCharging");
 
 
-function chargeProgressBar(finalPercent){
-  let presentPercent = 0;
+function fillProgressBarProgressively(finalPercentage) {
+    let currentPercentage = 0;
+    const interval = setInterval(() => {
+        currentPercentage++;
+        progressBarCharging.style.width = currentPercentage + '%';
 
-  const interval =  setInterval(() => {
-    presentPercent ++;
-    progressBarCharging.style.width = presentPercent +  "%";
-
-    if (presentPercent  >=  finalPercent) {
-      clearInterval(interval);
-    }
-
-
-  },30)
-
+        if (currentPercentage >= finalPercentage) {
+            clearInterval(interval);
+        }
+    }, 20); // Adjust the timing here to control the speed
 }
-chargeProgressBar(50);
+
+// Call the function
+fillProgressBarProgressively(100); // Fills the bar up to 100%
