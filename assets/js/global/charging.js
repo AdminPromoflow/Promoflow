@@ -1,7 +1,4 @@
 
-
-
-
 var progressBarCharging = document.getElementById("progressBarCharging");
 
 
@@ -12,7 +9,7 @@ function fillProgressBarProgressively(finalPercentage) {
         progressBarCharging.style.width = currentPercentage + '%';
 
         if (currentPercentage >= finalPercentage) {
-            clearInterval(interval);
+            fillProgressBarProgressively(finalPercentage) ;
         }
     }, 20); // Adjust the timing here to control the speed
 }
