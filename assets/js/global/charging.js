@@ -10,12 +10,13 @@ class Charging {
 
           if (currentPercentage >= finalPercentage) {
               clearInterval(interval);
+              if (progressBarCharging.style.width  == "100%") {
+                alert("Lo logramos");
+              }
 
           }
       }, 5); // Adjust the timing here to control the speed
-      if (progressBarCharging.style.width  == "100%") {
-        alert("Lo logramos");
-      }
+
   }
 
 
