@@ -37,11 +37,11 @@
   margin: 20px 0;
 }
 .progressBarCharging{
-  position: relative;
+  position: absolute;
   top: 00px;
   left: 0px;
   height: 100%;
-  width: 300%;
+  width: 30%;
   background-color: green;
   overflow: hidden;
 }
