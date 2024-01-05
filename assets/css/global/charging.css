@@ -22,7 +22,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
 }
 .iconCharging img{
   position: relative;
@@ -33,6 +32,7 @@
   width: 180px;
   height: 30px;
   background-color: white;
+  margin: 20px 0;
 }
 @keyframes rotate {
   from {
