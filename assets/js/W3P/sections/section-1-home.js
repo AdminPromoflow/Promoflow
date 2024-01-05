@@ -8,6 +8,6 @@ var open_W3P_products = document.getElementById("open_W3P_products");
 
 open_W3P_products.addEventListener("click", function(){
   chargingClass.fillProgressBarProgressively(100, 2000);
-  alert("alert");
+//  alert("alert");
   //../../views/W3P_products/index.php
 });
