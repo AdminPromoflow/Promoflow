@@ -10,15 +10,13 @@ class Charging {
 
           if (currentPercentage >= finalPercentage) {
               clearInterval(interval);
+              // Si se alcanza el 100%, muestra el alert
+            if (currentPercentage === 100) {
+                alert("¡La barra de progreso ha alcanzado el 100%!");
+            }
 
           }
-          else {
-            if (finalPercentage == 100) {
-              progressBarCharging.style.width = '0%';
-              alert(finalPercentage);
-              //charging.style.display = "none";
-            }
-          }
+
 
       }, 2); // Adjust the timing here to control the speed
 
