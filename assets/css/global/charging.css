@@ -6,7 +6,7 @@
   left: 0px;
   background-color: rgba(0, 0, 0, .5);
   z-index: 30;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
