@@ -14,7 +14,7 @@
 .iconCharging{
   position: relative;
   height: 80px;
-  animation: rotate 6s linear infinite;
+  width: 90px;
   height: 40px;
 
   display: flex;
@@ -24,6 +24,8 @@
 .iconCharging img{
   position: relative;
   height: 100%;
+  animation: rotate 6s linear infinite;
+
 }
 @keyframes rotate {
   from {
