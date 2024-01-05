@@ -8,9 +8,6 @@ class Charging {
   hideProgressBar() {
     charging.style.display = "none";
  }
-
-
-
 }
 
 
