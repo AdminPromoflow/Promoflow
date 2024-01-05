@@ -14,7 +14,7 @@
 .iconCharging{
   position: relative;
   height: 80px;
-  animation: rotate 3s linear infinite;
+  animation: rotate 4s linear infinite;
   height: 100px;
 
   display: flex;
