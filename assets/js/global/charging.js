@@ -10,13 +10,7 @@ class Charging {
 
           if (currentPercentage >= finalPercentage) {
               clearInterval(interval);
-
-              // Esperar un breve momento para asegurarse de que la UI se ha actualizado
-              setTimeout(() => {
-                  if (currentPercentage === 100) {
-                      alert("¡La barra de progreso ha alcanzado el 100%!");
-                  }
-              }, 200); // Retraso de 100 milisegundos
+              alert(currentPercentage);
           }
       }, 5); // Adjust the timing here to control the speed
   }
