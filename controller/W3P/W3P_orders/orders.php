@@ -18,7 +18,7 @@ require_once('../../../controller/assets/data/W3P_orders/flapi_credentials.php')
         $apiClient->setupAuth($flapi[0],$flapi[1]); //  $apiClient->setupAuth( 'username', 'password' );
 
         try { // Make a simple get call (this returns tag types in JSON format)
-            $result = $apiClient->get('/runs?state=waiting&days=120&format=json');
+            $result = $apiClient->get('/runs?state=waiting&days=160&format=json');
         }
         catch (Exception $e) { // Handle error. In practice there are several exception types,
             die( $e->getMessage()); // which you can use to differentiate between different error conditions
