@@ -26,7 +26,7 @@
         padding-left: 15px;
       }
     </style>
-    <img src="../../public/img/login/sections/section-1-home/logo.png" alt="">
+    <img src="../../assets/img/login/sections/section-1-home/logo.png" alt="">
   </div>
   <div class="bodyLogin">
     <div class="boxLogin">
@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="boxLogin2">
-        <img src="../../public/img/login/sections/section-1-home/login-picture.png" alt="">
+        <img src="../../assets/img/login/sections/section-1-home/login-picture.png" alt="">
         <h3>Your product management interface is ready for you.</h3>
       </div>
     </div>

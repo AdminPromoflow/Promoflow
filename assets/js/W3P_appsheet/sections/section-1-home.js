@@ -1,6 +1,5 @@
 // Create an instance of the Menu class to handle menu functionality
 menuClass.changePathImageOpenLogin(1);
-
 //var test = document.getElementById('test');
   function getToSendPO(){
     var containersItemsContentToSendPO = document.getElementById("containersItemsContentToSendPO");
@@ -12,13 +11,15 @@ menuClass.changePathImageOpenLogin(1);
              module: "getToSendPOOrders"
                    },
            success: function(data){
+            // alert(data);
+
              containersItemsContentToSendPO.innerHTML = "";
 
              console.log(data);
              var data = jQuery.parseJSON(data);
             for (var i = 0; i < data.length; i++) { // Create each orders
               //alert(data[i]["created_date"]);
-              // createToSendPOOrders(data[i]["id"], data[i]["created_date"], i);
+               createToSendPOOrders(data[i]["id"], data[i]["created_date"], i);
              }
             }
           })
