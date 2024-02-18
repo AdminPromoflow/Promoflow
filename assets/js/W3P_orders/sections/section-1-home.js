@@ -2,6 +2,7 @@
 menuClass.changePathImageOpenLogin(1);
 
 /*--------------------------  Get orders from API  ---------------------------*/
+alert("Buenas");
   function getOrders(){
     var containerOrders = document.getElementById("containerOrders");
     $.ajax( "../../controller/W3P/W3P_orders/orders.php", {
