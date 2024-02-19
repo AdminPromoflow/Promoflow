@@ -24,7 +24,6 @@
       <?php include "../../views/global/menu.php" ?>
       <?php include "../../views/W3P_orders/sections/section-1-home.php" ?>
 
-      <!-- Include JavaScript file for interactive functionality -->
-      <script src="../../assets/js/global/menu.js" type="text/javascript"></script>
+      
   </body>
 </html>
