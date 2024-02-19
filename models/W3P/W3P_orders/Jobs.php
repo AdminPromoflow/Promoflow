@@ -226,9 +226,9 @@
 
 
        function createJob(){
-         /*try{
+         try{
            $sql = "INSERT INTO `Jobs`
-            (`id`,
+            (
              `addresses`,
              `product_code`,
              `idUser`,
@@ -238,113 +238,39 @@
              `customer`,
              `print_ref`,
              `project`,
-             `qty`,
-             `supplier`,
-             `c_order_date`,
-             `po_sent`,
-             `approval_sent`,
-             `s_despatch_sent`,
-             `c_due_date`,
-             `artwork_pre_approved`,
-             `c_artwork`,
-             `c_artwork_visual`,
-             `c_approved_pdf`,
-             `box_no`,
-             `act_despatch_date`,
-             `uk_trading_no`,
-             `delivered_date`,
-             `nett_sale`,
-             `customer_reference_1`,
-             `s_ref`,
-             `s_email`,
-             `item`,
-             `size`,
-             `material`,
-             `weigth_thickness_Capacity`,
-             `print`,
-             `coverage`,
-             `print_style`,
-             `finish_1`,
-             `finish_2`,
-             `finish_3`,
-             `service_level`,
-             `status`,
-             `notes`,
-             `note`,
-             `company_name`,
-             `attn`,
-             `tel`,
-             `email`,
-             `delivery_address`,
-             `uk_track_link`,
-             `delivery_image`,
-             `product_image`,
-             `not_sure`,
-             `po_received`)
+             `qty`)
 
-           VALUES (
-             '$this->',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             '',
-             ''
-           )
-           "; //no esta reverse
+
+             SELECT
+             '$this->addresses',
+             '$this->product_code',
+             '$this->idUser',
+             '$this->idOrder',
+             '$this->idSuppliers',
+             '$this->data_no',
+             '$this->customer',
+             '$this->print_ref',
+             '$this->project',
+             '$this->qty'
+
+             WHERE NOT EXISTS (
+
+               SELECT *
+               FROM Jobs
+
+               WHERE`product_code` = '$this->product_code'
+               AND `idOrder` = '$this->idOrder'
+
+             )
+             LIMIT 1";
+
            $this->conn->getConnection()->exec($sql);//echo "hola2"; exit;
            $this->conn->closeConnection() ;
            return "The order has been created";
              }
          catch(PDOException $e){
              return $query . "<br>" . $e->getMessage();
-           }*/
+           }
        }
        function verifyRepeatJob(){
          try{ //SELECT COUNT(*) FROM `Order` WHERE `id` = ''
@@ -371,17 +297,10 @@
        }
        function getToSendPO(){
          try{ //SELECT COUNT(*) FROM `Order` WHERE `id` = ''
-          $sql = $this->conn->getConnection()->query("SELECT  `data_no`,`customer`,`print_ref`,
-              `quantity`,`PO_sent`,`approval_sent`,
-              `expected_despatch_date`, `C_due_date`, `artwork_pre_approved`,`C_artwork`,
-              `C_artwork_visual`,`C_approved_PDF`, `C_approved_visual`, `box_no`,
-              `act_despatch_date`, `UK_tracking_no`,`delivered_date`,  `nett_sale`,
-              `service_level`,`status_order`,
-              `notes`, `note`,
-              `UK_track_link`,  `delivery_image`,`not_sure`,`PO_received`
+          $sql = $this->conn->getConnection()->query("SELECT  *
 
               FROM `Jobs`
-              WHERE `idOrder` = '$this->id'");
+              WHERE `idOrder` = '$this->idOrder'");
           $data = $sql->fetchAll(PDO::FETCH_ASSOC);
           $this->conn->closeConnection() ;
           return $data;

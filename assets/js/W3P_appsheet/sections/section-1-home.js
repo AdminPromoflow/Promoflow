@@ -58,32 +58,33 @@ menuClass.changePathImageOpenLogin(1);
              data: {
                module: "getToSendPOContent",
                idOrder: idOrder
-                     },
+                   },
              success: function(data){
-               alert(data);
+            //   alert(data);
 
               dataContentToSentPO = jQuery.parseJSON(data);
               containersItemContentToSendPO[noDivOrder].innerHTML = '';
 
 
                //alert(data[i]["data_no"]);
-                 createToSendPOContent(noDivOrder);
+                 createToSendPOContent(noDivOrder, dataContentToSentPO);
 
               }
             })
   }
 
-  function createToSendPOContent(noDivOrder){
+  function createToSendPOContent(noDivOrder, dataContentToSentPO){
+  //  alert(noDivOrder);
     const containersItemContentToSendPO =  document.querySelectorAll(".containersItemContentToSendPO");
     containersItemsContentToSendPO.innerHTML +=
     '<div class="containerItemsContentToSendPO">'+
         '<div class="itemContentToSendPO">'+
           '<h3 >1. Data No*:</h3>'+
-          '<input class="DataNo" type="text" name="" value="CTR11004">'+
+          '<input class="DataNo" type="text" name="" value="'+dataContentToSentPO[0]["data_no"]+'">'+
         '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >2. Customer:</h3>'+
-          '<input class="Customer" type="text" name="" value="Moorside High School">'+
+          '<input class="Customer" type="text" name="" value="W3P">'+
          '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >3. Print Ref*:</h3>'+
@@ -95,7 +96,7 @@ menuClass.changePathImageOpenLogin(1);
         '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >5. Qty*: </h3>'+
-          '<input class="Qty" type="text" name="" value="150">'+
+          '<input class="Qty" type="text" name="" value="'+dataContentToSentPO[0]["qty"]+'">'+
         '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >6. Supplier:</h3>'+

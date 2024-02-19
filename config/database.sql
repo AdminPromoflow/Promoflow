@@ -79,7 +79,7 @@ CREATE TABLE `Customer`
 
 CREATE TABLE `Jobs`
 (
-	`id` VARCHAR(50) NOT NULL,
+	`id` INT NOT NULL AUTO_INCREMENT,
 	`addresses` VARCHAR(50) NULL,
 	`product_code` VARCHAR(50) NULL,
 	`idUser` INT NULL,
@@ -290,4 +290,4 @@ ALTER TABLE `product_group`
 ;
 
 SET FOREIGN_KEY_CHECKS=1
-;
+; 

@@ -42,7 +42,7 @@ require_once('../../../controller/assets/data/W3P_orders/flapi_credentials.php')
           die( $e->getMessage());
       }
 
-    //  echo(json_encode( $result) );
+      echo(json_encode( $result) );
       createJobs($result, $_POST['idOrder']);
     }
    function createOrders($result){
@@ -79,7 +79,6 @@ require_once('../../../controller/assets/data/W3P_orders/flapi_credentials.php')
        $customerInfoReturn = array();
 
 
-       $varDataNo = 50224;
 
         foreach ($result["jobs"] as $item => $value) {
 
@@ -126,7 +125,6 @@ require_once('../../../controller/assets/data/W3P_orders/flapi_credentials.php')
            else {
              $dataNo = intval($dataNo)  + 1;
            }
-          // echo json_encode ($dataNo);exit;
 
 
            $db = new Database();
@@ -134,7 +132,7 @@ require_once('../../../controller/assets/data/W3P_orders/flapi_credentials.php')
 
            $job->set_addresses($idCustomer);
            $job->set_product_code(  str_replace($searchedCharacter, $neewCharacter, $value["product_code"])  );
-           $job->set_idUser($_SESSION['idUser']);
+           $job->set_idUser(1);
            $job->set_idOrder($idOrder);
            $job->set_idSuppliers(1);
            $job->set_data_no($dataNo);
@@ -142,14 +140,13 @@ require_once('../../../controller/assets/data/W3P_orders/flapi_credentials.php')
            $job->set_print_ref("We are working on it");
            $job->set_project("We are working on it");
            $job->set_qty(  str_replace($searchedCharacter, $neewCharacter, $value["quantity_allocated"])  );
+            ($job->createJob());
 
 
 
 
 
 
-
-          //  json_encode($job->createJob() );
          }
         }
       //echo json_encode($result);
