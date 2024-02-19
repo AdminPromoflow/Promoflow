@@ -17,14 +17,12 @@
       <link rel="stylesheet" href="../../assets/css/W3P_orders/sections/section-1-home.css">
       <link rel="stylesheet" href="../../assets/css/W3P_orders/style.css">
 
-      <script src="../../assets/libs/jquery.js"></script>
 </head>
   <body>
       <!-- Include the menu and section components using PHP include -->
       <?php include "../../views/global/menu.php" ?>
       <?php include "../../views/W3P_orders/sections/section-1-home.php" ?>
 
-      <!-- Include JavaScript file for interactive functionality -->
 
   </body>
 </html>
