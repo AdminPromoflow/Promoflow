@@ -297,9 +297,10 @@
        }
        function getToSendPO(){
          try{ //SELECT COUNT(*) FROM `Order` WHERE `id` = ''
-          $sql = $this->conn->getConnection()->query("SELECT  *
+          $sql = $this->conn->getConnection()->query("SELECT  `Jobs`.*, `product`.`name`
 
               FROM `Jobs`
+              JOIN `product` ON `Jobs`.`product_code` = `product`.`id`
               WHERE `idOrder` = '$this->idOrder'");
           $data = $sql->fetchAll(PDO::FETCH_ASSOC);
           $this->conn->closeConnection() ;
@@ -310,4 +311,9 @@
             }
        }
      }
+
+
+
+
+
 ?>
