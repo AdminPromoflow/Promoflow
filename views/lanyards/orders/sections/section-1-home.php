@@ -64,7 +64,7 @@
       alert(error.message); // Show the error message in an alert
     });
   }
-   function drawOrders(data) {
+  function function drawOrders(data) {
   const container = document.getElementById("organize_order_lanyards_for_you");
   container.innerHTML = "";
 
