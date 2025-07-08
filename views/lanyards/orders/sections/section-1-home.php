@@ -79,7 +79,6 @@
           : '';
 
         const artworkHTML = job.artwork
-        alert("acá debimos entrar");
           ? `
             <div>
               <p><strong>Artwork:</strong></p>
@@ -99,6 +98,7 @@
           </div>
         `;
       }).join('');
+      alert(artworkHTML);
 
       return `
         <div class="order" style="border: 1px solid #ccc; margin-bottom: 20px; padding: 10px;">
