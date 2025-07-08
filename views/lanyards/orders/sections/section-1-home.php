@@ -51,7 +51,7 @@
       throw new Error("Network error.");
     })
     .then(data => {
-      alert(data);
+      alert(JSON.stringify(data));
       // Process the response data
 
     })
