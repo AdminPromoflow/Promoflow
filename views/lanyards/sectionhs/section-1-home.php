@@ -17,12 +17,11 @@
 
     </a>
 
-    <a href="../../views/lanyards/lanyards-customers/index.php">
+    <a href="../../views/lanyards/orders/index.php">
       <div class="itemUsersManager">
         <img src="../../../assets/img/lanyards/sections/orders.png" alt="">
         <h3>Orders</h3>
       </div>
-
     </a>
 
 
