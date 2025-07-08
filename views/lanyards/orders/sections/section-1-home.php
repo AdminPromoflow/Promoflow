@@ -98,7 +98,7 @@
           </div>
         `;
       }).join('');
-      alert(job.artwork);
+      alert(job.image);
 
       return `
         <div class="order" style="border: 1px solid #ccc; margin-bottom: 20px; padding: 10px;">
