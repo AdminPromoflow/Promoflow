@@ -14,6 +14,10 @@
         <img src="../../../assets/img/lanyards/sections/customers.png" alt="">
         <h3>Customers</h3>
       </div>
+      <div class="itemUsersManager">
+        <img src="../../../assets/img/lanyards/sections/orders.png" alt="">
+        <h3>Orders</h3>
+      </div>
     </a>
   </div>
 </section>
