@@ -6,9 +6,8 @@
   </head>
   <body>
     <script type="text/javascript">
-    //window.open("views/login/index.php", "_self");
+    window.open("views/login/index.php", "_self");
 
     </script>
-    <h1>hola</h1>
   </body>
 </html>
