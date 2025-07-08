@@ -64,36 +64,28 @@
       alert(error.message); // Show the error message in an alert
     });
   }
-  function drawOrders(dataValues){
-    const data = dataValues;
-
+  function drawOrders(data) {
     const container = document.getElementById("organize_order_lanyards_for_you");
-    container.innerHTML = data.map(order => {
-      const user = order.user;
-      const address = order.address;
-      const orderInfo = order.order;
-      const jobsHTML = order.jobs.map(job => {
-        let extraContent = '';
-        if (job.text) {
-          extraContent = `<p><strong>Text:</strong> ${job.text.contentText}</p>`;
-        } else if (job.image) {
-          extraContent = `<p><strong>Image:</strong> <img src="https://www.lanyardsforyou.com/${job.image.linkImage}" style="width: 100px;"></p>`;
-        }
-        const description = JSON.parse(job.description);
+    container.innerHTML = data.map(({ order, user, address, jobs }) => {
+      const jobsHTML = jobs.map(job => {
+        const desc = JSON.parse(job.description);
+        const text = job.text ? `<p><strong>Text:</strong> ${job.text.contentText}</p>` : '';
+        const image = job.image ? `<p><strong>Image:</strong> <img src="https://www.lanyardsforyou.com/${job.image.linkImage}" style="width: 100px;"></p>` : '';
+
         return `
           <div class="job" style="margin-left: 20px; margin-bottom: 10px;">
             <p><strong>Job Name:</strong> ${job.name}</p>
-            <p><strong>Description:</strong> ${description.material.type}, ${description.lanyard_type.type}, ${description.width.value}, ${description.side_printed.side}</p>
-            ${extraContent}
+            <p><strong>Description:</strong> ${desc.material.type}, ${desc.lanyard_type.type}, ${desc.width.value}, ${desc.side_printed.side}</p>
+            ${text || image}
           </div>
         `;
       }).join('');
 
       return `
         <div class="order" style="border: 1px solid #ccc; margin-bottom: 20px; padding: 10px;">
-          <h3>Order #${orderInfo.idOrder}</h3>
-          <p><strong>Status:</strong> ${orderInfo.status}</p>
-          <p><strong>Total:</strong> $${parseFloat(orderInfo.total).toFixed(2)}</p>
+          <h3>Order #${order.idOrder}</h3>
+          <p><strong>Status:</strong> ${order.status}</p>
+          <p><strong>Total:</strong> $${parseFloat(order.total).toFixed(2)}</p>
           <p><strong>User:</strong> ${user.name} (${user.email})</p>
           <p><strong>Address:</strong> ${address.first_name} ${address.last_name}, ${address.company_name}, ${address.street_address_1}</p>
           <div class="jobs">
@@ -104,4 +96,5 @@
       `;
     }).join('');
   }
+
 </script>
