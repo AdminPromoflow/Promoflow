@@ -77,7 +77,7 @@
         if (job.text) {
           extraContent = `<p><strong>Text:</strong> ${job.text.contentText}</p>`;
         } else if (job.image) {
-          extraContent = `<p><strong>Image:</strong> <img src="../../${job.image.linkImage}" style="width: 100px;"></p>`;
+          extraContent = `<p><strong>Image:</strong> <img src="../../../${job.image.linkImage}" style="width: 100px;"></p>`;
         }
         const description = JSON.parse(job.description);
         return `
