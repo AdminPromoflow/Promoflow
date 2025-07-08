@@ -20,7 +20,7 @@
   <!-- Section Title -->
   <h1 class="titleBodyLogin">Orders</h1>
 
-  <div class="containerUsersManagerBottoms">
+  <div id="organize_order_lanyards_for_you" class="containerUsersManagerBottoms">
     <h1>Buenas</h1>
   </div>
 
@@ -51,6 +51,9 @@
       throw new Error("Network error.");
     })
     .then(data => {
+
+      drawOrders(JSON.parse(data));
+
       console.log(JSON.stringify(data));
       // Process the response data
 
@@ -60,5 +63,45 @@
       console.error("Error:", error.message);
       alert(error.message); // Show the error message in an alert
     });
+  }
+  function drawOrders(dataValues){
+    const data = dataValues;
+
+    const container = document.getElementById("organize_order_lanyards_for_you");
+    container.innerHTML = data.map(order => {
+      const user = order.user;
+      const address = order.address;
+      const orderInfo = order.order;
+      const jobsHTML = order.jobs.map(job => {
+        let extraContent = '';
+        if (job.text) {
+          extraContent = `<p><strong>Text:</strong> ${job.text.contentText}</p>`;
+        } else if (job.image) {
+          extraContent = `<p><strong>Image:</strong> <img src="${job.image.linkImage}" style="width: 100px;"></p>`;
+        }
+        const description = JSON.parse(job.description);
+        return `
+          <div class="job" style="margin-left: 20px; margin-bottom: 10px;">
+            <p><strong>Job Name:</strong> ${job.name}</p>
+            <p><strong>Description:</strong> ${description.material.type}, ${description.lanyard_type.type}, ${description.width.value}, ${description.side_printed.side}</p>
+            ${extraContent}
+          </div>
+        `;
+      }).join('');
+
+      return `
+        <div class="order" style="border: 1px solid #ccc; margin-bottom: 20px; padding: 10px;">
+          <h3>Order #${orderInfo.idOrder}</h3>
+          <p><strong>Status:</strong> ${orderInfo.status}</p>
+          <p><strong>Total:</strong> $${parseFloat(orderInfo.total).toFixed(2)}</p>
+          <p><strong>User:</strong> ${user.name} (${user.email})</p>
+          <p><strong>Address:</strong> ${address.first_name} ${address.last_name}, ${address.company_name}, ${address.street_address_1}</p>
+          <div class="jobs">
+            <h4>Jobs</h4>
+            ${jobsHTML}
+          </div>
+        </div>
+      `;
+    }).join('');
   }
 </script>
