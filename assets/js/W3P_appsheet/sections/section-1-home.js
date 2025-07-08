@@ -18,7 +18,7 @@ menuClass.changePathImageOpenLogin(1);
              var data = jQuery.parseJSON(data);
             for (var i = 0; i < data.length; i++) { // Create each orders
               //alert(data[i]["created_date"]);
-              // createToSendPOOrders(data[i]["id"], data[i]["created_date"], i);
+               createToSendPOOrders(data[i]["id"], data[i]["created_date"], i);
              }
             }
           })
@@ -48,7 +48,54 @@ menuClass.changePathImageOpenLogin(1);
   var dataContentToSentPO;
   function getToSendPOContent(idOrder, noDivOrder){
     const containersItemContentToSendPO =  document.querySelectorAll(".containersItemContentToSendPO");
-
+    /*const DataNo =  document.querySelectorAll(".DataNo");
+    const Customer =  document.querySelectorAll(".Customer");
+    const PrintRef =  document.querySelectorAll(".PrintRef");
+    const Project =  document.querySelectorAll(".Project");
+    const Qty =  document.querySelectorAll(".Qty");
+    const Supplier =  document.querySelectorAll(".Supplier");
+    const OrderDate =  document.querySelectorAll(".OrderDate");
+    const POSent =  document.querySelectorAll(".POSent");
+    const ApprovalSent =  document.querySelectorAll(".ApprovalSent");
+    const DespatchDate =  document.querySelectorAll(".DespatchDate");
+    const DUEDATE =  document.querySelectorAll(".DUEDATE");
+    const ArtworkPreApproved =  document.querySelectorAll(".ArtworkPreApproved");
+    const Artwork =  document.querySelectorAll(".Artwork");
+    const ArtworkVisual =  document.querySelectorAll(".ArtworkVisual");
+    const ApprovedPDF =  document.querySelectorAll(".ApprovedPDF");
+    const ApprovedVisual =  document.querySelectorAll(".ApprovedVisual");
+    const BoxNo =  document.querySelectorAll(".BoxNo");
+    const DespatchDate =  document.querySelectorAll(".DespatchDate");
+    const TrackingNo =  document.querySelectorAll(".TrackingNo");
+    const DeliveredDate =  document.querySelectorAll(".DeliveredDate");
+    const Nettsale =  document.querySelectorAll(".Nettsale");
+    const CustomerReference1 =  document.querySelectorAll(".CustomerReference1");
+    const Ref =  document.querySelectorAll(".Ref");
+    const Email =  document.querySelectorAll(".Email");
+    const Item =  document.querySelectorAll(".Item");
+    const Size =  document.querySelectorAll(".Size");
+    const Material =  document.querySelectorAll(".Material");
+    const Weigth =  document.querySelectorAll(".Weigth");
+    const Print =  document.querySelectorAll(".Print");
+    const Coverage =  document.querySelectorAll(".Coverage");
+    const PrintStyle =  document.querySelectorAll(".PrintStyle");
+    const Finish1 =  document.querySelectorAll(".Finish1");
+    const Finish2 =  document.querySelectorAll(".Finish2");
+    const Finish3 =  document.querySelectorAll(".Finish3");
+    const ServiceLevel =  document.querySelectorAll(".ServiceLevel");
+    const Status =  document.querySelectorAll(".Status");
+    const Notes =  document.querySelectorAll(".Notes");
+    const Note =  document.querySelectorAll(".Note");
+    const CompanyName =  document.querySelectorAll(".CompanyName");
+    const Attn =  document.querySelectorAll(".Attn");
+    const Tel =  document.querySelectorAll(".Tel");
+    const Email =  document.querySelectorAll(".Email");
+    const DeliveryAddress =  document.querySelectorAll(".DeliveryAddress");
+    const Tracklink =  document.querySelectorAll(".Tracklink");
+    const DeliveryImage =  document.querySelectorAll(".DeliveryImage");
+    const ProductImage =  document.querySelectorAll(".ProductImage");
+    const NotSure =  document.querySelectorAll(".NotSure");
+    const POReceived =  document.querySelectorAll(".POReceived");*/
 
 
       $.ajax( "../../controller/W3P/W3P_appsheet/appsheet.php", {
@@ -59,8 +106,9 @@ menuClass.changePathImageOpenLogin(1);
                idOrder: idOrder
                      },
              success: function(data){
-               alert(data);
+               console.log(data);
 
+            // alert(data);
               dataContentToSentPO = jQuery.parseJSON(data);
               containersItemContentToSendPO[noDivOrder].innerHTML = '';
 
@@ -277,52 +325,3 @@ menuClass.changePathImageOpenLogin(1);
 
 
 getToSendPO();
-
-/*const DataNo =  document.querySelectorAll(".DataNo");
-const Customer =  document.querySelectorAll(".Customer");
-const PrintRef =  document.querySelectorAll(".PrintRef");
-const Project =  document.querySelectorAll(".Project");
-const Qty =  document.querySelectorAll(".Qty");
-const Supplier =  document.querySelectorAll(".Supplier");
-const OrderDate =  document.querySelectorAll(".OrderDate");
-const POSent =  document.querySelectorAll(".POSent");
-const ApprovalSent =  document.querySelectorAll(".ApprovalSent");
-const DespatchDate =  document.querySelectorAll(".DespatchDate");
-const DUEDATE =  document.querySelectorAll(".DUEDATE");
-const ArtworkPreApproved =  document.querySelectorAll(".ArtworkPreApproved");
-const Artwork =  document.querySelectorAll(".Artwork");
-const ArtworkVisual =  document.querySelectorAll(".ArtworkVisual");
-const ApprovedPDF =  document.querySelectorAll(".ApprovedPDF");
-const ApprovedVisual =  document.querySelectorAll(".ApprovedVisual");
-const BoxNo =  document.querySelectorAll(".BoxNo");
-const DespatchDate =  document.querySelectorAll(".DespatchDate");
-const TrackingNo =  document.querySelectorAll(".TrackingNo");
-const DeliveredDate =  document.querySelectorAll(".DeliveredDate");
-const Nettsale =  document.querySelectorAll(".Nettsale");
-const CustomerReference1 =  document.querySelectorAll(".CustomerReference1");
-const Ref =  document.querySelectorAll(".Ref");
-const Email =  document.querySelectorAll(".Email");
-const Item =  document.querySelectorAll(".Item");
-const Size =  document.querySelectorAll(".Size");
-const Material =  document.querySelectorAll(".Material");
-const Weigth =  document.querySelectorAll(".Weigth");
-const Print =  document.querySelectorAll(".Print");
-const Coverage =  document.querySelectorAll(".Coverage");
-const PrintStyle =  document.querySelectorAll(".PrintStyle");
-const Finish1 =  document.querySelectorAll(".Finish1");
-const Finish2 =  document.querySelectorAll(".Finish2");
-const Finish3 =  document.querySelectorAll(".Finish3");
-const ServiceLevel =  document.querySelectorAll(".ServiceLevel");
-const Status =  document.querySelectorAll(".Status");
-const Notes =  document.querySelectorAll(".Notes");
-const Note =  document.querySelectorAll(".Note");
-const CompanyName =  document.querySelectorAll(".CompanyName");
-const Attn =  document.querySelectorAll(".Attn");
-const Tel =  document.querySelectorAll(".Tel");
-const Email =  document.querySelectorAll(".Email");
-const DeliveryAddress =  document.querySelectorAll(".DeliveryAddress");
-const Tracklink =  document.querySelectorAll(".Tracklink");
-const DeliveryImage =  document.querySelectorAll(".DeliveryImage");
-const ProductImage =  document.querySelectorAll(".ProductImage");
-const NotSure =  document.querySelectorAll(".NotSure");
-const POReceived =  document.querySelectorAll(".POReceived");*/

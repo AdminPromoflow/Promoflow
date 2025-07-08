@@ -14,19 +14,16 @@
 
     <!-- Include CSS files for styling -->
     <link rel="stylesheet" href="../../assets/css/global/menu.css">
-    <link rel="stylesheet" href="../../assets/css/global/charging.css">
     <link rel="stylesheet" href="../../assets/css/W3P/sections/section-1-home.css">
     <link rel="stylesheet" href="../../assets/css/W3P/style.css">
 </head>
 <body>
     <!-- Include the menu and section components using PHP include -->
-    <?php include "../../views/global/charging.php" ?>
     <?php include "../../views/global/menu.php" ?>
     <?php include "../../views/W3P/sections/section-1-home.php" ?>
 
     <!-- Include JavaScript file for interactive functionality -->
     <script src="../../assets/js/global/menu.js" type="text/javascript"></script>
-    <script src="../../assets/js/global/charging.js" type="text/javascript"></script>
     <script  src="../../assets/js/W3P/sections/section-1-home.js" type="text/javascript">
     </script>
 </body>
