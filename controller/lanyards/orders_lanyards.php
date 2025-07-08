@@ -54,6 +54,11 @@ class OrdersLanyardsForYou {
         ]);
     }
 }
+require_once('../../config/database.php');
+require_once('../../models/LanyardsForYou/lanyards_for_you.php');
+
+
+
 
 // Instanciar y manejar la solicitud
 $ordersLanyards = new OrdersLanyardsForYou();
