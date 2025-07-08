@@ -1,4 +1,6 @@
 <?php
+echo json_encode("hahah");exit;
+
 // Start the session
 session_start();
 
@@ -14,7 +16,6 @@ class OrdersLanyardsForYou {
 
                 switch ($action) {
                     case "getOrdersInfo":
-                      echo json_encode("hahah");exit;
                         $this->getOrdersInfo($data);
                         break;
                     default:
