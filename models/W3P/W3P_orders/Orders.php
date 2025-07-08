@@ -36,7 +36,7 @@
       }
 
 
-       function createOrders(){
+       function createUser(){
          try{
            $sql = "INSERT INTO `Order`(`id`, `created_date`, `name`, `runtype`, `description`, `finished_date`, `workgroup`)
             VALUES (
@@ -56,7 +56,6 @@
              return $query . "<br>" . $e->getMessage();
            }
        }
-
        function verifyRepeatOrder(){
          try{ //SELECT COUNT(*) FROM `Order` WHERE `id` = ''
           $sql = $this->conn->getConnection()->query("SELECT COUNT(*) FROM `Order` WHERE `id` = '$this->id'");
@@ -68,9 +67,7 @@
               echo $query . "<br>" . $e->getMessage();
             }
        }
-       
        function getToSendPOOrders(){
-
          try{
            $sql = $this->conn->getConnection()->query("SELECT * FROM `Order` ");
           $data = $sql->fetchAll(PDO::FETCH_ASSOC);

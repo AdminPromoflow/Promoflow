@@ -1,5 +1,6 @@
 // Create an instance of the Menu class to handle menu functionality
 menuClass.changePathImageOpenLogin(1);
+
 //var test = document.getElementById('test');
   function getToSendPO(){
     var containersItemsContentToSendPO = document.getElementById("containersItemsContentToSendPO");
@@ -13,9 +14,11 @@ menuClass.changePathImageOpenLogin(1);
            success: function(data){
              containersItemsContentToSendPO.innerHTML = "";
 
+             console.log(data);
              var data = jQuery.parseJSON(data);
             for (var i = 0; i < data.length; i++) { // Create each orders
-               createToSendPOOrders(data[i]["id"], data[i]["created_date"], i);
+              //alert(data[i]["created_date"]);
+              // createToSendPOOrders(data[i]["id"], data[i]["created_date"], i);
              }
             }
           })
@@ -30,7 +33,7 @@ menuClass.changePathImageOpenLogin(1);
     '<div class="containerItemsToSendPO">' +
       '<div class="itemToSendPO">' +
         '<h3>Order: '+ date +'</h3>' +
-        '<div class="openToggleSubitemToSendPO" onclick="showAppsheetContent(\'' + noDivOrder  + '\');" >' +
+        '<div class="openToggleSubitemToSendPO" onclick="" >' +
           '<img  class="buttonPlusToSendPO"src="../../assets/img/W3P_appsheet/sections/section-1-home/mas.png" alt="">' +
           '<img  class="buttonLessToSendPO"src="../../assets/img/W3P_appsheet/sections/section-1-home/menos.png" alt="">' +
         '</div>' +
@@ -39,35 +42,7 @@ menuClass.changePathImageOpenLogin(1);
       '</div>' +
     '</div>'
     ;
-
-
     getToSendPOContent(idOrder, noDivOrder);
-
-    showAppsheetContent(noDivOrder); //Show all the jobs
-    showAppsheetContent(noDivOrder); //Hide all jobs --> we have twice this function of hide all
-  }
-
-  function showAppsheetContent(noDivOrder){
-
-
-    const buttonPlusOrder =  document.querySelectorAll(".buttonPlusToSendPO");
-    const buttonLessOrder =  document.querySelectorAll(".buttonLessToSendPO");
-      const containersItemContentToSendPO =  document.querySelectorAll(".containersItemContentToSendPO");
-
-      containersItemContentToSendPO[noDivOrder].innerHTML = '';
-
-
-
-    /*if (buttonPlusOrder[noDivOrder].style.display == "none" ) {
-      buttonPlusOrder[noDivOrder].style.display = "block";
-      buttonLessOrder[noDivOrder].style.display = "none";
-      containersItemContentToSendPO[noDivOrder].style.display = "none";
-
-    }else {
-      buttonPlusOrder[noDivOrder].style.display = "none";
-      buttonLessOrder[noDivOrder].style.display = "block";
-      containersItemContentToSendPO[noDivOrder].style.display = "block";
-    }*/
   }
 
   var dataContentToSentPO;
@@ -82,31 +57,32 @@ menuClass.changePathImageOpenLogin(1);
              data: {
                module: "getToSendPOContent",
                idOrder: idOrder
-                   },
+                     },
              success: function(data){
-            //   alert(data);
+               alert(data);
 
               dataContentToSentPO = jQuery.parseJSON(data);
               containersItemContentToSendPO[noDivOrder].innerHTML = '';
 
-                 createToSendPOContent(noDivOrder, dataContentToSentPO);
+
+               //alert(data[i]["data_no"]);
+                 createToSendPOContent(noDivOrder);
 
               }
             })
   }
 
-  function createToSendPOContent(noDivOrder, dataContentToSentPO){
+  function createToSendPOContent(noDivOrder){
     const containersItemContentToSendPO =  document.querySelectorAll(".containersItemContentToSendPO");
-
     containersItemsContentToSendPO.innerHTML +=
     '<div class="containerItemsContentToSendPO">'+
         '<div class="itemContentToSendPO">'+
           '<h3 >1. Data No*:</h3>'+
-          '<input class="DataNo" type="text" name="" value="'+dataContentToSentPO[0]["data_no"]+'">'+
+          '<input class="DataNo" type="text" name="" value="CTR11004">'+
         '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >2. Customer:</h3>'+
-          '<input class="Customer" type="text" name="" value="W3P">'+
+          '<input class="Customer" type="text" name="" value="Moorside High School">'+
          '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >3. Print Ref*:</h3>'+
@@ -114,11 +90,11 @@ menuClass.changePathImageOpenLogin(1);
         '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >4. Project:</h3>'+
-          '<input class="Project" type="text" name="" value="'+dataContentToSentPO[0]["name"]+'">'+
+          '<input class="Project" type="text" name="" value="">'+
         '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >5. Qty*: </h3>'+
-          '<input class="Qty" type="text" name="" value="'+dataContentToSentPO[0]["qty"]+'">'+
+          '<input class="Qty" type="text" name="" value="150">'+
         '</div>'+
         '<div class="itemContentToSendPO">'+
           '<h3 >6. Supplier:</h3>'+
@@ -301,3 +277,52 @@ menuClass.changePathImageOpenLogin(1);
 
 
 getToSendPO();
+
+/*const DataNo =  document.querySelectorAll(".DataNo");
+const Customer =  document.querySelectorAll(".Customer");
+const PrintRef =  document.querySelectorAll(".PrintRef");
+const Project =  document.querySelectorAll(".Project");
+const Qty =  document.querySelectorAll(".Qty");
+const Supplier =  document.querySelectorAll(".Supplier");
+const OrderDate =  document.querySelectorAll(".OrderDate");
+const POSent =  document.querySelectorAll(".POSent");
+const ApprovalSent =  document.querySelectorAll(".ApprovalSent");
+const DespatchDate =  document.querySelectorAll(".DespatchDate");
+const DUEDATE =  document.querySelectorAll(".DUEDATE");
+const ArtworkPreApproved =  document.querySelectorAll(".ArtworkPreApproved");
+const Artwork =  document.querySelectorAll(".Artwork");
+const ArtworkVisual =  document.querySelectorAll(".ArtworkVisual");
+const ApprovedPDF =  document.querySelectorAll(".ApprovedPDF");
+const ApprovedVisual =  document.querySelectorAll(".ApprovedVisual");
+const BoxNo =  document.querySelectorAll(".BoxNo");
+const DespatchDate =  document.querySelectorAll(".DespatchDate");
+const TrackingNo =  document.querySelectorAll(".TrackingNo");
+const DeliveredDate =  document.querySelectorAll(".DeliveredDate");
+const Nettsale =  document.querySelectorAll(".Nettsale");
+const CustomerReference1 =  document.querySelectorAll(".CustomerReference1");
+const Ref =  document.querySelectorAll(".Ref");
+const Email =  document.querySelectorAll(".Email");
+const Item =  document.querySelectorAll(".Item");
+const Size =  document.querySelectorAll(".Size");
+const Material =  document.querySelectorAll(".Material");
+const Weigth =  document.querySelectorAll(".Weigth");
+const Print =  document.querySelectorAll(".Print");
+const Coverage =  document.querySelectorAll(".Coverage");
+const PrintStyle =  document.querySelectorAll(".PrintStyle");
+const Finish1 =  document.querySelectorAll(".Finish1");
+const Finish2 =  document.querySelectorAll(".Finish2");
+const Finish3 =  document.querySelectorAll(".Finish3");
+const ServiceLevel =  document.querySelectorAll(".ServiceLevel");
+const Status =  document.querySelectorAll(".Status");
+const Notes =  document.querySelectorAll(".Notes");
+const Note =  document.querySelectorAll(".Note");
+const CompanyName =  document.querySelectorAll(".CompanyName");
+const Attn =  document.querySelectorAll(".Attn");
+const Tel =  document.querySelectorAll(".Tel");
+const Email =  document.querySelectorAll(".Email");
+const DeliveryAddress =  document.querySelectorAll(".DeliveryAddress");
+const Tracklink =  document.querySelectorAll(".Tracklink");
+const DeliveryImage =  document.querySelectorAll(".DeliveryImage");
+const ProductImage =  document.querySelectorAll(".ProductImage");
+const NotSure =  document.querySelectorAll(".NotSure");
+const POReceived =  document.querySelectorAll(".POReceived");*/

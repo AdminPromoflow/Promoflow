@@ -1,7 +1,7 @@
 // Define a class called Users
 class Users {
   constructor() {
-    const url = "../../controller/user_manager/user-controller.php";
+    const url = "../../controller/user-controller.php";
 
     // Initialize event listeners for the login button and password input field
     access.addEventListener("click", function () {

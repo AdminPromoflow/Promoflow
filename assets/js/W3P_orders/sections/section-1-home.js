@@ -11,7 +11,7 @@ menuClass.changePathImageOpenLogin(1);
              module: "getOrders"
                    },
            success: function(data){
-          //   alert(data);
+             //alert(data);
             console.log(data);
             var data = jQuery.parseJSON(data);
             containerOrders.innerHTML  = "";
@@ -19,7 +19,7 @@ menuClass.changePathImageOpenLogin(1);
               createOrders(data["runs"][i]["id"],  data["runs"][i]["created_date"], i);
             }
             }
-      })
+          })
    }
 
 
@@ -83,7 +83,9 @@ menuClass.changePathImageOpenLogin(1);
                idOrder: idOrder
                      },
              success: function(data){
-            //  alert(data + "hahah");
+               console.log(data);
+
+            //  alert(data);
               var data = jQuery.parseJSON(data);
               dataJob =  data["jobs"];
               containersItemJob[noDivOrder].innerHTML = '';
