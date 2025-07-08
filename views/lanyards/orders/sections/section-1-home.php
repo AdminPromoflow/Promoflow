@@ -24,5 +24,11 @@
     <h1>Buenas</h1>
   </div>
 
-
 </section>
+
+<script type="text/javascript">
+  getDataOrders();
+  function getDataOrders(){
+    alert("ahi vamos");
+  }
+</script>
