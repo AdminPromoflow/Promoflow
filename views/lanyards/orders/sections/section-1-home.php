@@ -79,6 +79,7 @@
           : '';
 
         const artworkHTML = job.artwork
+        alert("acá debimos entrar");
           ? `
             <div>
               <p><strong>Artwork:</strong></p>
