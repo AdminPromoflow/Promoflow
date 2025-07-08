@@ -51,7 +51,7 @@
       throw new Error("Network error.");
     })
     .then(data => {
-      alert(JSON.stringify(data));
+    //  alert(JSON.stringify(data));
       drawOrders(data);
 
       console.log(JSON.stringify(data));
@@ -64,44 +64,48 @@
       alert(error.message); // Show the error message in an alert
     });
   }
-  function drawOrders(dataValues){
-    const data = dataValues;
+ function drawOrders(data) {
+  const container = document.getElementById("organize_order_lanyards_for_you");
+  container.innerHTML = "";
 
-    const container = document.getElementById("organize_order_lanyards_for_you");
-    container.innerHTML = data.map(order => {
-      const user = order.user;
-      const address = order.address;
-      const orderInfo = order.order;
-      const jobsHTML = order.jobs.map(job => {
-        let extraContent = '';
-        if (job.text) {
-          extraContent = `<p><strong>Text:</strong> ${job.text.contentText}</p>`;
-        } else if (job.image) {
-          extraContent = `<p><strong>Image:</strong> <img src="https://www.lanyardsforyou.com/${job.image.linkImage}" style="width: 100px;"></p>`;
-        }
-        const description = JSON.parse(job.description);
-        return `
-          <div class="job" style="margin-left: 20px; margin-bottom: 10px;">
-            <p><strong>Job Name:</strong> ${job.name}</p>
-            <p><strong>Description:</strong> ${description.material.type}, ${description.lanyard_type.type}, ${description.width.value}, ${description.side_printed.side}</p>
-            ${extraContent}
-          </div>
-        `;
-      }).join('');
+  data.forEach(orderEntry => {
+    const { order, user, address, jobs } = orderEntry;
 
-      return `
-        <div class="order" style="border: 1px solid #ccc; margin-bottom: 20px; padding: 10px;">
-          <h3>Order #${orderInfo.idOrder}</h3>
-          <p><strong>Status:</strong> ${orderInfo.status}</p>
-          <p><strong>Total:</strong> $${parseFloat(orderInfo.total).toFixed(2)}</p>
-          <p><strong>User:</strong> ${user.name} (${user.email})</p>
-          <p><strong>Address:</strong> ${address.first_name} ${address.last_name}, ${address.company_name}, ${address.street_address_1}</p>
-          <div class="jobs">
-            <h4>Jobs</h4>
-            ${jobsHTML}
-          </div>
+    let jobDetails = jobs.map(job => {
+      let content = `
+        <div>
+          <h4>${job.name}</h4>
+          <p>Price per unit: ${job.price_per_unit}</p>
+          <p>Amount: ${job.amount}</p>
+          <p>Total: ${job.total}</p>`;
+
+      if (job.artwork) {
+        content += `
+          <div>
+            <strong>Artwork:</strong><br>
+            <img src="${job.artwork.linkLeftImage}" alt="Left Artwork" style="width:100px;"><br>
+            <img src="${job.artwork.linkRightImage}" alt="Right Artwork" style="width:100px;">
+          </div>`;
+      }
+
+      content += `</div>`;
+      return content;
+    }).join("");
+
+    container.innerHTML += `
+      <div class="order-card">
+        <h3>Order #${order.idOrder}</h3>
+        <p>Status: ${order.status}</p>
+        <p>Total: ${order.total}</p>
+        <div>
+          <strong>Customer:</strong> ${user.name} - ${user.email}<br>
+          <strong>Address:</strong> ${address.street_address_1}, ${address.town_city}
         </div>
-      `;
-    }).join('');
-  }
+        ${jobDetails}
+        <hr>
+      </div>
+    `;
+  });
+}
+
 </script>
