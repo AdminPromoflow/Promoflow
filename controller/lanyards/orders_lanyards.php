@@ -1,6 +1,4 @@
 <?php
-echo json_encode("hahah");exit;
-
 // Start the session
 session_start();
 
