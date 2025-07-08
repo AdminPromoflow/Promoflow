@@ -32,26 +32,18 @@ class OrdersLanyardsForYou {
     }
 
     private function getOrdersInfo($data) {
-        // Aquí puedes reemplazar con lógica real de base de datos
-        $sampleOrders = [
-            [
-                "idOrder" => 101,
-                "customerName" => "John Doe",
-                "total" => 49.99,
-                "status" => "Shipped"
-            ],
-            [
-                "idOrder" => 102,
-                "customerName" => "Jane Smith",
-                "total" => 29.50,
-                "status" => "Processing"
-            ]
-        ];
+      // Primero asegúrate de tener la conexión a la base de datos
+      $connection = new Database(); // Suponiendo que esta clase ya está definida
 
-        echo json_encode([
-            "success" => true,
-            "orders" => $sampleOrders
-        ]);
+      // Crear una instancia del modelo
+      $lanyardsModel = new LanyardsForYou_Model($connection);
+
+      // Llamar a la función para obtener todas las órdenes
+      $allOrders = $lanyardsModel->getAllOrders();
+
+      // Mostrar resultados (por ejemplo, en JSON para una API)
+      echo json_encode($allOrders);
+
     }
 }
 require_once('../../config/database.php');
