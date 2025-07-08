@@ -69,14 +69,32 @@
     container.innerHTML = data.map(({ order, user, address, jobs }) => {
       const jobsHTML = jobs.map(job => {
         const desc = JSON.parse(job.description);
-        const text = job.text ? `<p><strong>Text:</strong> ${job.text.contentText}</p>` : '';
-        const image = job.image ? `<p><strong>Image:</strong> <img src="https://www.lanyardsforyou.com/${job.image.linkImage}" style="width: 100px;"></p>` : '';
+
+        const textHTML = job.text
+          ? `<p><strong>Text:</strong> ${job.text.contentText}</p>`
+          : '';
+
+        const imageHTML = job.image
+          ? `<p><strong>Image:</strong> <img src="https://www.lanyardsforyou.com/${job.image.linkImage}" style="width: 100px;"></p>`
+          : '';
+
+        const artworkHTML = job.artwork
+          ? `
+            <div>
+              <p><strong>Artwork:</strong></p>
+              <img src="https://www.lanyardsforyou.com/${job.artwork.linkLeftImage}" alt="Left Artwork" style="width: 100px; margin-right: 10px;">
+              <img src="https://www.lanyardsforyou.com/${job.artwork.linkRightImage}" alt="Right Artwork" style="width: 100px;">
+            </div>
+          `
+          : '';
 
         return `
           <div class="job" style="margin-left: 20px; margin-bottom: 10px;">
             <p><strong>Job Name:</strong> ${job.name}</p>
             <p><strong>Description:</strong> ${desc.material.type}, ${desc.lanyard_type.type}, ${desc.width.value}, ${desc.side_printed.side}</p>
-            ${text || image}
+            ${textHTML}
+            ${imageHTML}
+            ${artworkHTML}
           </div>
         `;
       }).join('');
