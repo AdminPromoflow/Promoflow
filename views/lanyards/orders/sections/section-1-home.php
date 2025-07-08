@@ -32,7 +32,7 @@
     // Define the URL and the JSON data you want to send
     const url = "../../controller/lanyards/orders_lanyards.php"; // Replace with your API endpoint URL
     const data = {
-      action: "getOrders"
+      action: "getOrdersInfo"
     };
 
     fetch(url, {
