@@ -64,48 +64,49 @@
       alert(error.message); // Show the error message in an alert
     });
   }
- function drawOrders(data) {
-  const container = document.getElementById("organize_order_lanyards_for_you");
-  container.innerHTML = "";
+  function drawOrders(data) {
+ const container = document.getElementById("organize_order_lanyards_for_you");
+ container.innerHTML = "";
 
-  data.forEach(orderEntry => {
-    const { order, user, address, jobs } = orderEntry;
+ data.forEach(orderEntry => {
+   const { order, user, address, jobs } = orderEntry;
 
-    let jobDetails = jobs.map(job => {
-      let content = `
-        <div>
-          <h4>${job.name}</h4>
-          <p>Price per unit: ${job.price_per_unit}</p>
-          <p>Amount: ${job.amount}</p>
-          <p>Total: ${job.total}</p>`;
+   let jobDetails = jobs.map(job => {
+     let content = `
+       <div>
+         <h4>${job.name}</h4>
+         <p>Price per unit: ${job.price_per_unit}</p>
+         <p>Amount: ${job.amount}</p>
+         <p>Total: ${job.total}</p>`;
 
-      if (job.artwork) {
-        content += `
-          <div>
-            <strong>Artwork:</strong><br>
-            <img src="${job.artwork.linkLeftImage}" alt="Left Artwork" style="width:100px;"><br>
-            <img src="${job.artwork.linkRightImage}" alt="Right Artwork" style="width:100px;">
-          </div>`;
-      }
+     if (job.artwork && job.artwork.linkLeftImage && job.artwork.linkRightImage) {
+       content += `
+         <div>
+           <strong>Artwork:</strong><br>
+           <img src="${job.artwork.linkLeftImage}" alt="Left Artwork" style="width:100px;"><br>
+           <img src="${job.artwork.linkRightImage}" alt="Right Artwork" style="width:100px;">
+         </div>`;
+     }
 
-      content += `</div>`;
-      return content;
-    }).join("");
+     content += `</div>`;
+     return content;
+   }).join("");
 
-    container.innerHTML += `
-      <div class="order-card">
-        <h3>Order #${order.idOrder}</h3>
-        <p>Status: ${order.status}</p>
-        <p>Total: ${order.total}</p>
-        <div>
-          <strong>Customer:</strong> ${user.name} - ${user.email}<br>
-          <strong>Address:</strong> ${address.street_address_1}, ${address.town_city}
-        </div>
-        ${jobDetails}
-        <hr>
-      </div>
-    `;
-  });
+   container.innerHTML += `
+     <div class="order-card">
+       <h3>Order #${order.idOrder}</h3>
+       <p>Status: ${order.status}</p>
+       <p>Total: ${order.total}</p>
+       <div>
+         <strong>Customer:</strong> ${user.name} - ${user.email}<br>
+         <strong>Address:</strong> ${address.street_address_1}, ${address.town_city}
+       </div>
+       ${jobDetails}
+       <hr>
+     </div>
+   `;
+ });
 }
+
 
 </script>
