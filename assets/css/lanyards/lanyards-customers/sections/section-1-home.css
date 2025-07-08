@@ -1,6 +1,6 @@
 .bodyLogin{
   position: relative;
-  height: 80vh;
+  padding: 4vw 0;
   width: 98%;
   left: 50%;
   transform: translateX(-50%);
