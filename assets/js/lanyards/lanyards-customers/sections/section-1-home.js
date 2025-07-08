@@ -13,7 +13,7 @@ class LanyardCustomers {
     };
 
     // Initiate an AJAX request to retrieve customer data
-    this.makeAjaxRequestGetAllLanyardCustomers(url, data);
+  //this.makeAjaxRequestGetAllLanyardCustomers(url, data);
   }
 
   // Function to make the AJAX request
