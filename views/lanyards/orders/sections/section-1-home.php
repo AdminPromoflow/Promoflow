@@ -52,7 +52,7 @@
     })
     .then(data => {
 
-      drawOrders(JSON.parse(data));
+      drawOrders(data);
 
       console.log(JSON.stringify(data));
       // Process the response data
