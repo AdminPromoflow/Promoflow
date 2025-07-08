@@ -14,7 +14,7 @@ class OrdersLanyardsForYou {
 
                 switch ($action) {
                     case "getOrdersInfo":
-                      echo json_encode("hahah");
+                      echo json_encode("hahah");exit;
                         $this->getOrdersInfo($data);
                         break;
                     default:
