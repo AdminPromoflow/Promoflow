@@ -7,6 +7,8 @@
   <body>
     <script type="text/javascript">
     window.open("views/login/index.php", "_self");
+
     </script>
+    <h1></h1>
   </body>
 </html>
